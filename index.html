@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2027 家庭旅行｜釜山・首爾・沖繩 機票＋住宿比價總覽（2/27–3/7）</title>
+<style>
+:root{
+  --bg:#f4f6fb;--card:#fff;--ink:#1d2433;--mute:#64748b;--line:#e2e8f0;
+  --pri:#1f5fbf;--pri-lt:#e8f0fd;--good:#0f8a5f;--good-lt:#ecfdf5;
+  --pus:#0369a1;--pus-lt:#e0f2fe;--sel:#6d28d9;--sel-lt:#f3e8ff;--oka:#047857;--oka-lt:#d1fae5;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Noto Sans TC","Microsoft JhengHei",system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+header{background:linear-gradient(135deg,#0f2957 0%,#1f5fbf 58%,#3882f6 100%);color:#fff;padding:34px 24px 28px;text-align:center}
+header h1{margin:0 0 8px;font-size:28px;letter-spacing:.5px}
+header .sub{opacity:.92;font-size:14.5px;max-width:780px;margin:0 auto}
+.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:14px}
+.chip{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.32);padding:4px 12px;border-radius:999px;font-size:13px}
+main{max-width:1240px;margin:0 auto;padding:24px 16px 64px}
+.section-title{margin:0 0 14px;font-size:20px;display:flex;align-items:center;gap:8px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:18px;margin-bottom:24px}
+.dest-card{background:var(--card);border-radius:16px;box-shadow:0 4px 14px rgba(15,35,70,.08);overflow:hidden;border:1px solid var(--line);display:flex;flex-direction:column;transition:transform .18s,box-shadow .18s}
+.dest-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(15,35,70,.13)}
+.dest-head{padding:18px 20px;color:#fff;display:flex;justify-content:space-between;align-items:center}
+.dest-head.pus{background:linear-gradient(135deg,#0c4a6e,#0284c7)}
+.dest-head.sel{background:linear-gradient(135deg,#4c1d95,#7c3aed)}
+.dest-head.oka{background:linear-gradient(135deg,#065f46,#059669)}
+.dest-head h2{margin:0;font-size:22px}
+.dest-head .code{font-size:13px;background:rgba(255,255,255,.22);padding:3px 10px;border-radius:999px;font-weight:600}
+.dest-body{padding:18px 20px;flex:1;display:flex;flex-direction:column;gap:12px}
+.price-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.pbox{background:#f8fafc;border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.pbox .lbl{font-size:12px;color:var(--mute)}
+.pbox .val{font-size:20px;font-weight:800;color:var(--pri);margin:2px 0}
+.pbox .val.good{color:var(--good)}
+.pbox .meta{font-size:12px;color:#475569}
+.info-list{margin:0;padding-left:18px;font-size:13.5px;color:#334155}
+.info-list li{margin-bottom:5px}
+.dest-foot{padding:14px 20px;background:#f8fafc;border-top:1px solid var(--line);display:flex;gap:10px}
+.btn-go{flex:1;text-align:center;background:var(--pri);color:#fff;text-decoration:none;font-weight:700;padding:10px 14px;border-radius:10px;font-size:14.5px;transition:background .15s}
+.btn-go:hover{background:#154694}
+.btn-go.pus{background:#0284c7}.btn-go.pus:hover{background:#0369a1}
+.btn-go.sel{background:#7c3aed}.btn-go.sel:hover{background:#5b21b6}
+.btn-go.oka{background:#059669}.btn-go.oka:hover{background:#047857}
+.btn-sub{background:#fff;border:1px solid var(--line);color:#334155;text-decoration:none;padding:10px 12px;border-radius:10px;font-size:13.5px;font-weight:600}
+.btn-sub:hover{background:#f1f5f9}
+.card{background:var(--card);border-radius:16px;box-shadow:0 2px 8px rgba(15,35,70,.06);padding:20px 22px;margin-bottom:20px;border:1px solid var(--line)}
+.toolbar{display:flex;flex-wrap:wrap;gap:12px 18px;align-items:center;background:#f8fafc;border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin-bottom:14px;font-size:14px}
+.toolbar select{padding:6px 10px;border:1px solid #cbd5e1;border-radius:8px;font-size:14px;font-weight:600;background:#fff}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{border-bottom:1px solid var(--line);padding:9px 10px;text-align:center;white-space:nowrap}
+th{background:#f8fafc;font-weight:700;color:#334155}
+td.l,th.l{text-align:left}
+td.wrap{white-space:normal;min-width:210px}
+.low{color:var(--good);font-weight:800;background:var(--good-lt)}
+.badge-dest{display:inline-block;padding:2px 8px;border-radius:6px;font-weight:700;font-size:12px}
+.badge-dest.pus{background:var(--pus-lt);color:var(--pus)}
+.badge-dest.sel{background:var(--sel-lt);color:var(--sel)}
+.badge-dest.oka{background:var(--oka-lt);color:var(--oka)}
+.pref{display:inline-block;background:#fff4d6;color:#8a5a00;border-radius:6px;font-size:11px;padding:1px 6px;margin-left:4px;font-weight:600}
+.viewer-wrap{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff}
+.viewer-tabs{display:flex;background:#f1f5f9;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.viewer-tabs button{border:0;background:none;padding:12px 20px;font-size:14.5px;font-weight:700;color:#475569;cursor:pointer;border-bottom:3px solid transparent}
+.viewer-tabs button.active{color:var(--pri);border-bottom-color:var(--pri);background:#fff}
+.viewer-tabs a.open-ext{margin-left:auto;align-self:center;margin-right:14px;font-size:13px;color:var(--pri);font-weight:600;text-decoration:none}
+iframe{width:100%;height:780px;border:0;display:block}
+.note{font-size:13px;color:var(--mute)}
+@media(max-width:680px){header h1{font-size:22px}.cards{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+  <h1>👨‍👩‍👧‍👦 2027 家庭旅行｜釜山・首爾・沖繩 機票＋住宿比價總覽</h1>
+  <div class="sub">ezTravel 易遊網數據整合 · 來回時間 2027/02/27 – 03/07 · 至少住 5 晚（最晚 3/7 回台北） · 直飛且排除廉價航空</div>
+  <div class="chips">
+    <span class="chip">🛫 出發地：台北 (TPE)</span>
+    <span class="chip">✈️ 僅看直飛・非廉價航空</span>
+    <span class="chip">💛 偏好：中華・長榮・星宇・日航系・全日空</span>
+    <span class="chip">🏨 住宿：西面站 / 弘大入口站 / 那霸國際通</span>
+  </div>
+</header>
+
+<main>
+  <h2 class="section-title">🗺️ 三大目的地快速入口（點擊開啟完整比價網頁）</h2>
+  <div class="cards">
+    <!-- 釜山 -->
+    <article class="dest-card">
+      <div class="dest-head pus">
+        <h2>🇰🇷 韓國・釜山</h2>
+        <span class="code">TPE ⇄ PUS</span>
+      </div>
+      <div class="dest-body">
+        <div class="price-grid">
+          <div class="pbox">
+            <div class="lbl">✈️ 直飛非廉航最低</div>
+            <div class="val good">TWD 9,369</div>
+            <div class="meta">大韓航空 KE2086 (3/2–3/7)</div>
+          </div>
+          <div class="pbox">
+            <div class="lbl">💛 偏好航空最低</div>
+            <div class="val">TWD 10,467</div>
+            <div class="meta">星宇 JX902 / 華航 10,497</div>
+          </div>
+          <div class="pbox">
+            <div class="lbl">🏨 西面站首選飯店 (5晚)</div>
+            <div class="val">TWD 6,505<small style="font-size:12px">/人</small></div>
+            <div class="meta">釜山商務酒店 (雙人房13,010)</div>
+          </div>
+          <div class="pbox">
+            <div class="lbl">🧳 5晚機＋酒每人總預算</div>
+            <div class="val good">13,429 起</div>
+            <div class="meta">偏好航空＋商務酒店約 16,972</div>
+          </div>
+        </div>
+        <ul class="info-list">
+          <li><strong>推薦住宿區：</strong><strong>西面站</strong>（地鐵 1、2 號線交會，去海雲台、南浦洞免轉車）</li>
+          <li><strong>來回機場：</strong>金海輕軌至沙上站轉 2 號線直達，全程約 <strong>25–30 分鐘</strong></li>
+          <li><strong>逛街美食：</strong>樂天百貨總店、西面地下街、田浦咖啡街、豬肉湯飯街</li>
+          <li><strong>航班選擇：</strong>星宇、華航、長榮、大韓每日皆有早/午去晚回直飛班次</li>
+        </ul>
+      </div>
+      <div class="dest-foot">
+        <a class="btn-go pus" href="./易遊網-機票住宿_台北-釜山_2027-02-27至03-07.html">進入釜山完整比價 ➡️</a>
+        <a class="btn-sub" href="#viewer" onclick="switchTab('pus')">頁內預覽</a>
+      </div>
+    </article>
+
+    <!-- 首爾 -->
+    <article class="dest-card">
+      <div class="dest-head sel">
+        <h2>🇰🇷 韓國・首爾</h2>
+        <span class="code">TPE ⇄ ICN</span>
+      </div>
+      <div class="dest-body">
+        <div class="price-grid">
+          <div class="pbox">
+            <div class="lbl">✈️ 直飛非廉航最低</div>
+            <div class="val good">TWD 9,266</div>
+            <div class="meta">大韓航空 KE2030 (3/2–3/7)</div>
+          </div>
+          <div class="pbox">
+            <div class="lbl">💛 偏好航空最低</div>
+            <div class="val">TWD 9,840</div>
+            <div class="meta">中華 CI162 / 長榮 9,973</div>
+          </div>
+          <div class="pbox">
+            <div class="lbl">🏨 弘大入口站首選 (5晚)</div>
+            <div class="val">TWD 11,838<small style="font-size:12px">/人</small></div>
+            <div class="meta">弘大智選假日 (含早/共構23,675)</div>
+          </div>
+          <div class="pbox">
+            <div class="lbl">🧳 5晚機＋酒每人總預算</div>
+            <div class="val good">16,101 起</div>
+            <div class="meta">華航＋智選假日含早約 21,678</div>
+          </div>
+        </div>
+        <ul class="info-list">
+          <li><strong>推薦住宿區：</strong><strong>弘大入口站</strong>（AREX 機場快線＋地鐵 2 號環狀線交會）</li>
+          <li><strong>來回機場：</strong>仁川機場搭 AREX <strong>免轉車直達（52 分鐘）</strong>，站內電梯直通飯店</li>
+          <li><strong>逛街美食：</strong>弘大主街、延南洞咖啡街、AK PLAZA、Olive Young 旗艦店</li>
+          <li><strong>航班選擇：</strong>華航、長榮、大韓、韓亞航班極密集（此時段無星宇直飛）</li>
+        </ul>
+      </div>
+      <div class="dest-foot">
+        <a class="btn-go sel" href="./易遊網-機票住宿_台北-首爾_2027-02-27至03-07.html">進入首爾完整比價 ➡️</a>
+        <a class="btn-sub" href="#viewer" onclick="switchTab('sel')">頁內預覽</a>
+      </div>
+    </article>
+
+    <!-- 沖繩 -->
+    <article class="dest-card">
+      <div class="dest-head oka">
+        <h2>🇯🇵 日本・沖繩</h2>
+        <span class="code">TPE ⇄ OKA</span>
+      </div>
+      <div class="dest-body">
+        <div class="price-grid">
+          <div class="pbox">
+            <div class="lbl">✈️ 直飛非廉航最低</div>
+            <div class="val good">TWD 8,253</div>
+            <div class="meta">日本越洋 NU308 日航系 (3/1–3/6)</div>
+          </div>
+          <div class="pbox">
+            <div class="lbl">💛 國籍偏好航空最低</div>
+            <div class="val">TWD 9,610</div>
+            <div class="meta">中華 CI122 / 星宇 9,854</div>
+          </div>
+          <div class="pbox">
+            <div class="lbl">🏨 國際通首選飯店 (5晚)</div>
+            <div class="val">TWD 9,558<small style="font-size:12px">/人</small></div>
+            <div class="meta">JR九州Blossom那霸 (雙人19,115)</div>
+          </div>
+          <div class="pbox">
+            <div class="lbl">🧳 5晚機＋酒每人總預算</div>
+            <div class="val good">13,861 起</div>
+            <div class="meta">華航＋JR九州四星約 19,168</div>
+          </div>
+        </div>
+        <ul class="info-list">
+          <li><strong>推薦住宿區：</strong><strong>那霸國際通（縣廳前/美榮橋/牧志站）</strong>，免自駕也超方便</li>
+          <li><strong>來回機場：</strong>那霸機場搭單軌電車<strong>免轉車直達僅 12–16 分鐘</strong>！飛行僅 90 分鐘</li>
+          <li><strong>逛街美食：</strong>國際通商店街、唐吉訶德、RYUBO 百貨、牧志公設市場、屋台村</li>
+          <li><strong>航班選擇：</strong>華航、星宇、長榮、日航系(JTA)全數皆為偏好航空！</li>
+        </ul>
+      </div>
+      <div class="dest-foot">
+        <a class="btn-go oka" href="./易遊網-機票住宿_台北-沖繩_2027-02-27至03-07.html">進入沖繩完整比價 ➡️</a>
+        <a class="btn-sub" href="#viewer" onclick="switchTab('oka')">頁內預覽</a>
+      </div>
+    </article>
+  </div>
+
+  <!-- 跨目的地互動總表 -->
+  <section class="card">
+    <h2 class="section-title">📊 釜山 vs 首爾 vs 沖繩｜10 組日期「機票＋住宿」跨地橫向PK表</h2>
+    <div class="toolbar">
+      <label><strong>✈️ 機票篩選模式：</strong>
+        <select id="airMode" onchange="renderCompare()">
+          <option value="pref" selected>💛 只看偏好航空（中華 / 長榮 / 星宇 / 日航系）最低價</option>
+          <option value="all">🌐 全部非廉價航空（含大韓 / 韓亞）最低價</option>
+        </select>
+      </label>
+      <label><strong>🏨 住宿等級基準（雙人房÷2人）：</strong>
+        <select id="htlTier" onchange="renderCompare()">
+          <option value="none">只比機票（不含住宿）</option>
+          <option value="budget">💰 高CP值商旅（西面Urbanstay / 弘大阿曼緹 / 那霸柔婕閣）</option>
+          <option value="rec" selected>⭐ 口碑首選四星（釜山商務 / 弘大智選假日含早 / 那霸JR九州）</option>
+          <option value="lux">👑 頂級/精品飯店（西面SOTA套房 / 弘大美居 / 國際通嘉新五星含早）</option>
+        </select>
+      </label>
+    </div>
+    <p class="note">💡 表格顯示每位成人的「來回直飛含稅機票」或「機票＋對應天數住宿每人分攤」含稅總價；綠色底色代表該日期組合三地之中最划算的選擇。</p>
+    <div class="scroll">
+      <table id="cmpTable"></table>
+    </div>
+  </section>
+
+  <!-- 家庭決策評估重點 -->
+  <section class="card">
+    <h2 class="section-title">🧭 家庭旅行三地決策評估指南</h2>
+    <div class="scroll">
+      <table>
+        <tr>
+          <th class="l">評估項目</th>
+          <th><span class="badge-dest pus">🇰🇷 釜山 (西面站)</span></th>
+          <th><span class="badge-dest sel">🇰🇷 首爾 (弘大入口站)</span></th>
+          <th><span class="badge-dest oka">🇯🇵 沖繩 (那霸國際通)</span></th>
+        </tr>
+        <tr>
+          <td class="l"><strong>飛行時間</strong></td>
+          <td>約 2 小時 10 分 ～ 2 小時 25 分</td>
+          <td>約 2 小時 30 分 ～ 2 小時 45 分</td>
+          <td class="low">約 1 小時 25 分 ～ 1 小時 35 分（最短！）</td>
+        </tr>
+        <tr>
+          <td class="l"><strong>2月底～3月初氣候</strong></td>
+          <td>約 4°C ～ 12°C（冬末初春，比首爾溫暖）</td>
+          <td>約 -1°C ～ 8°C（偏冷，需保暖大衣）</td>
+          <td class="low">約 16°C ～ 22°C（舒適涼爽如台灣秋天）</td>
+        </tr>
+        <tr>
+          <td class="l"><strong>機場 ⇄ 飯店交通</strong></td>
+          <td>輕軌至沙上站轉地鐵 2 號線（約 28 分鐘）<br>計程車約 25 分鐘（約 TWD 380）</td>
+          <td>AREX 機場鐵道<strong>免轉車直達弘大（52 分鐘）</strong><br>智選假日與車站共構免吹風</td>
+          <td class="low">那霸機場搭單軌電車<strong>免轉車直達（12–16 分鐘）</strong><br>計程車約 15 分鐘（約 TWD 400）</td>
+        </tr>
+        <tr>
+          <td class="l"><strong>雙人房每晚房價水準</strong></td>
+          <td class="low">最親民（四星/精品商旅約 TWD 2,000–3,000/晚）</td>
+          <td>偏高（弘大四星飯店約 TWD 3,800–5,200/晚）</td>
+          <td>中等（國際通四星飯店約 TWD 2,300–3,900/晚）</td>
+        </tr>
+        <tr>
+          <td class="l"><strong>逛街與家庭旅遊亮點</strong></td>
+          <td class="wrap">樂天百貨、西面地下街、海雲台膠囊列車、Spa Land 汗蒸幕、松島纜車、海鮮烤肉</td>
+          <td class="wrap">弘大潮流服飾、延南洞咖啡、明洞免稅百貨、聖水洞、景福宮韓服、大型超市採買</td>
+          <td class="wrap">國際通伴手禮藥妝、美麗海水族館、瀨長島、美國村、玉泉洞、石垣牛阿古豬燒肉</td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- 內嵌預覽器 -->
+  <section class="card" id="viewer">
+    <h2 class="section-title">🖥️ 頁內直接切換預覽（免跳頁快速檢視）</h2>
+    <div class="viewer-wrap">
+      <div class="viewer-tabs">
+        <button id="tab-pus" class="active" onclick="switchTab('pus')">🇰🇷 釜山（台北⇄釜山＋西面住宿）</button>
+        <button id="tab-sel" onclick="switchTab('sel')">🇰🇷 首爾（台北⇄首爾＋弘大住宿）</button>
+        <button id="tab-oka" onclick="switchTab('oka')">🇯🇵 沖繩（台北⇄沖繩＋國際通住宿）</button>
+        <a id="extLink" class="open-ext" href="./易遊網-機票住宿_台北-釜山_2027-02-27至03-07.html" target="_blank">在新分頁單獨開啟 ↗</a>
+      </div>
+      <iframe id="frame" src="./易遊網-機票住宿_台北-釜山_2027-02-27至03-07.html" title="機票住宿比價預覽"></iframe>
+    </div>
+  </section>
+</main>
+
+<script>
+const FILES = {
+  pus: "./易遊網-機票住宿_台北-釜山_2027-02-27至03-07.html",
+  sel: "./易遊網-機票住宿_台北-首爾_2027-02-27至03-07.html",
+  oka: "./易遊網-機票住宿_台北-沖繩_2027-02-27至03-07.html"
+};
+
+// 10 組符合「至少住5晚、最晚3/7回台北」的日期組合真實最低價
+const COMBOS = [
+  { dep:"2/27(六)", ret:"3/4(四)", days:5,
+    pus:{ all:[12719,"大韓 KE2086"], pref:[13229,"星宇 JX902"] },
+    sel:{ all:[11702,"大韓 KE2028"], pref:[12661,"中華 CI160"] },
+    oka:{ all:[9840,"日本越洋 NU308"], pref:[9840,"日本越洋 NU308"] }
+  },
+  { dep:"2/27(六)", ret:"3/5(五)", days:6,
+    pus:{ all:[12719,"大韓 KE2086"], pref:[13229,"星宇 JX902"] },
+    sel:{ all:[11702,"大韓 KE2028"], pref:[12661,"中華 CI162"] },
+    oka:{ all:[9840,"日本越洋 NU308"], pref:[9840,"日本越洋 NU308"] }
+  },
+  { dep:"2/27(六)", ret:"3/6(六)", days:7,
+    pus:{ all:[12719,"大韓 KE2086"], pref:[14162,"星宇 JX902"] },
+    sel:{ all:[11702,"大韓 KE2028"], pref:[12661,"中華 CI160"] },
+    oka:{ all:[9840,"日本越洋 NU308"], pref:[9840,"日本越洋 NU308"] }
+  },
+  { dep:"2/27(六)", ret:"3/7(日)", days:8,
+    pus:{ all:[12719,"大韓 KE2086"], pref:[14683,"中華 CI186"] },
+    sel:{ all:[11702,"大韓 KE2028"], pref:[13347,"長榮 BR170"] },
+    oka:{ all:[9840,"日本越洋 NU308"], pref:[9840,"日本越洋 NU308"] }
+  },
+  { dep:"2/28(日)", ret:"3/5(五)", days:5,
+    pus:{ all:[10467,"星宇 JX902"], pref:[10467,"星宇 JX902"] },
+    sel:{ all:[9840,"中華 CI162"], pref:[9840,"中華 CI162"] },
+    oka:{ all:[9046,"日本越洋 NU308"], pref:[9046,"日本越洋 NU308"] }
+  },
+  { dep:"2/28(日)", ret:"3/6(六)", days:6,
+    pus:{ all:[10790,"大韓 KE2086"], pref:[11398,"星宇 JX902"] },
+    sel:{ all:[10356,"大韓 KE2030"], pref:[10524,"中華 CI162"] },
+    oka:{ all:[9046,"日本越洋 NU308"], pref:[9046,"日本越洋 NU308"] }
+  },
+  { dep:"2/28(日)", ret:"3/7(日)", days:7,
+    pus:{ all:[10790,"大韓 KE2086"], pref:[11919,"中華 CI186"] },
+    sel:{ all:[10356,"大韓 KE2030"], pref:[10539,"長榮 BR170"] },
+    oka:{ all:[9046,"日本越洋 NU308"], pref:[9046,"日本越洋 NU308"] }
+  },
+  { dep:"3/1(一)", ret:"3/6(六)", days:5,
+    pus:{ all:[9993,"大韓 KE2086"], pref:[11398,"星宇 JX902"] },
+    sel:{ all:[9903,"大韓 KE2022"], pref:[9973,"長榮 BR170"] },
+    oka:{ all:[8253,"日本越洋 NU308"], pref:[8253,"日本越洋 NU308"] }
+  },
+  { dep:"3/1(一)", ret:"3/7(日)", days:6,
+    pus:{ all:[9993,"大韓 KE2086"], pref:[11398,"星宇 JX902"] },
+    sel:{ all:[9903,"大韓 KE2022"], pref:[9973,"長榮 BR170"] },
+    oka:{ all:[8649,"日本越洋 NU308"], pref:[8649,"日本越洋 NU308"] }
+  },
+  { dep:"3/2(二)", ret:"3/7(日)", days:5,
+    pus:{ all:[9369,"大韓 KE2086"], pref:[10824,"星宇 JX902"] },
+    sel:{ all:[9266,"大韓 KE2030"], pref:[9973,"長榮 BR170"] },
+    oka:{ all:[8649,"日本越洋 NU308"], pref:[8649,"日本越洋 NU308"] }
+  }
+];
+
+// 每晚雙人房含稅均價 (TWD)
+const HTL_NIGHT = {
+  none:   { pus:[0,"不含住宿"], sel:[0,"不含住宿"], oka:[0,"不含住宿"] },
+  budget: { pus:[2160,"西面Urbanstay"], sel:[3767,"弘大阿曼緹"], oka:[2243,"那霸柔婕閣"] },
+  rec:    { pus:[2602,"釜山商務酒店"], sel:[4735,"弘大智選假日(含早)"], oka:[3823,"JR九州Blossom"] },
+  lux:    { pus:[3640,"西面SOTA套房"], sel:[5153,"弘大美居大使"], oka:[7054,"國際通嘉新五星(含早)"] }
+};
+
+function renderCompare(){
+  const mode = document.getElementById("airMode").value;
+  const tier = document.getElementById("htlTier").value;
+  const htl = HTL_NIGHT[tier];
+  const isPkg = tier !== "none";
+  let h = `<tr>
+    <th class="l">去程 → 回程</th>
+    <th>住幾晚</th>
+    <th><span class="badge-dest pus">🇰🇷 釜山 (${htl.pus[1]})</span></th>
+    <th><span class="badge-dest sel">🇰🇷 首爾 (${htl.sel[1]})</span></th>
+    <th><span class="badge-dest oka">🇯🇵 沖繩 (${htl.oka[1]})</span></th>
+  </tr>`;
+  COMBOS.forEach(c => {
+    const pPus = c.pus[mode][0] + Math.round(htl.pus[0] * c.days / 2);
+    const pSel = c.sel[mode][0] + Math.round(htl.sel[0] * c.days / 2);
+    const pOka = c.oka[mode][0] + Math.round(htl.oka[0] * c.days / 2);
+    const lo = Math.min(pPus, pSel, pOka);
+    const cell = (tot, air, hNight) => {
+      const hPart = Math.round(hNight * c.days / 2);
+      return `<td class="${tot===lo?'low':''}">
+        <div style="font-size:15.5px;font-weight:700">TWD ${tot.toLocaleString()}</div>
+        <div class="note">${air[1]} (${air[0].toLocaleString()})${isPkg ? ` + 宿 ${hPart.toLocaleString()}` : ''}</div>
+      </td>`;
+    };
+    h += `<tr>
+      <td class="l"><strong>${c.dep} → ${c.ret}</strong></td>
+      <td>${c.days} 晚</td>
+      ${cell(pPus, c.pus[mode], htl.pus[0])}
+      ${cell(pSel, c.sel[mode], htl.sel[0])}
+      ${cell(pOka, c.oka[mode], htl.oka[0])}
+    </tr>`;
+  });
+  document.getElementById("cmpTable").innerHTML = h;
+}
+
+function switchTab(k){
+  ["pus","sel","oka"].forEach(x => document.getElementById("tab-"+x).classList.toggle("active", x===k));
+  document.getElementById("frame").src = FILES[k];
+  document.getElementById("extLink").href = FILES[k];
+}
+
+renderCompare();
+</script>
+</body>
+</html>

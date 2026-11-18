@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>台北 ⇄ 釜山 直飛來回機票＋精選住宿比價（2027/2/27–3/7）</title>
+<style>
+:root{--bg:#f4f6fb;--card:#fff;--ink:#1d2433;--mute:#6b7487;--pri:#1f5fbf;--pri2:#e8f0fd;--good:#0f8a5f;--warn:#c2410c;--line:#e3e7ef;--htl:#6d28d9;--htl2:#f3e8ff}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Noto Sans TC","Microsoft JhengHei",system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5}
+header{background:linear-gradient(135deg,#123a7a,#1f5fbf 60%,#3a86e8);color:#fff;padding:28px 24px 22px}
+header h1{margin:0 0 6px;font-size:26px}
+header .sub{opacity:.9;font-size:14px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.chip{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);padding:3px 10px;border-radius:999px;font-size:13px}
+.nav-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.nav-tabs a{background:#fff;color:var(--pri);text-decoration:none;font-weight:700;font-size:13px;padding:6px 14px;border-radius:999px;box-shadow:0 2px 5px rgba(0,0,0,.15)}
+.nav-tabs a:hover{background:#e8f0fd}
+main{max-width:1220px;margin:0 auto;padding:20px 16px 60px}
+.card{background:var(--card);border-radius:14px;box-shadow:0 1px 3px rgba(20,30,60,.08);padding:18px 20px;margin-bottom:18px}
+.card h2{margin:0 0 12px;font-size:19px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}
+.kpi{border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.kpi .t{font-size:12px;color:var(--mute)}
+.kpi .v{font-size:24px;font-weight:700;color:var(--pri)}
+.kpi .d{font-size:13px;color:var(--ink)}
+.kpi.best{border-color:var(--good);background:#effaf5}.kpi.best .v{color:var(--good)}
+.kpi.lcc{background:#fff7ed;border-color:#fed7aa}.kpi.lcc .v{color:var(--warn)}
+.kpi.htl{border-color:#c4b5fd;background:#faf5ff}.kpi.htl .v{color:var(--htl)}
+.filters{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center}
+.filters label{font-size:14px;cursor:pointer;user-select:none}
+.btn{border:1px solid var(--pri);background:#fff;color:var(--pri);border-radius:8px;padding:4px 10px;cursor:pointer;font-size:13px}
+.btn:hover{background:var(--pri2)}
+.btn.active{background:var(--pri);color:#fff}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{border-bottom:1px solid var(--line);padding:7px 8px;text-align:center;white-space:nowrap}
+th{background:#f7f9fc;font-weight:600;color:#3b4457;position:sticky;top:0}
+.scroll{overflow-x:auto}
+.matrix td.cell{cursor:pointer;font-weight:600;min-width:110px}
+.matrix td.cell small{display:block;font-weight:400;font-size:11px;color:var(--mute)}
+.matrix td.na{color:#bbb;background:#fafafa}
+.low{color:var(--good);font-weight:700}
+.pref{display:inline-block;background:#fff4d6;color:#8a5a00;border-radius:6px;font-size:11px;padding:0 5px;margin-left:4px}
+.cs{display:inline-block;background:#eef1f6;color:#556;border-radius:6px;font-size:11px;padding:0 5px;margin-left:4px}
+.tag{display:inline-block;background:#eef2ff;color:#3730a3;border-radius:6px;font-size:11px;padding:1px 6px;margin:2px 3px 2px 0}
+.tag.green{background:#dcfce7;color:#166534}
+.area-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:14px;margin-bottom:14px}
+.area-box{border:1px solid #dbeafe;background:#f8fbff;border-radius:12px;padding:14px 16px}
+.area-box h3{margin:0 0 6px;font-size:16px;color:#1e3a8a;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:6px}
+.area-box .badge{background:#1d4ed8;color:#fff;font-size:11px;padding:2px 8px;border-radius:999px;font-weight:500}
+.area-box ul{margin:6px 0 0;padding-left:18px;font-size:13.5px}
+.area-box li{margin-bottom:4px}
+.calc-bar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;background:#f8fafc;border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin-bottom:12px;font-size:14px}
+.calc-bar select{padding:5px 8px;border:1px solid #cbd5e1;border-radius:6px;font-size:13.5px}
+details{border:1px solid var(--line);border-radius:12px;margin-bottom:10px;background:#fff}
+summary{padding:10px 14px;cursor:pointer;font-weight:600;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+summary .p{margin-left:auto;color:var(--pri)}
+details .in{padding:0 14px 14px}
+details h4{margin:12px 0 6px;font-size:14px;color:#3b4457}
+td.l,th.l{text-align:left}
+td.wrap{white-space:normal;min-width:200px;max-width:320px}
+a{color:var(--pri)}
+.note{font-size:13px;color:var(--mute)}
+.legend span{display:inline-block;width:14px;height:14px;border-radius:3px;vertical-align:middle;margin:0 3px 0 10px}
+@media(max-width:640px){header h1{font-size:20px}}
+</style>
+</head>
+<body>
+<header>
+  <h1>✈️🏨 台北 (TPE) ⇄ 釜山 (PUS) 直飛來回機票＋精選住宿比價</h1>
+  <div class="sub">資料來源：ezTravel 易遊網 · 抓取時間 <span id="gen"></span> · 機票為每位成人來回含稅價，住宿為雙人房（2成人1室）含稅總價</div>
+  <div class="chips">
+    <span class="chip">來回直飛</span><span class="chip">2027/2/27 – 3/7</span><span class="chip">至少住 5 晚・最晚 3/7 回台北</span>
+    <span class="chip">已排除廉價航空</span><span class="chip">偏好：中華・長榮・星宇・日航・全日空</span><span class="chip">住宿：交通＆逛街＆機場便利</span>
+  </div>
+  <div class="nav-tabs">
+    <a href="./index.html" style="background:#ffe4e6;color:#9f1239">🏠 回三地總覽首頁</a>
+    <a href="./易遊網-機票住宿_台北-釜山_2027-02-27至03-07.html">🇰🇷 釜山比價</a>
+    <a href="./易遊網-機票住宿_台北-首爾_2027-02-27至03-07.html">🇰🇷 首爾比價</a>
+    <a href="./易遊網-機票住宿_台北-沖繩_2027-02-27至03-07.html">🇯🇵 沖繩比價</a>
+    <a href="#sec-kpi">📌 重點摘要</a>
+    <a href="#sec-matrix">📅 機票日期矩陣</a>
+    <a href="#sec-hotels">🏨 推薦住宿比價</a>
+    <a href="#sec-pkg">🧮 機＋酒自由配試算</a>
+    <a href="#sec-details">🧾 航班明細</a>
+  </div>
+</header>
+<main>
+  <section class="card" id="sec-kpi"><h2>📌 重點摘要（機票＋住宿＋機酒合計最低參考）</h2><div class="kpis" id="kpis"></div></section>
+
+  <section class="card">
+    <h2>🔎 航空公司篩選</h2>
+    <div class="filters" id="filters"></div>
+    <p class="note">勾選要比較的航空公司（以「實際飛行」航空公司判斷；聯營航班會標示）。下方所有機票與機＋酒試算表格會即時更新。</p>
+  </section>
+
+  <section class="card" id="sec-matrix">
+    <h2>📅 日期組合最低票價矩陣</h2>
+    <p class="note">列＝去程日、欄＝回程日；每格顯示該組合（依篩選條件）最便宜的來回含稅價與航空公司。點擊格子可跳至航班明細。<span class="legend">顏色：<span style="background:#c9f0dd"></span>較便宜<span style="background:#fde2cf"></span>較貴</span></p>
+    <div class="scroll"><table class="matrix" id="matrix"></table></div>
+  </section>
+
+  <section class="card">
+    <h2>🏷️ 各航空公司 × 日期組合價格比較</h2>
+    <p class="note">每格為該航空公司在該日期組合的最低來回含稅價；綠色粗體為該列最低。</p>
+    <div class="scroll"><table id="airTable"></table></div>
+  </section>
+
+  <section class="card" id="sec-hotels">
+    <h2>🏨 釜山精選住宿比價（交通・逛街・來回機場皆便利）</h2>
+    <div class="area-grid" id="areaGuide"></div>
+    <div class="calc-bar">
+      <span><strong>📊 排序方式：</strong></span>
+      <button class="btn active" id="sortRec" onclick="setHotelSort('rec')">綜合推薦</button>
+      <button class="btn" id="sortPrice" onclick="setHotelSort('price')">價格由低到高</button>
+      <button class="btn" id="sortScore" onclick="setHotelSort('score')">評分由高到低</button>
+      <span style="margin-left:auto"><strong>🛏️ 入住天數換算：</strong>
+        <select id="stayNights" onchange="renderHotels();renderPkg();">
+          <option value="5" selected>住 5 晚（基準：2027/2/28–3/5）</option>
+          <option value="6">住 6 晚（依每晚均價換算）</option>
+          <option value="7">住 7 晚（依每晚均價換算）</option>
+          <option value="8">住 8 晚（依每晚均價換算）</option>
+        </select>
+      </span>
+    </div>
+    <p class="note">💡 房價取自 ezTravel 易遊網 2027/02/28–03/05（5晚，1間雙人房・2位成人）含稅總價與每晚均價；每人分攤價以「2人同住1間房（房價÷2）」計算。點擊「查看房型」可直接帶入日期開啟易遊網訂房頁。</p>
+    <div class="scroll"><table id="hotelTable"></table></div>
+  </section>
+
+  <section class="card" id="sec-pkg">
+    <h2>🧮 機＋酒自由配「每人含稅總價」試算表</h2>
+    <div class="calc-bar">
+      <label><strong>✈️ 選擇出發/回程日期組合：</strong>
+        <select id="pkgCombo" onchange="renderPkg()"></select>
+      </label>
+      <label><strong>🛫 航班選擇：</strong>
+        <select id="pkgFlightMode" onchange="renderPkg()">
+          <option value="best">篩選條件下最便宜航班</option>
+          <option value="pref">只選偏好航空（中華/長榮/星宇/日航系）最便宜</option>
+        </select>
+      </label>
+    </div>
+    <p class="note">公式：<strong>每人機＋酒總預算 ＝ 每人來回含稅機票 ＋（該天數雙人房含稅總價 ÷ 2 人）</strong>。讓你一眼比較不同住宿等級搭配機票後的總花費！</p>
+    <div class="scroll"><table id="pkgTable"></table></div>
+  </section>
+
+  <section class="card" id="sec-details">
+    <h2>🧾 各日期組合航班明細</h2>
+    <p class="note">去程航班與價格取自 ezTravel 來回搜尋結果；回程時刻取自同日 釜山→台北 直飛航班清單（實際可搭配之回程班次與價格，以 ezTravel 選擇去程後顯示為準）。</p>
+    <div id="details"></div>
+  </section>
+
+  <section class="card note">
+    ⚠️ 機票與飯店價格、空房皆為即時浮動，本頁為 2026/11/18 抓取自 ezTravel 易遊網之參考快照，實際下單請點擊表內連結以易遊網最新報價為準。<br>
+    廉價航空排除名單：台灣虎航、樂桃、捷星、酷航、濟州航空、真航空、易斯達、德威、釜山航空、首爾航空、Air Premia、亞洲航空、泰越捷、泰國獅子航空、泰瑞航空等。
+  </section>
+</main>
+<script>
+const DATA = {"dest": "PUS", "zh": "釜山", "combos": [{"dep": "0227", "ret": "0304", "depL": "2/27(六)", "retL": "3/4(四)", "days": 5, "ok": true, "url": "https://flight.eztravel.com.tw/tickets-roundtrip-TPE-PUS/?outbounddate=27/02/2027&inbounddate=04/03/2027&adults=1&children=0&infants=0&direct=true&cabintype=any&dport=&aport=&airline=", "flights": [{"airline": "大韓航空", "op": "大韓航空", "no": "KE2086", "cs": false, "dt": "17:30", "da": "TPET1", "at": "20:45", "aa": "PUSI", "dur": "2h15m", "price": 12719, "pref": false}, {"airline": "星宇航空", "op": "星宇航空", "no": "JX902", "cs": false, "dt": "14:50", "da": "TPET1", "at": "17:55", "aa": "PUSI", "dur": "2h5m", "price": 13229, "pref": true}, {"airline": "長榮航空", "op": "長榮航空", "no": "BR194", "cs": false, "dt": "07:00", "da": "TPET2", "at": "10:15", "aa": "PUSI", "dur": "2h15m", "price": 15094, "pref": true}, {"airline": "長榮航空", "op": "長榮航空", "no": "BR164", "cs": false, "dt": "15:00", "da": "TPET2", "at": "18:15", "aa": "PUSI", "dur": "2h15m", "price": 15094, "pref": true}, {"airline": "大韓航空", "op": "中華航空", "no": "KE5698", "cs": true, "dt": "15:40", "da": "TPET1", "at": "18:50", "aa": "PUSI", "dur": "2h10m", "price": 15252, "pref": true}, {"airline": "大韓航空", "op": "中華航空", "no": "KE5696", "cs": true, "dt": "07:40", "da": "TPET1", "at": "10:50", "aa": "PUSI", "dur": "2h10m", "price": 15252, "pref": true}, {"airline": "中華航空", "op": "中華航空", "no": "CI186", "cs": false, "dt": "15:40", "da": "TPET1", "at": "18:50", "aa": "PUSI", "dur": "2h10m", "price": 15615, "pref": true}, {"airline": "中華航空", "op": "中華航空", "no": "CI188", "cs": false, "dt": "07:40", "da": "TPET1", "at": "10:50", "aa": "PUSI", "dur": "2h10m", "price": 15657, "pref": true}]}, {"dep": "0227", "ret": "0305", "depL": "2/27(六)", "retL": "3/5(五)", "days": 6, "ok": true, "url": "https://flight.eztravel.com.tw/tickets-roundtrip-TPE-PUS/?outbounddate=27/02/2027&inbounddate=05/03/2027&adults=1&children=0&infants=0&direct=true&cabintype=any&dport=&aport=&airline=", "flights": [{"airline": "大韓航空", "op": "大韓航空", "no": "KE2086", "cs": false, "dt": "17:30", "da": "TPET1", "at": "20:45", "aa": "PUSI", "dur": "2h15m", "price": 12719, "pref": false}, {"airline": "星宇航空", "op": "星宇航空", "no": "JX902", "cs": false, "dt": "14:50", "da": "TPET1", "at": "17:55", "aa": "PUSI", "dur": "2h5m", "price": 13159, "pref": true}, {"airline": "大韓航空", "op": "中華航空", "no": "KE5698", "cs": true, "dt": "15:40", "da": "TPET1", "at": "18:50", "aa": "PUSI", "dur": "2h10m", "price": 15252, "pref": true}, {"airline": "大韓航空", "op": "中華航空", "no": "KE5696", "cs": true, "dt": "07:40", "da": "TPET1", "at": "10:50", "aa": "PUSI", "dur": "2h10m", "price": 15252, "pref": true}, {"airline": "中華航空", "op": "中華航空", "no": "CI186", "cs": false, "dt": "15:40", "da": "TPET1", "at": "18:50", "aa": "PUSI", "dur": "2h10m", "price": 15615, "pref": true}, {"airline": "中華航空", "op": "中華航空", "no": "CI188", "cs": false, "dt": "07:40", "da": "TPET1", "at": "10:50", "aa": "PUSI", "dur": "2h10m", "price": 15657, "pref": true}, {"airline": "長榮航空", "op": "長榮航空", "no": "BR194", "cs": false, "dt": "07:00", "da": "TPET2", "at": "10:15", "aa": "PUSI", "dur": "2h15m", "price": 15856, "pref": true}, {"airline": "長榮航空", "op": "長榮航空", "no": "BR164", "cs": false, "dt": "15:00", "da": "TPET2", "at": "18:15", "aa": "PUSI", "dur": "2h15m", "price": 15856, "pref": true}]}, {"dep": "0227", "ret": "0306", "depL": "2/27(六)", "retL": "3/6(六)", "days": 7, "ok": true, "url": "https://flight.eztravel.com.tw/tickets-roundtrip-TPE-PUS/?outbounddate=27/02/2027&inbounddate=06/03/2027&adults=1&children=0&infants=0&direct=true&cabintype=any&dport=&aport=&airline=", "flights": [{"airline": "大韓航空", "op": "大韓航空", "no": "KE2086", "cs": false, "dt": "17:30", "da": "TPET1", "at": "20:45", "aa": "PUSI", "dur": "2h15m", "price": 12719, "pref": false}, {"airline": "星宇航空", "op": "星宇航空", "no": "JX902", "cs": false, "dt": "14:50", "da": "TPET1", "at": "17:55", "aa": "PUSI", "dur": "2h5m", "price": 14566, "pref": true}, {"airline": "長榮航空", "op": "長榮航空", "no": "BR194", "cs": false, "dt": "07:00", "da": "TPET2", "at": "10:15", "aa": "PUSI", "dur": "2h15m", "price": 15094, "pref": true}, {"airline": "長榮航空", "op": "長榮航空", "no": "BR164", "cs": false, "dt": "15:00", "da": "TPET2", "at": "18:15", "aa": "PUSI", "dur": "2h15m", "price": 15094, "pref": true}, {"airline": "大韓航空", "op": "中華航空", "no": "KE5698", "cs": true, "dt": "15:40", "da": "TPET1", "at": "18:50", "aa": "PUSI", "dur": "2h10m", "price": 15252, "pref": true}, {"airline": "大韓航空", "op": "中華航空", "no": "KE5696", "cs": true, "dt": "07:40", "da": "TPET1", "at": "10:50", "aa": "PUSI", "dur": "2h10m", "price": 15252, "pref": true}, {"airline": "中華航空", "op": "中華航空", "no": "CI186", "cs": false, "dt": "15:40", "da": "TPET1", "at": "18:50", "aa": "PUSI", "dur": "2h10m", "price": 15615, "pref": true}, {"airline": "中華航空", "op": "中華航空", "no": "CI188", "cs": false, "dt": "07:40", "da": "TPET1", "at": "10:50", "aa": "PUSI", "dur": "2h10m", "price": 15657, "pref": true}]}, {"dep": "0227", "ret": "0307", "depL": "2/27(六)", "retL": "3/7(日)", "days": 8, "ok": true, "url": "https://flight.eztravel.com.tw/tickets-roundtrip-TPE-PUS/?outbounddate=27/02/2027&inbounddate=07/03/2027&adults=1&children=0&infants=0&direct=true&cabintype=any&dport=&aport=&airline=", "flights": [{"airline": "長榮航空", "op": "長榮航空", "no": "BR164", "cs": false, "dt": "15:00", "da": "TPET2", "at": "18:15", "aa": "PUSI", "dur": "2h15m", "price": 12134, "pref": true}, {"airline": "大韓航空", "op": "大韓航空", "no": "KE2086", "cs": false, "dt": "17:30", "da": "TPET1", "at": "20:45", "aa": "PUSI", "dur": "2h15m", "price": 12719, "pref": false}, {"airline": "星宇航空", "op": "星宇航空", "no": "JX902", "cs": false, "dt": "14:50", "da": "TPET1", "at": "17:55", "aa": "PUSI", "dur": "2h5m", "price": 14203, "pref": true}, {"airline": "長榮航空", "op": "長榮航空", "no": "BR194", "cs": false, "dt": "07:00", "da": "TPET2", "at": "10:15", "aa": "PUSI", "dur": "2h15m", "price": 15094, "pref": true}, {"airline": "大韓航空", "op": "中華航空", "no": "KE5698", "cs": true, "dt": "15:40", "da": "TPET1", "at": "18:50", "aa": "PUSI", "dur": "2h10m", "price": 15252, "pref": true}, {"airline": "大韓航空", "op": "中華航空", "no": "KE5696", "cs": true, "dt": "07:40", "da": "TPET1", "at": "10:50", "aa": "PUSI", "dur": "2h10m", "price": 15252, "pref": true}, {"airline": "中華航空", "op": "中華航空", "no": "CI186", "cs": false, "dt": "15:40", "da": "TPET1", "at": "18:50", "aa": "PUSI", "dur": "2h10m", "price": 15615, "pref": true}, {"airline": "中華航空", "op": "中華航空", "no": "CI188", "cs": false, "dt": "07:40", "da": "TPET1", "at": "10:50", "aa": "PUSI", "dur": "2h10m", "price": 15657, "pref": true}]}, {"dep": "0228", "ret": "0305", "depL": "2/28(日)", "retL": "3/5(五)", "days": 5, "ok": true, "url": "https://flight.eztravel.com.tw/tickets-roundtrip-TPE-PUS/?outbounddate=28/02/2027&inbounddate=05/03/2027&adults=1&children=0&infants=0&direct=true&cabintype=any&dport=&aport=&airline=", "flights": [{"airline": "大韓航空", "op": "大韓航空", "no": "KE2086", "cs": false, "dt": "17:30", "da": "TPET1", "at": "20:45", "aa": "PUSI", "dur": "2h15m", "price": 9921, "pref": false}, {"airline": "星宇航空", "op": "星宇航空", "no": "JX902", "cs": false, "dt": "14:50", "da": "TPET1", "at": "17:55", "aa": "PUSI", "dur": "2h5m", "price": 10467, "pref": true}, {"airline": "中華航空", "op": "中華航空", "no": "CI186", "cs": false, "dt": "15:40", "da": "TPET1", "at": "18:50", "aa": "PUSI", "dur": "2h10m", "price": 10497, "pref": true}, {"airline": "中華航空", "op": "中華航空", "no": "CI188", "cs": false, "dt": "07:40", "da": "TPET1", "at": "10:50", "aa": "PUSI", "dur": "2h10m", "price": 11378, "pref": true}, {"airline": "長榮航空", "op": "長榮航空", "no": "BR194", "cs": false, "dt": "07:00", "da": "TPET2", "at": "10:15", "aa": "PUSI", "dur": "2h15m", "price": 11821, "pref": true}, {"airline": "大韓航空", "op": "中華航空", "no": "KE5698", "cs": true, "dt": "15:40", "da": "TPET1", "at": "18:50", "aa": "PUSI", "dur": "2h10m", "price": 12782, "pref": true}, {"airline": "大韓航空", "op": "中華航空", "no": "KE5696", "cs": true, "dt": "07:40", "da": "TPET1", "at": "10:50", "aa": "PUSI", "dur": "2h10m", "price": 12782, "pref": true}, {"airline": "長榮航空", "op": "長榮航空", "no": "BR164", "cs": false, "dt": "15:00", "da": "TPET2", "at": "18:15", "aa": "PUSI", "dur": "2h15m", "price": 13224, "pref": true}, {"airline": "中華航空", "op": "大韓航空", "no": "CI9698", "cs": true, "dt": "17:30", "da": "TPET1", "at": "20:45", "aa": "PUSI", "dur": "2h15m", "price": 17924, "pref": true}]}, {"dep": "0228", "ret": "0306", "depL": "2/28(日)", "retL": "3/6(六)", "days": 6, "ok": true, "url": "https://flight.eztravel.com.tw/tickets-roundtrip-TPE-PUS/?outbounddate=28/02/2027&inbounddate=06/03/2027&adults=1&children=0&infants=0&direct=true&cabintype=any&dport=&aport=&airline=", "flights": [{"airline": "大韓航空", "op": "大韓航空", "no": "KE2086", "cs": false, "dt": "17:30", "da": "TPET1", "at": "20:45", "aa": "PUSI", "dur": "2h15m", "price": 9921, "pref": false}, {"airline": "中華航空", "op": "中華航空", "no": "CI186", "cs": false, "dt": "15:40", "da": "TPET1", "at": "18:50", "aa": "PUSI", "dur": "2h10m", "price": 10872, "pref": true}, {"airline": "星宇航空", "op": "星宇航空", "no": "JX902", "cs": false, "dt": "14:50", "da": "TPET1", "at": "17:55", "aa": "PUSI", "dur": "2h5m", "price": 11800, "pref": true}, {"airline": "長榮航空", "op": "長榮航空", "no": "BR194", "cs": false, "dt": "07:00", "da": "TPET2", "at": "10:15", "aa": "PUSI", "dur": "2h15m", "price": 11959, "pref": true}, {"airline": "中華航空", "op": "中華航空", "no": "CI188", "cs": false, "dt": "07:40", "da": "TPET1", "at": "10:50", "aa": "PUSI", "dur": "2h10m", "price": 12168, "pref": true}, {"airline": "大韓航空", "op": "中華航空", "no": "KE5698", "cs": true, "dt": "15:40", "da": "TPET1", "at": "18:50", "aa": "PUSI", "dur": "2h10m", "price": 12782, "pref": true}, {"airline": "大韓航空", "op": "中華航空", "no": "KE5696", "cs": true, "dt": "07:40", "da": "TPET1", "at": "10:50", "aa": "PUSI", "dur": "2h10m", "price": 12782, "pref": true}, {"airline": "長榮航空", "op": "長榮航空", "no": "BR164", "cs": false, "dt": "15:00", "da": "TPET2", "at": "18:15", "aa": "PUSI", "dur": "2h15m", "price": 13194, "pref": true}, {"airline": "中華航空", "op": "大韓航空", "no": "CI9698", "cs": true, "dt": "17:30", "da": "TPET1", "at": "20:45", "aa": "PUSI", "dur": "2h15m", "price": 17750, "pref": true}]}, {"dep": "0228", "ret": "0307", "depL": "2/28(日)", "retL": "3/7(日)", "days": 7, "ok": true, "url": "https://flight.eztravel.com.tw/tickets-roundtrip-TPE-PUS/?outbounddate=28/02/2027&inbounddate=07/03/2027&adults=1&children=0&infants=0&direct=true&cabintype=any&dport=&aport=&airline=", "flights": [{"airline": "大韓航空", "op": "大韓航空", "no": "KE2086", "cs": false, "dt": "17:30", "da": "TPET1", "at": "20:45", "aa": "PUSI", "dur": "2h15m", "price": 9921, "pref": false}, {"airline": "中華航空", "op": "中華航空", "no": "CI186", "cs": false, "dt": "15:40", "da": "TPET1", "at": "18:50", "aa": "PUSI", "dur": "2h10m", "price": 10872, "pref": true}, {"airline": "星宇航空", "op": "星宇航空", "no": "JX902", "cs": false, "dt": "14:50", "da": "TPET1", "at": "17:55", "aa": "PUSI", "dur": "2h5m", "price": 11362, "pref": true}, {"airline": "長榮航空", "op": "長榮航空", "no": "BR194", "cs": false, "dt": "07:00", "da": "TPET2", "at": "10:15", "aa": "PUSI", "dur": "2h15m", "price": 11959, "pref": true}, {"airline": "中華航空", "op": "中華航空", "no": "CI188", "cs": false, "dt": "07:40", "da": "TPET1", "at": "10:50", "aa": "PUSI", "dur": "2h10m", "price": 12168, "pref": true}, {"airline": "大韓航空", "op": "中華航空", "no": "KE5698", "cs": true, "dt": "15:40", "da": "TPET1", "at": "18:50", "aa": "PUSI", "dur": "2h10m", "price": 12782, "pref": true}, {"airline": "大韓航空", "op": "中華航空", "no": "KE5696", "cs": true, "dt": "07:40", "da": "TPET1", "at": "10:50", "aa": "PUSI", "dur": "2h10m", "price": 12782, "pref": true}, {"airline": "長榮航空", "op": "長榮航空", "no": "BR164", "cs": false, "dt": "15:00", "da": "TPET2", "at": "18:15", "aa": "PUSI", "dur": "2h15m", "price": 13194, "pref": true}, {"airline": "中華航空", "op": "大韓航空", "no": "CI9698", "cs": true, "dt": "17:30", "da": "TPET1", "at": "20:45", "aa": "PUSI", "dur": "2h15m", "price": 17924, "pref": true}]}, {"dep": "0301", "ret": "0306", "depL": "3/1(一)", "retL": "3/6(六)", "days": 5, "ok": true, "url": "https://flight.eztravel.com.tw/tickets-roundtrip-TPE-PUS/?outbounddate=01/03/2027&inbounddate=06/03/2027&adults=1&children=0&infants=0&direct=true&cabintype=any&dport=&aport=&airline=", "flights": [{"airline": "中華航空", "op": "中華航空", "no": "CI186", "cs": false, "dt": "15:40", "da": "TPET1", "at": "18:50", "aa": "PUSI", "dur": "2h10m", "price": 11276, "pref": true}, {"airline": "星宇航空", "op": "星宇航空", "no": "JX900", "cs": false, "dt": "11:55", "da": "TPET1", "at": "15:00", "aa": "PUSI", "dur": "2h5m", "price": 11800, "pref": true}, {"airline": "大韓航空", "op": "大韓航空", "no": "KE2086", "cs": false, "dt": "17:30", "da": "TPET1", "at": "20:45", "aa": "PUSI", "dur": "2h15m", "price": 12150, "pref": false}, {"airline": "中華航空", "op": "中華航空", "no": "CI188", "cs": false, "dt": "07:40", "da": "TPET1", "at": "10:50", "aa": "PUSI", "dur": "2h10m", "price": 12168, "pref": true}, {"airline": "大韓航空", "op": "中華航空", "no": "KE5696", "cs": true, "dt": "07:40", "da": "TPET1", "at": "10:50", "aa": "PUSI", "dur": "2h10m", "price": 12782, "pref": true}, {"airline": "大韓航空", "op": "中華航空", "no": "KE5698", "cs": true, "dt": "15:40", "da": "TPET1", "at": "18:50", "aa": "PUSI", "dur": "2h10m", "price": 12782, "pref": true}, {"airline": "長榮航空", "op": "長榮航空", "no": "BR164", "cs": false, "dt": "14:30", "da": "TPET2", "at": "17:45", "aa": "PUSI", "dur": "2h15m", "price": 13194, "pref": true}]}, {"dep": "0301", "ret": "0307", "depL": "3/1(一)", "retL": "3/7(日)", "days": 6, "ok": true, "url": "https://flight.eztravel.com.tw/tickets-roundtrip-TPE-PUS/?outbounddate=01/03/2027&inbounddate=07/03/2027&adults=1&children=0&infants=0&direct=true&cabintype=any&dport=&aport=&airline=", "flights": [{"airline": "中華航空", "op": "中華航空", "no": "CI186", "cs": false, "dt": "15:40", "da": "TPET1", "at": "18:50", "aa": "PUSI", "dur": "2h10m", "price": 11276, "pref": true}, {"airline": "星宇航空", "op": "星宇航空", "no": "JX900", "cs": false, "dt": "11:55", "da": "TPET1", "at": "15:00", "aa": "PUSI", "dur": "2h5m", "price": 11362, "pref": true}, {"airline": "大韓航空", "op": "大韓航空", "no": "KE2086", "cs": false, "dt": "17:30", "da": "TPET1", "at": "20:45", "aa": "PUSI", "dur": "2h15m", "price": 12150, "pref": false}, {"airline": "中華航空", "op": "中華航空", "no": "CI188", "cs": false, "dt": "07:40", "da": "TPET1", "at": "10:50", "aa": "PUSI", "dur": "2h10m", "price": 12168, "pref": true}, {"airline": "大韓航空", "op": "中華航空", "no": "KE5696", "cs": true, "dt": "07:40", "da": "TPET1", "at": "10:50", "aa": "PUSI", "dur": "2h10m", "price": 12782, "pref": true}, {"airline": "大韓航空", "op": "中華航空", "no": "KE5698", "cs": true, "dt": "15:40", "da": "TPET1", "at": "18:50", "aa": "PUSI", "dur": "2h10m", "price": 12782, "pref": true}, {"airline": "長榮航空", "op": "長榮航空", "no": "BR164", "cs": false, "dt": "14:30", "da": "TPET2", "at": "17:45", "aa": "PUSI", "dur": "2h15m", "price": 13194, "pref": true}]}, {"dep": "0302", "ret": "0307", "depL": "3/2(二)", "retL": "3/7(日)", "days": 5, "ok": true, "url": "https://flight.eztravel.com.tw/tickets-roundtrip-TPE-PUS/?outbounddate=02/03/2027&inbounddate=07/03/2027&adults=1&children=0&infants=0&direct=true&cabintype=any&dport=&aport=&airline=", "flights": [{"airline": "大韓航空", "op": "大韓航空", "no": "KE2086", "cs": false, "dt": "17:30", "da": "TPET1", "at": "20:45", "aa": "PUSI", "dur": "2h15m", "price": 9369, "pref": false}, {"airline": "中華航空", "op": "中華航空", "no": "CI186", "cs": false, "dt": "15:40", "da": "TPET1", "at": "18:50", "aa": "PUSI", "dur": "2h10m", "price": 10872, "pref": true}, {"airline": "長榮航空", "op": "長榮航空", "no": "BR164", "cs": false, "dt": "14:30", "da": "TPET2", "at": "17:45", "aa": "PUSI", "dur": "2h15m", "price": 10992, "pref": true}, {"airline": "星宇航空", "op": "星宇航空", "no": "JX900", "cs": false, "dt": "08:25", "da": "TPET1", "at": "11:30", "aa": "PUSI", "dur": "2h5m", "price": 11362, "pref": true}, {"airline": "中華航空", "op": "中華航空", "no": "CI188", "cs": false, "dt": "07:40", "da": "TPET1", "at": "10:50", "aa": "PUSI", "dur": "2h10m", "price": 12168, "pref": true}, {"airline": "大韓航空", "op": "中華航空", "no": "KE5698", "cs": true, "dt": "15:40", "da": "TPET1", "at": "18:50", "aa": "PUSI", "dur": "2h10m", "price": 12782, "pref": true}, {"airline": "大韓航空", "op": "中華航空", "no": "KE5696", "cs": true, "dt": "07:40", "da": "TPET1", "at": "10:50", "aa": "PUSI", "dur": "2h10m", "price": 12782, "pref": true}, {"airline": "中華航空", "op": "大韓航空", "no": "CI9698", "cs": true, "dt": "17:30", "da": "TPET1", "at": "20:45", "aa": "PUSI", "dur": "2h15m", "price": 17750, "pref": true}]}], "returns": {"0303": [{"airline": "中華航空", "op": "中華航空", "no": "CI189", "cs": false, "dt": "11:50", "da": "PUSI", "at": "13:30", "aa": "TPET1", "dur": "2h40m"}, {"airline": "長榮航空", "op": "長榮航空", "no": "BR193", "cs": false, "dt": "12:00", "da": "PUSI", "at": "13:30", "aa": "TPET2", "dur": "2h30m"}, {"airline": "星宇航空", "op": "星宇航空", "no": "JX901", "cs": false, "dt": "12:30", "da": "PUSI", "at": "14:15", "aa": "TPET1", "dur": "2h45m"}, {"airline": "中華航空", "op": "中華航空", "no": "CI187", "cs": false, "dt": "19:50", "da": "PUSI", "at": "21:30", "aa": "TPET1", "dur": "2h40m"}, {"airline": "大韓航空", "op": "中華航空", "no": "KE5695", "cs": true, "dt": "11:50", "da": "PUSI", "at": "13:30", "aa": "TPET1", "dur": "2h40m"}, {"airline": "長榮航空", "op": "長榮航空", "no": "BR163", "cs": false, "dt": "18:55", "da": "PUSI", "at": "20:25", "aa": "TPET2", "dur": "2h30m"}, {"airline": "大韓航空", "op": "大韓航空", "no": "KE2085", "cs": false, "dt": "14:50", "da": "PUSI", "at": "16:30", "aa": "TPET1", "dur": "2h40m"}, {"airline": "大韓航空", "op": "中華航空", "no": "KE5697", "cs": true, "dt": "19:50", "da": "PUSI", "at": "21:30", "aa": "TPET1", "dur": "2h40m"}], "0304": [{"airline": "大韓航空", "op": "大韓航空", "no": "KE2085", "cs": false, "dt": "14:50", "da": "PUSI", "at": "16:30", "aa": "TPET1", "dur": "2h40m"}, {"airline": "中華航空", "op": "中華航空", "no": "CI189", "cs": false, "dt": "11:50", "da": "PUSI", "at": "13:30", "aa": "TPET1", "dur": "2h40m"}, {"airline": "中華航空", "op": "中華航空", "no": "CI187", "cs": false, "dt": "19:50", "da": "PUSI", "at": "21:30", "aa": "TPET1", "dur": "2h40m"}, {"airline": "長榮航空", "op": "長榮航空", "no": "BR193", "cs": false, "dt": "11:15", "da": "PUSI", "at": "12:45", "aa": "TPET2", "dur": "2h30m"}, {"airline": "大韓航空", "op": "中華航空", "no": "KE5695", "cs": true, "dt": "11:50", "da": "PUSI", "at": "13:30", "aa": "TPET1", "dur": "2h40m"}, {"airline": "大韓航空", "op": "中華航空", "no": "KE5697", "cs": true, "dt": "19:50", "da": "PUSI", "at": "21:30", "aa": "TPET1", "dur": "2h40m"}, {"airline": "長榮航空", "op": "長榮航空", "no": "BR163", "cs": false, "dt": "18:55", "da": "PUSI", "at": "20:25", "aa": "TPET2", "dur": "2h30m"}, {"airline": "星宇航空", "op": "星宇航空", "no": "JX903", "cs": false, "dt": "18:55", "da": "PUSI", "at": "20:40", "aa": "TPET1", "dur": "2h45m"}, {"airline": "中華航空", "op": "大韓航空", "no": "CI9697", "cs": true, "dt": "14:50", "da": "PUSI", "at": "16:30", "aa": "TPET1", "dur": "2h40m"}], "0305": [{"airline": "大韓航空", "op": "大韓航空", "no": "KE2085", "cs": false, "dt": "14:50", "da": "PUSI", "at": "16:30", "aa": "TPET1", "dur": "2h40m"}, {"airline": "中華航空", "op": "中華航空", "no": "CI187", "cs": false, "dt": "19:50", "da": "PUSI", "at": "21:30", "aa": "TPET1", "dur": "2h40m"}, {"airline": "中華航空", "op": "中華航空", "no": "CI189", "cs": false, "dt": "11:50", "da": "PUSI", "at": "13:30", "aa": "TPET1", "dur": "2h40m"}, {"airline": "大韓航空", "op": "中華航空", "no": "KE5697", "cs": true, "dt": "19:50", "da": "PUSI", "at": "21:30", "aa": "TPET1", "dur": "2h40m"}, {"airline": "大韓航空", "op": "中華航空", "no": "KE5695", "cs": true, "dt": "11:50", "da": "PUSI", "at": "13:30", "aa": "TPET1", "dur": "2h40m"}, {"airline": "長榮航空", "op": "長榮航空", "no": "BR163", "cs": false, "dt": "18:55", "da": "PUSI", "at": "20:25", "aa": "TPET2", "dur": "2h30m"}, {"airline": "星宇航空", "op": "星宇航空", "no": "JX903", "cs": false, "dt": "18:00", "da": "PUSI", "at": "19:45", "aa": "TPET1", "dur": "2h45m"}, {"airline": "中華航空", "op": "大韓航空", "no": "CI9697", "cs": true, "dt": "14:50", "da": "PUSI", "at": "16:30", "aa": "TPET1", "dur": "2h40m"}], "0306": [{"airline": "大韓航空", "op": "大韓航空", "no": "KE2085", "cs": false, "dt": "14:50", "da": "PUSI", "at": "16:30", "aa": "TPET1", "dur": "2h40m"}, {"airline": "中華航空", "op": "中華航空", "no": "CI187", "cs": false, "dt": "19:50", "da": "PUSI", "at": "21:30", "aa": "TPET1", "dur": "2h40m"}, {"airline": "中華航空", "op": "中華航空", "no": "CI189", "cs": false, "dt": "11:50", "da": "PUSI", "at": "13:30", "aa": "TPET1", "dur": "2h40m"}, {"airline": "長榮航空", "op": "長榮航空", "no": "BR193", "cs": false, "dt": "11:15", "da": "PUSI", "at": "12:45", "aa": "TPET2", "dur": "2h30m"}, {"airline": "長榮航空", "op": "長榮航空", "no": "BR163", "cs": false, "dt": "19:25", "da": "PUSI", "at": "21:00", "aa": "TPET2", "dur": "2h35m"}, {"airline": "大韓航空", "op": "中華航空", "no": "KE5697", "cs": true, "dt": "19:50", "da": "PUSI", "at": "21:30", "aa": "TPET1", "dur": "2h40m"}, {"airline": "大韓航空", "op": "中華航空", "no": "KE5695", "cs": true, "dt": "11:50", "da": "PUSI", "at": "13:30", "aa": "TPET1", "dur": "2h40m"}, {"airline": "星宇航空", "op": "星宇航空", "no": "JX903", "cs": false, "dt": "18:55", "da": "PUSI", "at": "20:40", "aa": "TPET1", "dur": "2h45m"}, {"airline": "中華航空", "op": "大韓航空", "no": "CI9697", "cs": true, "dt": "14:50", "da": "PUSI", "at": "16:30", "aa": "TPET1", "dur": "2h40m"}], "0307": [{"airline": "大韓航空", "op": "大韓航空", "no": "KE2085", "cs": false, "dt": "14:50", "da": "PUSI", "at": "16:30", "aa": "TPET1", "dur": "2h40m"}, {"airline": "中華航空", "op": "中華航空", "no": "CI189", "cs": false, "dt": "11:50", "da": "PUSI", "at": "13:30", "aa": "TPET1", "dur": "2h40m"}, {"airline": "中華航空", "op": "中華航空", "no": "CI187", "cs": false, "dt": "19:50", "da": "PUSI", "at": "21:30", "aa": "TPET1", "dur": "2h40m"}, {"airline": "長榮航空", "op": "長榮航空", "no": "BR193", "cs": false, "dt": "11:15", "da": "PUSI", "at": "12:45", "aa": "TPET2", "dur": "2h30m"}, {"airline": "長榮航空", "op": "長榮航空", "no": "BR163", "cs": false, "dt": "19:25", "da": "PUSI", "at": "21:00", "aa": "TPET2", "dur": "2h35m"}, {"airline": "大韓航空", "op": "中華航空", "no": "KE5695", "cs": true, "dt": "11:50", "da": "PUSI", "at": "13:30", "aa": "TPET1", "dur": "2h40m"}, {"airline": "大韓航空", "op": "中華航空", "no": "KE5697", "cs": true, "dt": "19:50", "da": "PUSI", "at": "21:30", "aa": "TPET1", "dur": "2h40m"}, {"airline": "星宇航空", "op": "星宇航空", "no": "JX903", "cs": false, "dt": "18:55", "da": "PUSI", "at": "20:40", "aa": "TPET1", "dur": "2h45m"}, {"airline": "中華航空", "op": "大韓航空", "no": "CI9697", "cs": true, "dt": "14:50", "da": "PUSI", "at": "16:30", "aa": "TPET1", "dur": "2h40m"}]}, "lcc": [6993, "濟州航空", "3/1(一)–3/7(日)"], "hotels": {"areaGuide": [{"name": "西面站商圈（首選推薦 ⭐）", "badge": "逛街・機場・轉乘三冠王", "airport": "金海輕軌「機場站」→「沙上站」轉地鐵2號線直達「西面站」（僅換乘1次、全程約 25–30 分鐘，車資約 KRW 2,100）", "shopping": "樂天百貨釜山總店（含免稅店）、西面地下商街、田浦咖啡街、NC百貨、西面1番街、豬肉湯飯一條街、布帳馬車夜市", "pros": "釜山地鐵 1 號線與 2 號線唯一交會核心樞紐，去海雲台、廣安里、南浦洞、釜山站全部免轉車直達！"}, {"name": "南浦洞 / 釜山站商圈（次選推薦）", "badge": "傳統市場・海港風情・KTX樞紐", "airport": "輕軌至「沙上站」轉2號線至「西面站」再轉1號線（換乘2次、約 45 分鐘）；或搭計程車約 30 分鐘（約 KRW 18,000）", "shopping": "光復路時尚街、BIFF廣場、國際市場、富平罐頭夜市、札嘎其海鮮市場、樂天百貨光復店（含樂天超市）", "pros": "舊城區美食與傳統市場最集中，若行程有安排搭 KTX 或松島纜車、影島白淺灘非常順路。"}], "hotels": [{"id": "1800916", "cityId": "253", "name": "釜山商務酒店 (Busan Business Hotel)", "area": "西面站", "star": 3.5, "score": 4.5, "reviews": 1203, "distStation": "西面站 7 號出口步行約 5 分鐘（樂天百貨正對面）", "airportAccess": "沙上站轉地鐵 2 號線至西面站，出站可穿過樂天百貨搭電梯免搬行李", "shopping": "緊鄰樂天百貨釜山總店、味贊王鹽烤肉、Egg Drop、西面地下街、豬肉湯飯街", "priceNight": 2602, "price5N": 13010, "tags": ["免費取消", "大廳WOWPASS機台", "釜山PASS兌換處", "台灣人最愛"], "highlight": "台灣旅客人氣第一！就在樂天百貨旁，大廳有換匯機台且可領取實體釜山通行證。"}, {"id": "41842181", "cityId": "253", "name": "阿瓦尼中央釜山酒店 (Avani Central Busan)", "area": "西面 / 國際金融中心站", "star": 4, "score": 4.4, "reviews": 672, "distStation": "地鐵 2 號線國際金融中心·釜山銀行站步行 3 分鐘（西面站下一站）", "airportAccess": "沙上站轉 2 號線直達（比西面站多 1 站，約 30 分鐘），電梯直通地面", "shopping": "步行約 10 分鐘可達田浦咖啡街與西面商圈，樓下即有超商與星巴克", "priceNight": 2916, "price5N": 14580, "tags": ["免費取消", "國際四星品牌", "房間寬敞新穎", "健身房"], "highlight": "國際連鎖四星級飯店，客房空間比一般西面商旅寬敞許多，隔音與睡眠品質極佳。"}, {"id": "23646935", "cityId": "253", "name": "西面 tt 酒店 (Hotel tt Seomyeon)", "area": "西面站 / 釜田站", "star": 3, "score": 4.2, "reviews": 1021, "distStation": "西面站 9/11 號出口（有電梯）步行約 6 分鐘", "airportAccess": "沙上站轉 2 號線至西面站，從 9 號或 11 號出口搭電梯即可輕鬆拖行李抵達", "shopping": "鄰近西面地下街、釜田傳統市場、樂天百貨", "priceNight": 2209, "price5N": 11045, "tags": ["免費取消", "館內無人超商", "高CP值商旅", "浴缸房型"], "highlight": "房間乾淨明亮，館內設有無人便利商店，離西面站電梯出口近，CP 值極高。"}, {"id": "70411050", "cityId": "253", "name": "西面城市住宿酒店 (Urbanstay Seomyeon)", "area": "西面站", "star": 3.5, "score": 4.3, "reviews": 1384, "distStation": "西面站 12 號出口（有電梯）步行約 3 分鐘", "airportAccess": "沙上站轉 2 號線至西面站，12 號出口有電梯，拖大行李超輕鬆", "shopping": "西面商圈核心、鄰近各大燒肉店與咖啡廳", "priceNight": 2160, "price5N": 10800, "tags": ["房內洗烘衣機", "小廚房+大冰箱", "連住5晚首選", "自助入住"], "highlight": "新穎公寓式酒店，房內配備洗脫烘衣機與微波爐，非常適合連住 5 晚以上減少行李衣物！"}, {"id": "126900751", "cityId": "253", "name": "SOTA 套房 釜山 西面 (SOTA SUITE Busan Seomyeon)", "area": "西面站", "star": 4, "score": 4.3, "reviews": 1525, "distStation": "西面站步行約 6–8 分鐘", "airportAccess": "沙上站轉 2 號線直達西面站", "shopping": "西面商圈、田浦咖啡街", "priceNight": 3640, "price5N": 18200, "tags": ["免費取消", "新開幕套房", "房間很大", "現代設計"], "highlight": "近期高人氣新穎套房式飯店，高達 1,500+ 則好評，空間寬敞舒適。"}, {"id": "118834213", "cityId": "253", "name": "金斯泰西面 (Gemstay Seomyeon)", "area": "西面站", "star": 3.5, "score": 4.6, "reviews": 747, "distStation": "西面站步行約 6 分鐘", "airportAccess": "沙上站轉 2 號線直達西面站", "shopping": "西面地下商街、田浦咖啡街", "priceNight": 2152, "price5N": 10760, "tags": ["免費取消", "4.6高分好評", "房內洗衣機", "高CP值"], "highlight": "西面地區評分高達 4.6 的熱門公寓式住宿，乾淨整潔且價格親民。"}, {"id": "981633", "cityId": "253", "name": "東橫 INN - 釜山西面 (Toyoko Inn Busan Seomyeon)", "area": "西面站", "star": 3, "score": 4.3, "reviews": 1583, "distStation": "西面站 8 號出口步行約 8 分鐘", "airportAccess": "沙上站轉 2 號線直達西面站", "shopping": "田浦咖啡街、NC百貨、西面商圈", "priceNight": 2040, "price5N": 10200, "tags": ["免費取消", "含免費早餐", "日本連鎖品質", "浴缸"], "highlight": "日系連鎖商旅品質穩定，房價直接包含免費自助早餐，小資省錢首選。"}, {"id": "689041", "cityId": "253", "name": "釜山西面皇后酒店 (Queens Hotel Seomyeon Busan)", "area": "西面站", "star": 3, "score": 4.5, "reviews": 448, "distStation": "西面站 7 號出口步行約 4 分鐘", "airportAccess": "沙上站轉 2 號線直達西面站", "shopping": "緊鄰樂天百貨與西面美食街，下樓即商圈", "priceNight": 1624, "price5N": 8120, "tags": ["免費取消", "超低總價", "地點4.6分", "大浴缸"], "highlight": "5 晚含稅總價僅約 8 千出頭！地點極佳（樂天百貨旁），預算型旅客首選。"}, {"id": "1460900", "cityId": "253", "name": "釜山大道酒店 (Aventree Hotel Busan)", "area": "南浦洞商圈", "star": 3.5, "score": 4.5, "reviews": 432, "distStation": "地鐵 1 號線札嘎其站 / 南浦站步行約 5 分鐘", "airportAccess": "輕軌轉地鐵約 45 分鐘，或搭計程車約 25–30 分鐘", "shopping": "位於光復路時尚街與國際市場正中心，下樓就是 BIFF 廣場與藥妝街", "priceNight": 2573, "price5N": 12865, "tags": ["免費取消", "南浦洞逛街王", "房間寬敞", "位置無敵"], "highlight": "若偏好南浦洞傳統市場與街頭小吃，這間就在 Y 字型逛街徒步區正中央！"}, {"id": "19636528", "cityId": "253", "name": "釜山站 ASTI 酒店 (Asti Hotel Busan Station)", "area": "釜山站", "star": 4, "score": 4.5, "reviews": 1280, "distStation": "地鐵 1 號線 / KTX 釜山站步行僅 2 分鐘", "airportAccess": "輕軌轉地鐵約 40 分鐘，或搭計程車約 30 分鐘", "shopping": "釜山站商圈、草梁傳統市場，搭地鐵 2 站即達南浦洞、6 站達西面", "priceNight": 3177, "price5N": 15885, "tags": ["免費取消", "四星級飯店", "高樓海港景觀", "交通樞紐"], "highlight": "四星級新穎質感飯店，高樓層可眺望釜山港大橋夜景，搭 KTX 或跨區移動極方便。"}]}, "generated": "2026-11-18 15:28"};
+const $ = s => document.querySelector(s);
+const money = n => n==null ? "—" : "TWD " + Math.round(n).toLocaleString();
+$("#gen").textContent = DATA.generated;
+const PREFKEY = ["中華","長榮","星宇","日本航空","日航","全日","日本越洋"];
+const isPrefName = n => PREFKEY.some(k => (n||"").includes(k));
+const ops = {};
+DATA.combos.forEach(c => c.flights.forEach(f => { ops[f.op] = Math.min(ops[f.op] ?? 9e9, f.price ?? 9e9); }));
+const opList = Object.keys(ops).sort((a,b) => (isPrefName(b)-isPrefName(a)) || ops[a]-ops[b]);
+let sel = new Set(opList);
+let hotelSort = 'rec';
+
+function renderFilters(){
+  const el = $("#filters");
+  el.innerHTML = opList.map(o => `<label><input type="checkbox" value="${o}" ${sel.has(o)?"checked":""}> ${o}${isPrefName(o)?'<span class="pref">偏好</span>':''} <span class="note">(${money(ops[o])}起)</span></label>`).join("")
+   + ` <button class="btn" id="bAll">全選</button> <button class="btn" id="bPref">只看偏好航空</button>`;
+  el.querySelectorAll("input").forEach(i => i.onchange = () => { i.checked ? sel.add(i.value) : sel.delete(i.value); renderAll(); });
+  $("#bAll").onclick = () => { sel = new Set(opList); renderFilters(); renderAll(); };
+  $("#bPref").onclick = () => { sel = new Set(opList.filter(isPrefName)); renderFilters(); renderAll(); };
+}
+const fl = c => c.flights.filter(f => sel.has(f.op) && f.price);
+const best = c => fl(c).reduce((m,f) => (!m || f.price < m.price) ? f : m, null);
+const id = c => `c_${c.dep}_${c.ret}`;
+
+function renderKPIs(){
+  const all = DATA.combos.map(c => ({c, f: best(c)})).filter(x => x.f).sort((a,b)=>a.f.price-b.f.price);
+  let h = "";
+  if (all[0]) h += `<div class="kpi best"><div class="t">✈️ 篩選條件下機票最低</div><div class="v">${money(all[0].f.price)}</div><div class="d">${all[0].f.op} ${all[0].f.no}<br>${all[0].c.depL} → ${all[0].c.retL}（${all[0].c.days}晚）</div></div>`;
+  const per = {};
+  DATA.combos.forEach(c => fl(c).forEach(f => { if(!per[f.op] || f.price < per[f.op].f.price) per[f.op] = {f, c}; }));
+  Object.entries(per).sort((a,b)=>a[1].f.price-b[1].f.price).forEach(([op, x]) => {
+    h += `<div class="kpi"><div class="t">✈️ ${op}${isPrefName(op)?'<span class="pref">偏好</span>':''} 最低</div><div class="v">${money(x.f.price)}</div><div class="d">${x.f.no} ${x.f.dt}→${x.f.at}<br>${x.c.depL} → ${x.c.retL}（${x.c.days}晚）</div></div>`;
+  });
+  if (DATA.hotels && DATA.hotels.hotels.length) {
+    const htls = [...DATA.hotels.hotels].sort((a,b)=>a.priceNight - b.priceNight);
+    const hBest = htls[0];
+    const hTop = DATA.hotels.hotels[0];
+    h += `<div class="kpi htl"><div class="t">🏨 推薦住宿最高CP值（5晚）</div><div class="v">${money(hBest.price5N / 2)}<small style="font-size:12px">/人</small></div><div class="d">${hBest.name.split('(')[0]}<br>每晚 ${money(hBest.priceNight)}（雙人5晚 ${money(hBest.price5N)}）</div></div>`;
+    if (all[0]) {
+      const pkgMin = all[0].f.price + Math.round(hBest.price5N / 2);
+      const pkgRec = all[0].f.price + Math.round(hTop.price5N / 2);
+      h += `<div class="kpi htl"><div class="t">🧳 5晚機＋酒每人總價區間</div><div class="v">${money(pkgMin)} 起</div><div class="d">小資配：${money(pkgMin)}/人<br>首選飯店配：${money(pkgRec)}/人</div></div>`;
+    }
+  }
+  if (DATA.lcc) h += `<div class="kpi lcc"><div class="t">參考：廉價航空最低（已排除）</div><div class="v">${money(DATA.lcc[0])}</div><div class="d">${DATA.lcc[1]}<br>${DATA.lcc[2]}</div></div>`;
+  $("#kpis").innerHTML = h || "<p>無符合條件的航班</p>";
+}
+function color(p, lo, hi){ if(hi===lo) return "#c9f0dd"; const t=(p-lo)/(hi-lo); const g=[201,240,221], r=[253,226,207]; const c=g.map((v,i)=>Math.round(v+(r[i]-v)*t)); return `rgb(${c})`; }
+function renderMatrix(){
+  const deps = [...new Set(DATA.combos.map(c=>c.dep))].sort(), rets = [...new Set(DATA.combos.map(c=>c.ret))].sort();
+  const lab = {}; DATA.combos.forEach(c=>{lab[c.dep]=c.depL; lab["r"+c.ret]=c.retL;});
+  const prices = DATA.combos.map(best).filter(Boolean).map(f=>f.price); const lo=Math.min(...prices), hi=Math.max(...prices);
+  let h = `<tr><th>去程 \\ 回程</th>${rets.map(r=>`<th>${lab["r"+r]}</th>`).join("")}</tr>`;
+  deps.forEach(d => {
+    h += `<tr><th>${lab[d]}</th>`;
+    rets.forEach(r => {
+      const c = DATA.combos.find(x=>x.dep===d && x.ret===r);
+      if(!c){ h += `<td class="na">—</td>`; return; }
+      const b = best(c);
+      h += b ? `<td class="cell" style="background:${color(b.price,lo,hi)}" onclick="go('${id(c)}')">${b.price.toLocaleString()}<small>${b.op}·${c.days}晚</small></td>` : `<td class="na">${c.ok?"無航班":"抓取失敗"}</td>`;
+    });
+    h += "</tr>";
+  });
+  $("#matrix").innerHTML = h;
+}
+function renderAir(){
+  const cols = opList.filter(o=>sel.has(o));
+  let h = `<tr><th class="l">去程 → 回程</th><th>住幾晚</th>${cols.map(o=>`<th>${o}${isPrefName(o)?'<span class="pref">偏好</span>':''}</th>`).join("")}</tr>`;
+  DATA.combos.forEach(c => {
+    const m = {}; fl(c).forEach(f => { if(m[f.op]==null || f.price<m[f.op]) m[f.op]=f.price; });
+    const lo = Math.min(...Object.values(m));
+    h += `<tr><td class="l"><a href="#${id(c)}" onclick="go('${id(c)}');return false;">${c.depL} → ${c.retL}</a></td><td>${c.days}</td>${cols.map(o=>`<td class="${m[o]===lo?'low':''}">${m[o]!=null?m[o].toLocaleString():'—'}</td>`).join("")}</tr>`;
+  });
+  $("#airTable").innerHTML = h;
+}
+
+function renderAreaGuide(){
+  if(!DATA.hotels) return;
+  $("#areaGuide").innerHTML = DATA.hotels.areaGuide.map(a => `
+    <div class="area-box">
+      <h3><span>📍 ${a.name}</span><span class="badge">${a.badge}</span></h3>
+      <ul>
+        <li><strong>✈️ 來回機場：</strong>${a.airport}</li>
+        <li><strong>🛍️ 逛街美食：</strong>${a.shopping}</li>
+        <li><strong>👍 推薦理由：</strong>${a.pros}</li>
+      </ul>
+    </div>
+  `).join("");
+}
+
+function setHotelSort(mode){
+  hotelSort = mode;
+  ["Rec","Price","Score"].forEach(k => $("#sort"+k).classList.toggle("active", mode===k.toLowerCase()));
+  renderHotels();
+}
+
+function htlUrl(h, ci, co){
+  return `https://hotel.eztravel.com.tw/detail?CheckInDate=${ci}&CheckOutDate=${co}&Person=2&Room=1&Ages=&CityID=${h.cityId}&HotelID=${h.id}`;
+}
+
+function renderHotels(){
+  if(!DATA.hotels) return;
+  const nights = parseInt($("#stayNights").value, 10) || 5;
+  const list = [...DATA.hotels.hotels];
+  if(hotelSort === 'price') list.sort((a,b) => a.priceNight - b.priceNight);
+  else if(hotelSort === 'score') list.sort((a,b) => (b.score - a.score) || (b.reviews - a.reviews));
+  const minNight = Math.min(...list.map(x=>x.priceNight));
+  const coDate = `2027-03-0${nights}`;
+  let h = `<tr>
+    <th class="l">飯店名稱 / 特色標籤</th>
+    <th>商圈位置</th>
+    <th>評分 (評鑑數)</th>
+    <th class="l">🚇 車站距離 & ✈️ 機場交通</th>
+    <th class="l">🛍️ 周邊逛街 & 推薦亮點</th>
+    <th>每晚含稅均價<br><small>(雙人房)</small></th>
+    <th>住 ${nights} 晚含稅總價<br><small>(雙人房1間)</small></th>
+    <th>每人分攤 (${nights}晚)<br><small>(2人1室÷2)</small></th>
+    <th>訂房連結</th>
+  </tr>`;
+  list.forEach(x => {
+    const tot = x.priceNight * nights;
+    const perPerson = Math.round(tot / 2);
+    const isLow = x.priceNight === minNight;
+    const stars = "★".repeat(Math.floor(x.star)) + (x.star%1 ? "☆" : "");
+    const tags = (x.tags||[]).map(t => `<span class="tag ${t.includes('早餐')||t.includes('取消')?'green':''}">${t}</span>`).join("");
+    h += `<tr>
+      <td class="l wrap"><strong>${x.name}</strong> <span class="pref">${stars}</span><br>${tags}</td>
+      <td><strong>${x.area}</strong></td>
+      <td><strong style="color:var(--pri);font-size:15px">${x.score.toFixed(1)}</strong> / 5<br><span class="note">(${x.reviews.toLocaleString()}則)</span></td>
+      <td class="l wrap"><div>🚇 ${x.distStation}</div><div class="note" style="margin-top:3px">✈️ ${x.airportAccess}</div></td>
+      <td class="l wrap"><div>🛍️ ${x.shopping}</div><div class="note" style="margin-top:3px">✨ ${x.highlight}</div></td>
+      <td class="${isLow?'low':''}">${money(x.priceNight)}</td>
+      <td class="${isLow?'low':''}"><strong>${money(tot)}</strong></td>
+      <td style="color:var(--htl);font-weight:700">${money(perPerson)}/人</td>
+      <td><a href="${htlUrl(x, '2027-02-28', coDate)}" target="_blank" rel="noopener">查看房型 ➡️</a></td>
+    </tr>`;
+  });
+  $("#hotelTable").innerHTML = h;
+}
+
+function initPkgCombo(){
+  const selEl = $("#pkgCombo");
+  selEl.innerHTML = DATA.combos.map((c, idx) => `<option value="${idx}" ${c.dep==='0228'&&c.ret==='0305'?'selected':''}>${c.depL} → ${c.retL}（住 ${c.days} 晚）</option>`).join("");
+}
+
+function renderPkg(){
+  if(!DATA.hotels || !DATA.combos.length) return;
+  const idx = parseInt($("#pkgCombo").value, 10) || 0;
+  const c = DATA.combos[idx] || DATA.combos[0];
+  const mode = $("#pkgFlightMode").value;
+  const candidates = (mode === 'pref') ? fl(c).filter(f => f.pref) : fl(c);
+  const fBest = candidates.reduce((m,f) => (!m || f.price < m.price) ? f : m, null);
+  const ci = `2027-${c.dep.slice(0,2)}-${c.dep.slice(2,4)}`;
+  const co = `2027-${c.ret.slice(0,2)}-${c.ret.slice(2,4)}`;
+
+  if(!fBest){
+    $("#pkgTable").innerHTML = `<tr><td>此日期組合在目前篩選條件下無符合的航班，請勾選更多航空公司。</td></tr>`;
+    return;
+  }
+  const list = [...DATA.hotels.hotels];
+  const minTot = Math.min(...list.map(x => fBest.price + Math.round(x.priceNight * c.days / 2)));
+  let h = `<tr>
+    <th class="l">搭配飯店（${c.depL}→${c.retL}，共 ${c.days} 晚）</th>
+    <th>商圈</th>
+    <th>評分</th>
+    <th>✈️ 搭配機票（每人來回含稅）</th>
+    <th>🏨 住宿總價（${c.days}晚雙人房）</th>
+    <th>🏨 每人住宿分攤（÷2人）</th>
+    <th>💰 機＋酒 每人含稅總計</th>
+    <th>快速預訂</th>
+  </tr>`;
+  list.forEach(x => {
+    const hTot = x.priceNight * c.days;
+    const hPer = Math.round(hTot / 2);
+    const pkgPer = fBest.price + hPer;
+    const isLow = pkgPer === minTot;
+    h += `<tr>
+      <td class="l"><strong>${x.name.split('(')[0]}</strong></td>
+      <td>${x.area}</td>
+      <td>${x.score.toFixed(1)}</td>
+      <td>${fBest.op} ${fBest.no}（${fBest.dt}出發）<br><strong>${money(fBest.price)}</strong></td>
+      <td>${money(hTot)}<br><span class="note">(${money(x.priceNight)}/晚)</span></td>
+      <td>${money(hPer)}</td>
+      <td class="${isLow?'low':''}" style="font-size:16px"><strong>${money(pkgPer)} / 人</strong></td>
+      <td><a href="${c.url}" target="_blank" rel="noopener">訂機票</a> · <a href="${htlUrl(x, ci, co)}" target="_blank" rel="noopener">訂飯店</a></td>
+    </tr>`;
+  });
+  $("#pkgTable").innerHTML = h;
+}
+
+function sameGroup(a, b){ const k = ["中華","長榮","星宇","大韓","韓亞","日本航空","全日","華信","國泰","日本越洋"]; return k.some(x => (a||"").includes(x) && (b||"").includes(x)); }
+function renderDetails(){
+  $("#details").innerHTML = DATA.combos.map(c => {
+    const list = fl(c), b = best(c);
+    const opsHere = [...new Set(list.map(f=>f.op))];
+    const rets = (DATA.returns[c.ret]||[]).filter(r => opsHere.some(o => sameGroup(o, r.op) || o===r.op));
+    return `<details id="${id(c)}"><summary>${c.depL} → ${c.retL} <span class="note">住 ${c.days} 晚 · ${list.length} 班可選</span><span class="p">${b?money(b.price)+" 起 · "+b.op:"無符合航班"}</span></summary><div class="in">
+      <h4>🛫 去程 ${c.depL} 台北 → 釜山（價格＝來回含稅價起）</h4>
+      ${list.length?`<div class="scroll"><table><tr><th class="l">航空公司 / 班號</th><th>起飛</th><th>抵達</th><th>飛行時間</th><th>來回含稅價</th></tr>${list.map(f=>`<tr><td class="l">${f.airline} ${f.no}${f.cs?`<span class="cs">聯營・實際 ${f.op}</span>`:''}${f.pref?'<span class="pref">偏好</span>':''}</td><td>${f.dt} <span class="note">${f.da}</span></td><td>${f.at} <span class="note">${f.aa}</span></td><td>${f.dur}</td><td class="${f===b?'low':''}">${money(f.price)}</td></tr>`).join("")}</table></div>`:'<p class="note">無符合篩選的航班</p>'}
+      <h4>🛬 回程 ${c.retL} 釜山 → 台北 可搭配班次（同航空集團）</h4>
+      ${rets.length?`<div class="scroll"><table><tr><th class="l">航空公司 / 班號</th><th>起飛</th><th>抵達</th><th>飛行時間</th></tr>${rets.map(r=>`<tr><td class="l">${r.airline} ${r.no}${r.cs?`<span class="cs">聯營・實際 ${r.op}</span>`:''}</td><td>${r.dt} <span class="note">${r.da}</span></td><td>${r.at} <span class="note">${r.aa}</span></td><td>${r.dur}</td></tr>`).join("")}</table></div>`:'<p class="note">（未取得回程時刻資料）</p>'}
+      <p><a href="${c.url}" target="_blank" rel="noopener">➡️ 前往 ezTravel 查看此日期組合</a></p>
+    </div></details>`;
+  }).join("");
+}
+function go(i){ const e=document.getElementById(i); if(e){ e.open=true; e.scrollIntoView({behavior:"smooth",block:"start"}); } }
+function renderAll(){ renderKPIs(); renderMatrix(); renderAir(); renderAreaGuide(); renderHotels(); renderPkg(); renderDetails(); }
+renderFilters(); initPkgCombo(); renderAll();
+</script>
+</body>
+</html>

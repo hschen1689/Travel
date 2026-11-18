@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>台北 ⇄ 沖繩 直飛來回機票＋精選住宿比價（2027/2/27–3/7）</title>
+<style>
+:root{--bg:#f4f6fb;--card:#fff;--ink:#1d2433;--mute:#6b7487;--pri:#1f5fbf;--pri2:#e8f0fd;--good:#0f8a5f;--warn:#c2410c;--line:#e3e7ef;--htl:#6d28d9;--htl2:#f3e8ff}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Noto Sans TC","Microsoft JhengHei",system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5}
+header{background:linear-gradient(135deg,#123a7a,#1f5fbf 60%,#3a86e8);color:#fff;padding:28px 24px 22px}
+header h1{margin:0 0 6px;font-size:26px}
+header .sub{opacity:.9;font-size:14px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.chip{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);padding:3px 10px;border-radius:999px;font-size:13px}
+.nav-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.nav-tabs a{background:#fff;color:var(--pri);text-decoration:none;font-weight:700;font-size:13px;padding:6px 14px;border-radius:999px;box-shadow:0 2px 5px rgba(0,0,0,.15)}
+.nav-tabs a:hover{background:#e8f0fd}
+main{max-width:1220px;margin:0 auto;padding:20px 16px 60px}
+.card{background:var(--card);border-radius:14px;box-shadow:0 1px 3px rgba(20,30,60,.08);padding:18px 20px;margin-bottom:18px}
+.card h2{margin:0 0 12px;font-size:19px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}
+.kpi{border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.kpi .t{font-size:12px;color:var(--mute)}
+.kpi .v{font-size:24px;font-weight:700;color:var(--pri)}
+.kpi .d{font-size:13px;color:var(--ink)}
+.kpi.best{border-color:var(--good);background:#effaf5}.kpi.best .v{color:var(--good)}
+.kpi.lcc{background:#fff7ed;border-color:#fed7aa}.kpi.lcc .v{color:var(--warn)}
+.kpi.htl{border-color:#c4b5fd;background:#faf5ff}.kpi.htl .v{color:var(--htl)}
+.filters{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center}
+.filters label{font-size:14px;cursor:pointer;user-select:none}
+.btn{border:1px solid var(--pri);background:#fff;color:var(--pri);border-radius:8px;padding:4px 10px;cursor:pointer;font-size:13px}
+.btn:hover{background:var(--pri2)}
+.btn.active{background:var(--pri);color:#fff}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{border-bottom:1px solid var(--line);padding:7px 8px;text-align:center;white-space:nowrap}
+th{background:#f7f9fc;font-weight:600;color:#3b4457;position:sticky;top:0}
+.scroll{overflow-x:auto}
+.matrix td.cell{cursor:pointer;font-weight:600;min-width:110px}
+.matrix td.cell small{display:block;font-weight:400;font-size:11px;color:var(--mute)}
+.matrix td.na{color:#bbb;background:#fafafa}
+.low{color:var(--good);font-weight:700}
+.pref{display:inline-block;background:#fff4d6;color:#8a5a00;border-radius:6px;font-size:11px;padding:0 5px;margin-left:4px}
+.cs{display:inline-block;background:#eef1f6;color:#556;border-radius:6px;font-size:11px;padding:0 5px;margin-left:4px}
+.tag{display:inline-block;background:#eef2ff;color:#3730a3;border-radius:6px;font-size:11px;padding:1px 6px;margin:2px 3px 2px 0}
+.tag.green{background:#dcfce7;color:#166534}
+.area-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:14px;margin-bottom:14px}
+.area-box{border:1px solid #dbeafe;background:#f8fbff;border-radius:12px;padding:14px 16px}
+.area-box h3{margin:0 0 6px;font-size:16px;color:#1e3a8a;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:6px}
+.area-box .badge{background:#1d4ed8;color:#fff;font-size:11px;padding:2px 8px;border-radius:999px;font-weight:500}
+.area-box ul{margin:6px 0 0;padding-left:18px;font-size:13.5px}
+.area-box li{margin-bottom:4px}
+.calc-bar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;background:#f8fafc;border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin-bottom:12px;font-size:14px}
+.calc-bar select{padding:5px 8px;border:1px solid #cbd5e1;border-radius:6px;font-size:13.5px}
+details{border:1px solid var(--line);border-radius:12px;margin-bottom:10px;background:#fff}
+summary{padding:10px 14px;cursor:pointer;font-weight:600;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+summary .p{margin-left:auto;color:var(--pri)}
+details .in{padding:0 14px 14px}
+details h4{margin:12px 0 6px;font-size:14px;color:#3b4457}
+td.l,th.l{text-align:left}
+td.wrap{white-space:normal;min-width:200px;max-width:320px}
+a{color:var(--pri)}
+.note{font-size:13px;color:var(--mute)}
+.legend span{display:inline-block;width:14px;height:14px;border-radius:3px;vertical-align:middle;margin:0 3px 0 10px}
+@media(max-width:640px){header h1{font-size:20px}}
+</style>
+</head>
+<body>
+<header>
+  <h1>✈️🏨 台北 (TPE) ⇄ 沖繩 (OKA) 直飛來回機票＋精選住宿比價</h1>
+  <div class="sub">資料來源：ezTravel 易遊網 · 抓取時間 <span id="gen"></span> · 機票為每位成人來回含稅價，住宿為雙人房（2成人1室）含稅總價</div>
+  <div class="chips">
+    <span class="chip">來回直飛</span><span class="chip">2027/2/27 – 3/7</span><span class="chip">至少住 5 晚・最晚 3/7 回台北</span>
+    <span class="chip">已排除廉價航空</span><span class="chip">偏好：中華・長榮・星宇・日航・全日空</span><span class="chip">住宿：交通＆逛街＆機場便利</span>
+  </div>
+  <div class="nav-tabs">
+    <a href="./index.html" style="background:#ffe4e6;color:#9f1239">🏠 回三地總覽首頁</a>
+    <a href="./易遊網-機票住宿_台北-釜山_2027-02-27至03-07.html">🇰🇷 釜山比價</a>
+    <a href="./易遊網-機票住宿_台北-首爾_2027-02-27至03-07.html">🇰🇷 首爾比價</a>
+    <a href="./易遊網-機票住宿_台北-沖繩_2027-02-27至03-07.html">🇯🇵 沖繩比價</a>
+    <a href="#sec-kpi">📌 重點摘要</a>
+    <a href="#sec-matrix">📅 機票日期矩陣</a>
+    <a href="#sec-hotels">🏨 推薦住宿比價</a>
+    <a href="#sec-pkg">🧮 機＋酒自由配試算</a>
+    <a href="#sec-details">🧾 航班明細</a>
+  </div>
+</header>
+<main>
+  <section class="card" id="sec-kpi"><h2>📌 重點摘要（機票＋住宿＋機酒合計最低參考）</h2><div class="kpis" id="kpis"></div></section>
+
+  <section class="card">
+    <h2>🔎 航空公司篩選</h2>
+    <div class="filters" id="filters"></div>
+    <p class="note">勾選要比較的航空公司（以「實際飛行」航空公司判斷；聯營航班會標示）。下方所有機票與機＋酒試算表格會即時更新。</p>
+  </section>
+
+  <section class="card" id="sec-matrix">
+    <h2>📅 日期組合最低票價矩陣</h2>
+    <p class="note">列＝去程日、欄＝回程日；每格顯示該組合（依篩選條件）最便宜的來回含稅價與航空公司。點擊格子可跳至航班明細。<span class="legend">顏色：<span style="background:#c9f0dd"></span>較便宜<span style="background:#fde2cf"></span>較貴</span></p>
+    <div class="scroll"><table class="matrix" id="matrix"></table></div>
+  </section>
+
+  <section class="card">
+    <h2>🏷️ 各航空公司 × 日期組合價格比較</h2>
+    <p class="note">每格為該航空公司在該日期組合的最低來回含稅價；綠色粗體為該列最低。</p>
+    <div class="scroll"><table id="airTable"></table></div>
+  </section>
+
+  <section class="card" id="sec-hotels">
+    <h2>🏨 沖繩精選住宿比價（交通・逛街・來回機場皆便利）</h2>
+    <div class="area-grid" id="areaGuide"></div>
+    <div class="calc-bar">
+      <span><strong>📊 排序方式：</strong></span>
+      <button class="btn active" id="sortRec" onclick="setHotelSort('rec')">綜合推薦</button>
+      <button class="btn" id="sortPrice" onclick="setHotelSort('price')">價格由低到高</button>
+      <button class="btn" id="sortScore" onclick="setHotelSort('score')">評分由高到低</button>
+      <span style="margin-left:auto"><strong>🛏️ 入住天數換算：</strong>
+        <select id="stayNights" onchange="renderHotels();renderPkg();">
+          <option value="5" selected>住 5 晚（基準：2027/2/28–3/5）</option>
+          <option value="6">住 6 晚（依每晚均價換算）</option>
+          <option value="7">住 7 晚（依每晚均價換算）</option>
+          <option value="8">住 8 晚（依每晚均價換算）</option>
+        </select>
+      </span>
+    </div>
+    <p class="note">💡 房價取自 ezTravel 易遊網 2027/02/28–03/05（5晚，1間雙人房・2位成人）含稅總價與每晚均價；每人分攤價以「2人同住1間房（房價÷2）」計算。點擊「查看房型」可直接帶入日期開啟易遊網訂房頁。</p>
+    <div class="scroll"><table id="hotelTable"></table></div>
+  </section>
+
+  <section class="card" id="sec-pkg">
+    <h2>🧮 機＋酒自由配「每人含稅總價」試算表</h2>
+    <div class="calc-bar">
+      <label><strong>✈️ 選擇出發/回程日期組合：</strong>
+        <select id="pkgCombo" onchange="renderPkg()"></select>
+      </label>
+      <label><strong>🛫 航班選擇：</strong>
+        <select id="pkgFlightMode" onchange="renderPkg()">
+          <option value="best">篩選條件下最便宜航班</option>
+          <option value="pref">只選偏好航空（中華/長榮/星宇/日航系）最便宜</option>
+        </select>
+      </label>
+    </div>
+    <p class="note">公式：<strong>每人機＋酒總預算 ＝ 每人來回含稅機票 ＋（該天數雙人房含稅總價 ÷ 2 人）</strong>。讓你一眼比較不同住宿等級搭配機票後的總花費！</p>
+    <div class="scroll"><table id="pkgTable"></table></div>
+  </section>
+
+  <section class="card" id="sec-details">
+    <h2>🧾 各日期組合航班明細</h2>
+    <p class="note">去程航班與價格取自 ezTravel 來回搜尋結果；回程時刻取自同日 沖繩→台北 直飛航班清單（實際可搭配之回程班次與價格，以 ezTravel 選擇去程後顯示為準）。</p>
+    <div id="details"></div>
+  </section>
+
+  <section class="card note">
+    ⚠️ 機票與飯店價格、空房皆為即時浮動，本頁為 2026/11/18 抓取自 ezTravel 易遊網之參考快照，實際下單請點擊表內連結以易遊網最新報價為準。<br>
+    廉價航空排除名單：台灣虎航、樂桃、捷星、酷航、濟州航空、真航空、易斯達、德威、釜山航空、首爾航空、Air Premia、亞洲航空、泰越捷、泰國獅子航空、泰瑞航空等。
+  </section>
+</main>
+<script>
+const DATA = {"dest": "OKA", "zh": "沖繩", "combos": [{"dep": "0227", "ret": "0304", "depL": "2/27(六)", "retL": "3/4(四)", "days": 5, "ok": true, "url": "https://flight.eztravel.com.tw/tickets-roundtrip-TPE-OKA/?outbounddate=27/02/2027&inbounddate=04/03/2027&adults=1&children=0&infants=0&direct=true&cabintype=any&dport=&aport=&airline=", "flights": [{"airline": "日本越洋航空", "op": "日本越洋航空", "no": "NU308", "cs": false, "dt": "19:40", "da": "TPET2", "at": "22:10", "aa": "OKAI", "dur": "1h30m", "price": 10653, "pref": true}, {"airline": "長榮航空", "op": "長榮航空", "no": "BR186", "cs": false, "dt": "16:50", "da": "TPET2", "at": "19:10", "aa": "OKAI", "dur": "1h20m", "price": 10685, "pref": true}, {"airline": "中華航空", "op": "中華航空", "no": "CI122", "cs": false, "dt": "16:50", "da": "TPET2", "at": "19:25", "aa": "OKAI", "dur": "1h35m", "price": 10994, "pref": true}, {"airline": "日本航空", "op": "中華航空", "no": "JL5136", "cs": true, "dt": "16:50", "da": "TPET2", "at": "19:25", "aa": "OKAI", "dur": "1h35m", "price": 14990, "pref": true}, {"airline": "中華航空", "op": "中華航空", "no": "CI120", "cs": false, "dt": "08:10", "da": "TPET2", "at": "10:50", "aa": "OKAI", "dur": "1h40m", "price": 15656, "pref": true}, {"airline": "星宇航空", "op": "星宇航空", "no": "JX870", "cs": false, "dt": "11:40", "da": "TPET1", "at": "14:15", "aa": "OKAI", "dur": "1h35m", "price": 15770, "pref": true}, {"airline": "長榮航空", "op": "長榮航空", "no": "BR112", "cs": false, "dt": "06:55", "da": "TPET2", "at": "09:15", "aa": "OKAI", "dur": "1h20m", "price": 17839, "pref": true}, {"airline": "日本航空", "op": "中華航空", "no": "JL5134", "cs": true, "dt": "08:10", "da": "TPET2", "at": "10:50", "aa": "OKAI", "dur": "1h40m", "price": 21282, "pref": true}]}, {"dep": "0227", "ret": "0305", "depL": "2/27(六)", "retL": "3/5(五)", "days": 6, "ok": true, "url": "https://flight.eztravel.com.tw/tickets-roundtrip-TPE-OKA/?outbounddate=27/02/2027&inbounddate=05/03/2027&adults=1&children=0&infants=0&direct=true&cabintype=any&dport=&aport=&airline=", "flights": [{"airline": "日本越洋航空", "op": "日本越洋航空", "no": "NU308", "cs": false, "dt": "19:40", "da": "TPET2", "at": "22:10", "aa": "OKAI", "dur": "1h30m", "price": 10653, "pref": true}, {"airline": "中華航空", "op": "中華航空", "no": "CI122", "cs": false, "dt": "16:50", "da": "TPET2", "at": "19:25", "aa": "OKAI", "dur": "1h35m", "price": 11386, "pref": true}, {"airline": "長榮航空", "op": "長榮航空", "no": "BR186", "cs": false, "dt": "16:50", "da": "TPET2", "at": "19:10", "aa": "OKAI", "dur": "1h20m", "price": 11797, "pref": true}, {"airline": "日本航空", "op": "中華航空", "no": "JL5136", "cs": true, "dt": "16:50", "da": "TPET2", "at": "19:25", "aa": "OKAI", "dur": "1h35m", "price": 14990, "pref": true}, {"airline": "中華航空", "op": "中華航空", "no": "CI120", "cs": false, "dt": "08:10", "da": "TPET2", "at": "10:50", "aa": "OKAI", "dur": "1h40m", "price": 15656, "pref": true}, {"airline": "星宇航空", "op": "星宇航空", "no": "JX870", "cs": false, "dt": "11:40", "da": "TPET1", "at": "14:15", "aa": "OKAI", "dur": "1h35m", "price": 15770, "pref": true}, {"airline": "長榮航空", "op": "長榮航空", "no": "BR112", "cs": false, "dt": "06:55", "da": "TPET2", "at": "09:15", "aa": "OKAI", "dur": "1h20m", "price": 17839, "pref": true}, {"airline": "日本航空", "op": "中華航空", "no": "JL5134", "cs": true, "dt": "08:10", "da": "TPET2", "at": "10:50", "aa": "OKAI", "dur": "1h40m", "price": 21282, "pref": true}]}, {"dep": "0227", "ret": "0306", "depL": "2/27(六)", "retL": "3/6(六)", "days": 7, "ok": true, "url": "https://flight.eztravel.com.tw/tickets-roundtrip-TPE-OKA/?outbounddate=27/02/2027&inbounddate=06/03/2027&adults=1&children=0&infants=0&direct=true&cabintype=any&dport=&aport=&airline=", "flights": [{"airline": "日本越洋航空", "op": "日本越洋航空", "no": "NU308", "cs": false, "dt": "19:40", "da": "TPET2", "at": "22:10", "aa": "OKAI", "dur": "1h30m", "price": 10653, "pref": true}, {"airline": "長榮航空", "op": "長榮航空", "no": "BR186", "cs": false, "dt": "16:50", "da": "TPET2", "at": "19:10", "aa": "OKAI", "dur": "1h20m", "price": 10685, "pref": true}, {"airline": "中華航空", "op": "中華航空", "no": "CI122", "cs": false, "dt": "16:50", "da": "TPET2", "at": "19:25", "aa": "OKAI", "dur": "1h35m", "price": 10994, "pref": true}, {"airline": "日本航空", "op": "中華航空", "no": "JL5136", "cs": true, "dt": "16:50", "da": "TPET2", "at": "19:25", "aa": "OKAI", "dur": "1h35m", "price": 14990, "pref": true}, {"airline": "中華航空", "op": "中華航空", "no": "CI120", "cs": false, "dt": "08:10", "da": "TPET2", "at": "10:50", "aa": "OKAI", "dur": "1h40m", "price": 15656, "pref": true}, {"airline": "星宇航空", "op": "星宇航空", "no": "JX870", "cs": false, "dt": "11:40", "da": "TPET1", "at": "14:15", "aa": "OKAI", "dur": "1h35m", "price": 15770, "pref": true}, {"airline": "長榮航空", "op": "長榮航空", "no": "BR112", "cs": false, "dt": "06:55", "da": "TPET2", "at": "09:15", "aa": "OKAI", "dur": "1h20m", "price": 17839, "pref": true}, {"airline": "日本航空", "op": "中華航空", "no": "JL5134", "cs": true, "dt": "08:10", "da": "TPET2", "at": "10:50", "aa": "OKAI", "dur": "1h40m", "price": 21282, "pref": true}, {"airline": "全日空航空", "op": "長榮航空", "no": "NH5810", "cs": true, "dt": "16:50", "da": "TPET2", "at": "19:10", "aa": "OKAI", "dur": "1h20m", "price": 70049, "pref": true}]}, {"dep": "0227", "ret": "0307", "depL": "2/27(六)", "retL": "3/7(日)", "days": 8, "ok": true, "url": "https://flight.eztravel.com.tw/tickets-roundtrip-TPE-OKA/?outbounddate=27/02/2027&inbounddate=07/03/2027&adults=1&children=0&infants=0&direct=true&cabintype=any&dport=&aport=&airline=", "flights": [{"airline": "長榮航空", "op": "長榮航空", "no": "BR186", "cs": false, "dt": "16:50", "da": "TPET2", "at": "19:10", "aa": "OKAI", "dur": "1h20m", "price": 10690, "pref": true}, {"airline": "日本越洋航空", "op": "日本越洋航空", "no": "NU308", "cs": false, "dt": "19:40", "da": "TPET2", "at": "22:10", "aa": "OKAI", "dur": "1h30m", "price": 10893, "pref": true}, {"airline": "中華航空", "op": "中華航空", "no": "CI122", "cs": false, "dt": "16:50", "da": "TPET2", "at": "19:25", "aa": "OKAI", "dur": "1h35m", "price": 10999, "pref": true}, {"airline": "日本航空", "op": "中華航空", "no": "JL5136", "cs": true, "dt": "16:50", "da": "TPET2", "at": "19:25", "aa": "OKAI", "dur": "1h35m", "price": 15240, "pref": true}, {"airline": "中華航空", "op": "中華航空", "no": "CI120", "cs": false, "dt": "08:10", "da": "TPET2", "at": "10:50", "aa": "OKAI", "dur": "1h40m", "price": 15656, "pref": true}, {"airline": "星宇航空", "op": "星宇航空", "no": "JX870", "cs": false, "dt": "11:40", "da": "TPET1", "at": "14:15", "aa": "OKAI", "dur": "1h35m", "price": 16374, "pref": true}, {"airline": "長榮航空", "op": "長榮航空", "no": "BR112", "cs": false, "dt": "06:55", "da": "TPET2", "at": "09:15", "aa": "OKAI", "dur": "1h20m", "price": 17839, "pref": true}, {"airline": "日本航空", "op": "中華航空", "no": "JL5134", "cs": true, "dt": "08:10", "da": "TPET2", "at": "10:50", "aa": "OKAI", "dur": "1h40m", "price": 21532, "pref": true}, {"airline": "全日空航空", "op": "長榮航空", "no": "NH5810", "cs": true, "dt": "16:50", "da": "TPET2", "at": "19:10", "aa": "OKAI", "dur": "1h20m", "price": 70049, "pref": true}]}, {"dep": "0228", "ret": "0305", "depL": "2/28(日)", "retL": "3/5(五)", "days": 5, "ok": true, "url": "https://flight.eztravel.com.tw/tickets-roundtrip-TPE-OKA/?outbounddate=28/02/2027&inbounddate=05/03/2027&adults=1&children=0&infants=0&direct=true&cabintype=any&dport=&aport=&airline=", "flights": [{"airline": "日本越洋航空", "op": "日本越洋航空", "no": "NU308", "cs": false, "dt": "19:40", "da": "TPET2", "at": "22:10", "aa": "OKAI", "dur": "1h30m", "price": 9483, "pref": true}, {"airline": "中華航空", "op": "中華航空", "no": "CI122", "cs": false, "dt": "16:50", "da": "TPET2", "at": "19:25", "aa": "OKAI", "dur": "1h35m", "price": 9610, "pref": true}, {"airline": "日本越洋航空", "op": "日本越洋航空", "no": "NU302", "cs": false, "dt": "10:15", "da": "TPET2", "at": "12:45", "aa": "OKAI", "dur": "1h30m", "price": 10653, "pref": true}, {"airline": "長榮航空", "op": "長榮航空", "no": "BR112", "cs": false, "dt": "06:55", "da": "TPET2", "at": "09:15", "aa": "OKAI", "dur": "1h20m", "price": 10685, "pref": true}, {"airline": "長榮航空", "op": "長榮航空", "no": "BR186", "cs": false, "dt": "16:50", "da": "TPET2", "at": "19:10", "aa": "OKAI", "dur": "1h20m", "price": 10694, "pref": true}, {"airline": "中華航空", "op": "中華航空", "no": "CI120", "cs": false, "dt": "08:10", "da": "TPET2", "at": "10:50", "aa": "OKAI", "dur": "1h40m", "price": 10711, "pref": true}, {"airline": "星宇航空", "op": "星宇航空", "no": "JX870", "cs": false, "dt": "11:40", "da": "TPET1", "at": "14:15", "aa": "OKAI", "dur": "1h35m", "price": 10959, "pref": true}, {"airline": "日本航空", "op": "中華航空", "no": "JL5134", "cs": true, "dt": "08:10", "da": "TPET2", "at": "10:50", "aa": "OKAI", "dur": "1h40m", "price": 12390, "pref": true}, {"airline": "日本航空", "op": "中華航空", "no": "JL5136", "cs": true, "dt": "16:50", "da": "TPET2", "at": "19:25", "aa": "OKAI", "dur": "1h35m", "price": 12390, "pref": true}]}, {"dep": "0228", "ret": "0306", "depL": "2/28(日)", "retL": "3/6(六)", "days": 6, "ok": true, "url": "https://flight.eztravel.com.tw/tickets-roundtrip-TPE-OKA/?outbounddate=28/02/2027&inbounddate=06/03/2027&adults=1&children=0&infants=0&direct=true&cabintype=any&dport=&aport=&airline=", "flights": [{"airline": "日本越洋航空", "op": "日本越洋航空", "no": "NU308", "cs": false, "dt": "19:40", "da": "TPET2", "at": "22:10", "aa": "OKAI", "dur": "1h30m", "price": 9483, "pref": true}, {"airline": "中華航空", "op": "中華航空", "no": "CI122", "cs": false, "dt": "16:50", "da": "TPET2", "at": "19:25", "aa": "OKAI", "dur": "1h35m", "price": 9615, "pref": true}, {"airline": "日本越洋航空", "op": "日本越洋航空", "no": "NU302", "cs": false, "dt": "10:15", "da": "TPET2", "at": "12:45", "aa": "OKAI", "dur": "1h30m", "price": 10653, "pref": true}, {"airline": "長榮航空", "op": "長榮航空", "no": "BR112", "cs": false, "dt": "06:55", "da": "TPET2", "at": "09:15", "aa": "OKAI", "dur": "1h20m", "price": 10690, "pref": true}, {"airline": "中華航空", "op": "中華航空", "no": "CI120", "cs": false, "dt": "08:10", "da": "TPET2", "at": "10:50", "aa": "OKAI", "dur": "1h40m", "price": 10711, "pref": true}, {"airline": "長榮航空", "op": "長榮航空", "no": "BR186", "cs": false, "dt": "16:50", "da": "TPET2", "at": "19:10", "aa": "OKAI", "dur": "1h20m", "price": 10714, "pref": true}, {"airline": "星宇航空", "op": "星宇航空", "no": "JX870", "cs": false, "dt": "11:40", "da": "TPET1", "at": "14:15", "aa": "OKAI", "dur": "1h35m", "price": 10978, "pref": true}, {"airline": "日本航空", "op": "中華航空", "no": "JL5134", "cs": true, "dt": "08:10", "da": "TPET2", "at": "10:50", "aa": "OKAI", "dur": "1h40m", "price": 12390, "pref": true}, {"airline": "日本航空", "op": "中華航空", "no": "JL5136", "cs": true, "dt": "16:50", "da": "TPET2", "at": "19:25", "aa": "OKAI", "dur": "1h35m", "price": 12390, "pref": true}]}, {"dep": "0228", "ret": "0307", "depL": "2/28(日)", "retL": "3/7(日)", "days": 7, "ok": true, "url": "https://flight.eztravel.com.tw/tickets-roundtrip-TPE-OKA/?outbounddate=28/02/2027&inbounddate=07/03/2027&adults=1&children=0&infants=0&direct=true&cabintype=any&dport=&aport=&airline=", "flights": [{"airline": "中華航空", "op": "中華航空", "no": "CI122", "cs": false, "dt": "16:50", "da": "TPET2", "at": "19:25", "aa": "OKAI", "dur": "1h35m", "price": 9615, "pref": true}, {"airline": "日本越洋航空", "op": "日本越洋航空", "no": "NU308", "cs": false, "dt": "19:40", "da": "TPET2", "at": "22:10", "aa": "OKAI", "dur": "1h30m", "price": 9723, "pref": true}, {"airline": "長榮航空", "op": "長榮航空", "no": "BR186", "cs": false, "dt": "16:50", "da": "TPET2", "at": "19:10", "aa": "OKAI", "dur": "1h20m", "price": 10690, "pref": true}, {"airline": "長榮航空", "op": "長榮航空", "no": "BR112", "cs": false, "dt": "06:55", "da": "TPET2", "at": "09:15", "aa": "OKAI", "dur": "1h20m", "price": 10690, "pref": true}, {"airline": "星宇航空", "op": "星宇航空", "no": "JX870", "cs": false, "dt": "11:40", "da": "TPET1", "at": "14:15", "aa": "OKAI", "dur": "1h35m", "price": 10695, "pref": true}, {"airline": "中華航空", "op": "中華航空", "no": "CI120", "cs": false, "dt": "08:10", "da": "TPET2", "at": "10:50", "aa": "OKAI", "dur": "1h40m", "price": 10716, "pref": true}, {"airline": "日本越洋航空", "op": "日本越洋航空", "no": "NU302", "cs": false, "dt": "10:15", "da": "TPET2", "at": "12:45", "aa": "OKAI", "dur": "1h30m", "price": 10893, "pref": true}, {"airline": "日本航空", "op": "中華航空", "no": "JL5136", "cs": true, "dt": "16:50", "da": "TPET2", "at": "19:25", "aa": "OKAI", "dur": "1h35m", "price": 12595, "pref": true}, {"airline": "日本航空", "op": "中華航空", "no": "JL5134", "cs": true, "dt": "08:10", "da": "TPET2", "at": "10:50", "aa": "OKAI", "dur": "1h40m", "price": 12640, "pref": true}]}, {"dep": "0301", "ret": "0306", "depL": "3/1(一)", "retL": "3/6(六)", "days": 5, "ok": true, "url": "https://flight.eztravel.com.tw/tickets-roundtrip-TPE-OKA/?outbounddate=01/03/2027&inbounddate=06/03/2027&adults=1&children=0&infants=0&direct=true&cabintype=any&dport=&aport=&airline=", "flights": [{"airline": "日本越洋航空", "op": "日本越洋航空", "no": "NU308", "cs": false, "dt": "19:40", "da": "TPET2", "at": "22:15", "aa": "OKAI", "dur": "1h35m", "price": 8253, "pref": true}, {"airline": "中華航空", "op": "中華航空", "no": "CI122", "cs": false, "dt": "16:50", "da": "TPET2", "at": "19:25", "aa": "OKAI", "dur": "1h35m", "price": 9610, "pref": true}, {"airline": "星宇航空", "op": "星宇航空", "no": "JX870", "cs": false, "dt": "11:40", "da": "TPET1", "at": "14:15", "aa": "OKAI", "dur": "1h35m", "price": 9854, "pref": true}, {"airline": "日本越洋航空", "op": "日本越洋航空", "no": "NU302", "cs": false, "dt": "10:15", "da": "TPET2", "at": "12:50", "aa": "OKAI", "dur": "1h35m", "price": 10653, "pref": true}, {"airline": "長榮航空", "op": "長榮航空", "no": "BR112", "cs": false, "dt": "06:55", "da": "TPET2", "at": "09:15", "aa": "OKAI", "dur": "1h20m", "price": 10685, "pref": true}, {"airline": "長榮航空", "op": "長榮航空", "no": "BR186", "cs": false, "dt": "16:50", "da": "TPET2", "at": "19:10", "aa": "OKAI", "dur": "1h20m", "price": 10685, "pref": true}, {"airline": "中華航空", "op": "中華航空", "no": "CI120", "cs": false, "dt": "08:10", "da": "TPET2", "at": "10:50", "aa": "OKAI", "dur": "1h40m", "price": 10711, "pref": true}, {"airline": "日本航空", "op": "中華航空", "no": "JL5134", "cs": true, "dt": "08:10", "da": "TPET2", "at": "10:50", "aa": "OKAI", "dur": "1h40m", "price": 12390, "pref": true}, {"airline": "日本航空", "op": "中華航空", "no": "JL5136", "cs": true, "dt": "16:50", "da": "TPET2", "at": "19:25", "aa": "OKAI", "dur": "1h35m", "price": 12390, "pref": true}]}, {"dep": "0301", "ret": "0307", "depL": "3/1(一)", "retL": "3/7(日)", "days": 6, "ok": true, "url": "https://flight.eztravel.com.tw/tickets-roundtrip-TPE-OKA/?outbounddate=01/03/2027&inbounddate=07/03/2027&adults=1&children=0&infants=0&direct=true&cabintype=any&dport=&aport=&airline=", "flights": [{"airline": "日本越洋航空", "op": "日本越洋航空", "no": "NU308", "cs": false, "dt": "19:40", "da": "TPET2", "at": "22:15", "aa": "OKAI", "dur": "1h35m", "price": 8493, "pref": true}, {"airline": "中華航空", "op": "中華航空", "no": "CI122", "cs": false, "dt": "16:50", "da": "TPET2", "at": "19:25", "aa": "OKAI", "dur": "1h35m", "price": 9615, "pref": true}, {"airline": "星宇航空", "op": "星宇航空", "no": "JX870", "cs": false, "dt": "11:40", "da": "TPET1", "at": "14:15", "aa": "OKAI", "dur": "1h35m", "price": 9919, "pref": true}, {"airline": "長榮航空", "op": "長榮航空", "no": "BR112", "cs": false, "dt": "06:55", "da": "TPET2", "at": "09:15", "aa": "OKAI", "dur": "1h20m", "price": 10690, "pref": true}, {"airline": "長榮航空", "op": "長榮航空", "no": "BR186", "cs": false, "dt": "16:50", "da": "TPET2", "at": "19:10", "aa": "OKAI", "dur": "1h20m", "price": 10690, "pref": true}, {"airline": "中華航空", "op": "中華航空", "no": "CI120", "cs": false, "dt": "08:10", "da": "TPET2", "at": "10:50", "aa": "OKAI", "dur": "1h40m", "price": 10716, "pref": true}, {"airline": "日本越洋航空", "op": "日本越洋航空", "no": "NU302", "cs": false, "dt": "10:15", "da": "TPET2", "at": "12:50", "aa": "OKAI", "dur": "1h35m", "price": 10893, "pref": true}, {"airline": "日本航空", "op": "中華航空", "no": "JL5134", "cs": true, "dt": "08:10", "da": "TPET2", "at": "10:50", "aa": "OKAI", "dur": "1h40m", "price": 12595, "pref": true}, {"airline": "日本航空", "op": "中華航空", "no": "JL5136", "cs": true, "dt": "16:50", "da": "TPET2", "at": "19:25", "aa": "OKAI", "dur": "1h35m", "price": 12595, "pref": true}]}, {"dep": "0302", "ret": "0307", "depL": "3/2(二)", "retL": "3/7(日)", "days": 5, "ok": true, "url": "https://flight.eztravel.com.tw/tickets-roundtrip-TPE-OKA/?outbounddate=02/03/2027&inbounddate=07/03/2027&adults=1&children=0&infants=0&direct=true&cabintype=any&dport=&aport=&airline=", "flights": [{"airline": "日本越洋航空", "op": "日本越洋航空", "no": "NU308", "cs": false, "dt": "19:40", "da": "TPET2", "at": "22:15", "aa": "OKAI", "dur": "1h35m", "price": 8493, "pref": true}, {"airline": "中華航空", "op": "中華航空", "no": "CI122", "cs": false, "dt": "16:50", "da": "TPET2", "at": "19:25", "aa": "OKAI", "dur": "1h35m", "price": 9641, "pref": true}, {"airline": "星宇航空", "op": "星宇航空", "no": "JX870", "cs": false, "dt": "11:40", "da": "TPET1", "at": "14:15", "aa": "OKAI", "dur": "1h35m", "price": 10124, "pref": true}, {"airline": "日本越洋航空", "op": "日本越洋航空", "no": "NU302", "cs": false, "dt": "10:15", "da": "TPET2", "at": "12:50", "aa": "OKAI", "dur": "1h35m", "price": 10353, "pref": true}, {"airline": "中華航空", "op": "中華航空", "no": "CI120", "cs": false, "dt": "08:10", "da": "TPET2", "at": "10:50", "aa": "OKAI", "dur": "1h40m", "price": 10716, "pref": true}, {"airline": "長榮航空", "op": "長榮航空", "no": "BR186", "cs": false, "dt": "16:50", "da": "TPET2", "at": "19:10", "aa": "OKAI", "dur": "1h20m", "price": 10730, "pref": true}, {"airline": "長榮航空", "op": "長榮航空", "no": "BR112", "cs": false, "dt": "06:55", "da": "TPET2", "at": "09:15", "aa": "OKAI", "dur": "1h20m", "price": 10730, "pref": true}, {"airline": "日本航空", "op": "中華航空", "no": "JL5134", "cs": true, "dt": "08:10", "da": "TPET2", "at": "10:50", "aa": "OKAI", "dur": "1h40m", "price": 12640, "pref": true}, {"airline": "日本航空", "op": "中華航空", "no": "JL5136", "cs": true, "dt": "16:50", "da": "TPET2", "at": "19:25", "aa": "OKAI", "dur": "1h35m", "price": 12640, "pref": true}]}], "returns": {"0303": [{"airline": "日本越洋航空", "op": "日本越洋航空", "no": "NU301", "cs": false, "dt": "08:40", "da": "OKAI", "at": "09:15", "aa": "TPET2", "dur": "1h35m"}, {"airline": "日本越洋航空", "op": "日本越洋航空", "no": "NU307", "cs": false, "dt": "18:00", "da": "OKAI", "at": "18:40", "aa": "TPET2", "dur": "1h40m"}, {"airline": "長榮航空", "op": "長榮航空", "no": "BR185", "cs": false, "dt": "20:10", "da": "OKAI", "at": "20:55", "aa": "TPET2", "dur": "1h45m"}, {"airline": "長榮航空", "op": "長榮航空", "no": "BR113", "cs": false, "dt": "10:15", "da": "OKAI", "at": "10:55", "aa": "TPET2", "dur": "1h40m"}, {"airline": "星宇航空", "op": "星宇航空", "no": "JX871", "cs": false, "dt": "15:25", "da": "OKAI", "at": "16:10", "aa": "TPET1", "dur": "1h45m"}, {"airline": "中華航空", "op": "中華航空", "no": "CI121", "cs": false, "dt": "11:55", "da": "OKAI", "at": "12:35", "aa": "TPET2", "dur": "1h40m"}, {"airline": "中華航空", "op": "中華航空", "no": "CI123", "cs": false, "dt": "20:25", "da": "OKAI", "at": "21:05", "aa": "TPET2", "dur": "1h40m"}, {"airline": "全日空航空", "op": "長榮航空", "no": "NH5835", "cs": true, "dt": "10:15", "da": "OKAI", "at": "10:55", "aa": "TPET2", "dur": "1h40m"}, {"airline": "日本航空", "op": "中華航空", "no": "JL5135", "cs": true, "dt": "20:25", "da": "OKAI", "at": "21:05", "aa": "TPET2", "dur": "1h40m"}, {"airline": "全日空航空", "op": "長榮航空", "no": "NH5809", "cs": true, "dt": "20:10", "da": "OKAI", "at": "20:55", "aa": "TPET2", "dur": "1h45m"}], "0305": [{"airline": "日本越洋航空", "op": "日本越洋航空", "no": "NU301", "cs": false, "dt": "08:40", "da": "OKAI", "at": "09:15", "aa": "TPET2", "dur": "1h35m"}, {"airline": "日本越洋航空", "op": "日本越洋航空", "no": "NU307", "cs": false, "dt": "18:00", "da": "OKAI", "at": "18:40", "aa": "TPET2", "dur": "1h40m"}, {"airline": "長榮航空", "op": "長榮航空", "no": "BR113", "cs": false, "dt": "10:15", "da": "OKAI", "at": "10:55", "aa": "TPET2", "dur": "1h40m"}, {"airline": "長榮航空", "op": "長榮航空", "no": "BR185", "cs": false, "dt": "20:10", "da": "OKAI", "at": "20:55", "aa": "TPET2", "dur": "1h45m"}, {"airline": "星宇航空", "op": "星宇航空", "no": "JX871", "cs": false, "dt": "15:25", "da": "OKAI", "at": "16:10", "aa": "TPET1", "dur": "1h45m"}, {"airline": "中華航空", "op": "中華航空", "no": "CI121", "cs": false, "dt": "11:55", "da": "OKAI", "at": "12:35", "aa": "TPET2", "dur": "1h40m"}, {"airline": "中華航空", "op": "中華航空", "no": "CI123", "cs": false, "dt": "20:25", "da": "OKAI", "at": "21:05", "aa": "TPET2", "dur": "1h40m"}, {"airline": "全日空航空", "op": "長榮航空", "no": "NH5809", "cs": true, "dt": "20:10", "da": "OKAI", "at": "20:55", "aa": "TPET2", "dur": "1h45m"}, {"airline": "日本航空", "op": "中華航空", "no": "JL5135", "cs": true, "dt": "20:25", "da": "OKAI", "at": "21:05", "aa": "TPET2", "dur": "1h40m"}, {"airline": "日本航空", "op": "中華航空", "no": "JL5133", "cs": true, "dt": "11:55", "da": "OKAI", "at": "12:35", "aa": "TPET2", "dur": "1h40m"}], "0304": [{"airline": "日本越洋航空", "op": "日本越洋航空", "no": "NU301", "cs": false, "dt": "08:40", "da": "OKAI", "at": "09:15", "aa": "TPET2", "dur": "1h35m"}, {"airline": "日本越洋航空", "op": "日本越洋航空", "no": "NU307", "cs": false, "dt": "18:00", "da": "OKAI", "at": "18:40", "aa": "TPET2", "dur": "1h40m"}, {"airline": "長榮航空", "op": "長榮航空", "no": "BR113", "cs": false, "dt": "10:15", "da": "OKAI", "at": "10:55", "aa": "TPET2", "dur": "1h40m"}, {"airline": "長榮航空", "op": "長榮航空", "no": "BR185", "cs": false, "dt": "20:10", "da": "OKAI", "at": "20:55", "aa": "TPET2", "dur": "1h45m"}, {"airline": "星宇航空", "op": "星宇航空", "no": "JX871", "cs": false, "dt": "15:25", "da": "OKAI", "at": "16:10", "aa": "TPET1", "dur": "1h45m"}, {"airline": "中華航空", "op": "中華航空", "no": "CI121", "cs": false, "dt": "11:55", "da": "OKAI", "at": "12:35", "aa": "TPET2", "dur": "1h40m"}, {"airline": "中華航空", "op": "中華航空", "no": "CI123", "cs": false, "dt": "20:25", "da": "OKAI", "at": "21:05", "aa": "TPET2", "dur": "1h40m"}, {"airline": "全日空航空", "op": "長榮航空", "no": "NH5809", "cs": true, "dt": "20:10", "da": "OKAI", "at": "20:55", "aa": "TPET2", "dur": "1h45m"}, {"airline": "日本航空", "op": "中華航空", "no": "JL5133", "cs": true, "dt": "11:55", "da": "OKAI", "at": "12:35", "aa": "TPET2", "dur": "1h40m"}, {"airline": "日本航空", "op": "中華航空", "no": "JL5135", "cs": true, "dt": "20:25", "da": "OKAI", "at": "21:05", "aa": "TPET2", "dur": "1h40m"}], "0306": [{"airline": "日本越洋航空", "op": "日本越洋航空", "no": "NU301", "cs": false, "dt": "08:40", "da": "OKAI", "at": "09:15", "aa": "TPET2", "dur": "1h35m"}, {"airline": "日本越洋航空", "op": "日本越洋航空", "no": "NU307", "cs": false, "dt": "18:00", "da": "OKAI", "at": "18:40", "aa": "TPET2", "dur": "1h40m"}, {"airline": "長榮航空", "op": "長榮航空", "no": "BR113", "cs": false, "dt": "10:15", "da": "OKAI", "at": "10:55", "aa": "TPET2", "dur": "1h40m"}, {"airline": "長榮航空", "op": "長榮航空", "no": "BR185", "cs": false, "dt": "20:10", "da": "OKAI", "at": "20:55", "aa": "TPET2", "dur": "1h45m"}, {"airline": "星宇航空", "op": "星宇航空", "no": "JX871", "cs": false, "dt": "15:25", "da": "OKAI", "at": "16:10", "aa": "TPET1", "dur": "1h45m"}, {"airline": "中華航空", "op": "中華航空", "no": "CI121", "cs": false, "dt": "11:55", "da": "OKAI", "at": "12:35", "aa": "TPET2", "dur": "1h40m"}, {"airline": "中華航空", "op": "中華航空", "no": "CI123", "cs": false, "dt": "20:25", "da": "OKAI", "at": "21:05", "aa": "TPET2", "dur": "1h40m"}, {"airline": "日本航空", "op": "中華航空", "no": "JL5133", "cs": true, "dt": "11:55", "da": "OKAI", "at": "12:35", "aa": "TPET2", "dur": "1h40m"}, {"airline": "日本航空", "op": "中華航空", "no": "JL5135", "cs": true, "dt": "20:25", "da": "OKAI", "at": "21:05", "aa": "TPET2", "dur": "1h40m"}, {"airline": "全日空航空", "op": "長榮航空", "no": "NH5809", "cs": true, "dt": "20:10", "da": "OKAI", "at": "20:55", "aa": "TPET2", "dur": "1h45m"}], "0307": [{"airline": "日本越洋航空", "op": "日本越洋航空", "no": "NU301", "cs": false, "dt": "08:40", "da": "OKAI", "at": "09:15", "aa": "TPET2", "dur": "1h35m"}, {"airline": "日本越洋航空", "op": "日本越洋航空", "no": "NU307", "cs": false, "dt": "18:00", "da": "OKAI", "at": "18:40", "aa": "TPET2", "dur": "1h40m"}, {"airline": "長榮航空", "op": "長榮航空", "no": "BR113", "cs": false, "dt": "10:15", "da": "OKAI", "at": "10:55", "aa": "TPET2", "dur": "1h40m"}, {"airline": "長榮航空", "op": "長榮航空", "no": "BR185", "cs": false, "dt": "20:10", "da": "OKAI", "at": "20:55", "aa": "TPET2", "dur": "1h45m"}, {"airline": "星宇航空", "op": "星宇航空", "no": "JX871", "cs": false, "dt": "15:25", "da": "OKAI", "at": "16:10", "aa": "TPET1", "dur": "1h45m"}, {"airline": "中華航空", "op": "中華航空", "no": "CI121", "cs": false, "dt": "11:55", "da": "OKAI", "at": "12:35", "aa": "TPET2", "dur": "1h40m"}, {"airline": "中華航空", "op": "中華航空", "no": "CI123", "cs": false, "dt": "20:25", "da": "OKAI", "at": "21:05", "aa": "TPET2", "dur": "1h40m"}, {"airline": "全日空航空", "op": "長榮航空", "no": "NH5835", "cs": true, "dt": "10:15", "da": "OKAI", "at": "10:55", "aa": "TPET2", "dur": "1h40m"}, {"airline": "全日空航空", "op": "長榮航空", "no": "NH5809", "cs": true, "dt": "20:10", "da": "OKAI", "at": "20:55", "aa": "TPET2", "dur": "1h45m"}, {"airline": "日本航空", "op": "中華航空", "no": "JL5135", "cs": true, "dt": "20:25", "da": "OKAI", "at": "21:05", "aa": "TPET2", "dur": "1h40m"}, {"airline": "日本航空", "op": "中華航空", "no": "JL5133", "cs": true, "dt": "11:55", "da": "OKAI", "at": "12:35", "aa": "TPET2", "dur": "1h40m"}]}, "lcc": [5719, "台灣虎航", "2/28(日)–3/5(五)"], "hotels": {"areaGuide": [{"name": "那霸「國際通」沿線：縣廳前站 / 美榮橋站 / 牧志站（首選推薦 ⭐）", "badge": "單軌直達機場15分鐘・下樓即逛街", "airport": "那霸機場(OKA)搭 Yui-Rail 沖繩都市單軌電車免轉車直達：至「縣廳前站」僅 12 分鐘、至「美榮橋站」14 分鐘、至「牧志站」16 分鐘（車資 ¥300–340，可刷西瓜卡/信用卡感應）", "shopping": "國際通商店街、RYUBO 琉貿百貨、唐吉訶德國際通店、牧志公設市場、平和通商店街、大國藥妝、屋台村", "pros": "完全符合不自駕或半自駕需求！單軌電車幾分鐘一班直通那霸機場，出了車站就是沖繩最熱鬧的國際通，吃飯、買伴手禮、參加一日遊巴士集合點（縣廳前 RYUBO 百貨）都在走路範圍內。"}, {"name": "那霸「新都心 / 歌町站（Omoromachi）」（次選推薦）", "badge": "DFS免稅店・大型購物中心・自駕取車樞紐", "airport": "那霸機場搭單軌電車直達「歌町站（おもろまち駅）」約 19 分鐘", "shopping": "T Galleria by DFS 沖繩免稅店（與歌町站共構）、Naha Main Place 大型商場、山田電機、無印良品、Uniqlo", "pros": "街道寬敞現代，與 DFS 免稅店及租車櫃檯共構，若行程中間有 1–2 天要租車或喜歡逛大型百貨非常方便。"}], "hotels": [{"id": "7420938", "cityId": "92573", "name": "JR 九州 Blossom 酒店那霸 (JR Kyushu Hotel Blossom Naha)", "area": "國際通正中心 / 美榮橋站", "star": 4, "score": 4.6, "reviews": 2429, "distStation": "單軌「美榮橋站」步行約 5 分鐘、國際通步行 1 分鐘", "airportAccess": "那霸機場搭單軌電車 14 分鐘至美榮橋站，全程平坦好推行李", "shopping": "轉個彎就是國際通正中央，唐吉訶德與大國藥妝走路 2 分鐘、一蘭拉麵與牧志市場走路 4 分鐘", "priceNight": 3823, "price5N": 19115, "tags": ["免費取消", "JR九州四星品質", "2,400+則高評", "頂樓免費咖啡露台"], "highlight": "台灣人住國際通口碑第一名！JR 九州集團四星飯店，房間挑高寬敞、乾濕分離有浴缸，地點與質感兼具。"}, {"id": "35953012", "cityId": "92573", "name": "嘉新酒店 (Hotel Collective)", "area": "國際通正中心 / 縣廳前・美榮橋站", "star": 5, "score": 4.8, "reviews": 1105, "distStation": "單軌「縣廳前站」或「美榮橋站」步行約 7 分鐘", "airportAccess": "那霸機場搭單軌約 13 分鐘，或搭計程車約 15 分鐘（約 ¥1,800）", "shopping": "直接座落於國際通正中央大道上！下樓 0 秒開逛一蘭拉麵、唐吉訶德、牧志市場", "priceNight": 7054, "price5N": 35270, "tags": ["免費取消", "含豐盛早餐", "國際通唯一五星", "戶外泳池+大浴場桑拿"], "highlight": "台灣嘉新集團打造的國際通唯一五星級頂級酒店（評分高達 4.8），房間極度寬敞且含超人氣自助早餐！"}, {"id": "132512003", "cityId": "92573", "name": "那霸蒙特利拉蘇瑞酒店 (Hotel Monterey La Soeur Naha)", "area": "國際通 / 牧志站", "star": 4, "score": 4.7, "reviews": 321, "distStation": "單軌「牧志站」步行約 3 分鐘", "airportAccess": "那霸機場搭單軌電車 16 分鐘直達牧志站", "shopping": "步行 2 分鐘即達國際通與屋台村、牧志公設市場", "priceNight": 3585, "price5N": 17925, "tags": ["免費取消", "全新開幕四星", "4.7超高評分", "蒙特利集團"], "highlight": "蒙特利集團全新開幕四星飯店，設計優雅新穎，離單軌牧志站與國際通僅幾步之遙。"}, {"id": "67309116", "cityId": "92573", "name": "沖繩逸之彩溫泉度假酒店 (Okinawa Hinode Resort and Hot Spring Hotel)", "area": "國際通 / 牧志站", "star": 4, "score": 4.7, "reviews": 5072, "distStation": "單軌「牧志站」步行約 1–2 分鐘（約 150 公尺）", "airportAccess": "那霸機場搭單軌電車 16 分鐘至牧志站，出站轉彎即達", "shopping": "步行 2 分鐘進入國際通商店街、唐吉訶德、平和通", "priceNight": 3928, "price5N": 19640, "tags": ["免費取消", "5,000+則超高評", "免費拉麵宵夜+生啤冰淇淋", "戶外溫泉泳池"], "highlight": "超過 5,000 則評鑑高達 4.7 分！每日提供免費拉麵宵夜、Orion 生啤與冰淇淋無限暢飲，親子與情侶大推。"}, {"id": "88966589", "cityId": "92573", "name": "那霸格蘭康索爾酒店 (Hotel GrandConsort Naha)", "area": "國際通入口 / 縣廳前站", "star": 4, "score": 4.6, "reviews": 1065, "distStation": "單軌「縣廳前站」步行約 5 分鐘", "airportAccess": "那霸機場搭單軌電車僅 12 分鐘至縣廳前站", "shopping": "步行 3 分鐘即達國際通西口與 RYUBO 琉貿百貨（北部一日遊巴士集合點）", "priceNight": 2995, "price5N": 14975, "tags": ["免費取消", "2022新穎四星", "浴缸乾濕分離", "5晚不到1.5萬"], "highlight": "2022 年開幕的新穎質感飯店，每晚不到 3,000 元即可享有乾濕分離衛浴與極佳地段，CP 值爆表！"}, {"id": "3916196", "cityId": "92573", "name": "那霸縣廳前阿爾蒙特酒店 (Almont Hotel Naha Kenchomae)", "area": "國際通入口 / 縣廳前站", "star": 3.5, "score": 4.6, "reviews": 827, "distStation": "單軌「縣廳前站」步行僅 3 分鐘", "airportAccess": "那霸機場搭單軌電車 12 分鐘直達縣廳前站（全國際通離機場最近的一站）", "shopping": "過馬路就是 RYUBO 百貨與國際通起點，樓下有全家超商", "priceNight": 2375, "price5N": 11875, "tags": ["免費取消", "頂樓男女大浴場", "離機場僅12分", "高CP值"], "highlight": "單軌縣廳前站走路 3 分鐘，逛街回飯店還能泡 12 樓大浴場消除疲勞，5 晚總價不到 1.2 萬！"}, {"id": "124581577", "cityId": "92573", "name": "沖繩那霸柔婕閣酒店 (La'gent Hotel Okinawa Naha)", "area": "國際通 / 美榮橋站", "star": 4, "score": 4.5, "reviews": 2219, "distStation": "單軌「美榮橋站」步行約 6 分鐘", "airportAccess": "那霸機場搭單軌電車 14 分鐘至美榮橋站", "shopping": "步行約 5–6 分鐘可達國際通與暖暮拉麵、泊港漁市場", "priceNight": 2243, "price5N": 11215, "tags": ["免費取消", "2023新開幕", "2,200+則好評", "超值特價"], "highlight": "2023 年新開幕四星飯店，超過 2,200 則好評，5 晚含稅總價僅 11,215 元，新飯店控必選！"}, {"id": "704046", "cityId": "92573", "name": "麗嘉皇家酒店 GRAN 沖繩 (RIHGA Royal Gran Okinawa)", "area": "旭橋站共構（國際通西側）", "star": 4.5, "score": 4.7, "reviews": 690, "distStation": "單軌「旭橋站」天橋直通 2 樓大廳（步行 1 分鐘）", "airportAccess": "那霸機場搭單軌僅 5 站（11 分鐘）直達旭橋站，全程有遮雨空橋與電梯直通飯店！", "shopping": "步行約 8 分鐘達國際通與 RYUBO 百貨，樓下即為那霸巴士總站（去美國村、名護巴士總樞紐）", "priceNight": 5138, "price5N": 25690, "tags": ["單軌空橋直通", "全室35㎡大空間", "Premier四星半", "海景高樓層"], "highlight": "與單軌旭橋站及那霸巴士總站空橋直結！全館客房皆為 35㎡ 以上大空間且浴室景觀極佳。"}, {"id": "113004908", "cityId": "92573", "name": "那霸歌町大和 Roynet PREMIER 酒店 (Daiwa Roynet Hotel Naha-Omoromachi Premier)", "area": "新都心 / 歌町站", "star": 4, "score": 4.7, "reviews": 2138, "distStation": "單軌「歌町站（Omoromachi）」步行約 4 分鐘", "airportAccess": "那霸機場搭單軌電車 19 分鐘直達歌町站", "shopping": "緊鄰 DFS 免稅店、Naha Main Place 大型購物中心、大國藥妝新都心店；搭單軌 2 站即達國際通", "priceNight": 3595, "price5N": 17975, "tags": ["2023年10月全新開幕", "大和Roynet高階品牌", "全室乾濕分離", "2,100+則高評"], "highlight": "2023 年底全新開幕的大和 Roynet 頂級 Premier 線！房間大、全室乾濕分離，逛新都心百貨與免稅店超方便。"}, {"id": "68564677", "cityId": "92573", "name": "那霸 Hewitt 度假村 (Hewitt Resort Naha)", "area": "國際通東口 / 安里站", "star": 4, "score": 4.4, "reviews": 691, "distStation": "單軌「安里站」步行僅 3 分鐘", "airportAccess": "那霸機場搭單軌電車 18 分鐘直達安里站", "shopping": "下樓走 2 分鐘就是國際通東口與榮町市場居酒屋街，頂樓有無邊際泳池", "priceNight": 2540, "price5N": 12700, "tags": ["含豐盛自助早餐", "頂樓無邊際泳池", "2021新穎四星", "超狂CP值"], "highlight": "每晚 2,540 元竟然直接包含超豐盛自助早餐（可自製漢堡與沖繩料理）＋頂樓無邊際泳池！"}]}, "generated": "2026-11-18 15:28"};
+const $ = s => document.querySelector(s);
+const money = n => n==null ? "—" : "TWD " + Math.round(n).toLocaleString();
+$("#gen").textContent = DATA.generated;
+const PREFKEY = ["中華","長榮","星宇","日本航空","日航","全日","日本越洋"];
+const isPrefName = n => PREFKEY.some(k => (n||"").includes(k));
+const ops = {};
+DATA.combos.forEach(c => c.flights.forEach(f => { ops[f.op] = Math.min(ops[f.op] ?? 9e9, f.price ?? 9e9); }));
+const opList = Object.keys(ops).sort((a,b) => (isPrefName(b)-isPrefName(a)) || ops[a]-ops[b]);
+let sel = new Set(opList);
+let hotelSort = 'rec';
+
+function renderFilters(){
+  const el = $("#filters");
+  el.innerHTML = opList.map(o => `<label><input type="checkbox" value="${o}" ${sel.has(o)?"checked":""}> ${o}${isPrefName(o)?'<span class="pref">偏好</span>':''} <span class="note">(${money(ops[o])}起)</span></label>`).join("")
+   + ` <button class="btn" id="bAll">全選</button> <button class="btn" id="bPref">只看偏好航空</button>`;
+  el.querySelectorAll("input").forEach(i => i.onchange = () => { i.checked ? sel.add(i.value) : sel.delete(i.value); renderAll(); });
+  $("#bAll").onclick = () => { sel = new Set(opList); renderFilters(); renderAll(); };
+  $("#bPref").onclick = () => { sel = new Set(opList.filter(isPrefName)); renderFilters(); renderAll(); };
+}
+const fl = c => c.flights.filter(f => sel.has(f.op) && f.price);
+const best = c => fl(c).reduce((m,f) => (!m || f.price < m.price) ? f : m, null);
+const id = c => `c_${c.dep}_${c.ret}`;
+
+function renderKPIs(){
+  const all = DATA.combos.map(c => ({c, f: best(c)})).filter(x => x.f).sort((a,b)=>a.f.price-b.f.price);
+  let h = "";
+  if (all[0]) h += `<div class="kpi best"><div class="t">✈️ 篩選條件下機票最低</div><div class="v">${money(all[0].f.price)}</div><div class="d">${all[0].f.op} ${all[0].f.no}<br>${all[0].c.depL} → ${all[0].c.retL}（${all[0].c.days}晚）</div></div>`;
+  const per = {};
+  DATA.combos.forEach(c => fl(c).forEach(f => { if(!per[f.op] || f.price < per[f.op].f.price) per[f.op] = {f, c}; }));
+  Object.entries(per).sort((a,b)=>a[1].f.price-b[1].f.price).forEach(([op, x]) => {
+    h += `<div class="kpi"><div class="t">✈️ ${op}${isPrefName(op)?'<span class="pref">偏好</span>':''} 最低</div><div class="v">${money(x.f.price)}</div><div class="d">${x.f.no} ${x.f.dt}→${x.f.at}<br>${x.c.depL} → ${x.c.retL}（${x.c.days}晚）</div></div>`;
+  });
+  if (DATA.hotels && DATA.hotels.hotels.length) {
+    const htls = [...DATA.hotels.hotels].sort((a,b)=>a.priceNight - b.priceNight);
+    const hBest = htls[0];
+    const hTop = DATA.hotels.hotels[0];
+    h += `<div class="kpi htl"><div class="t">🏨 推薦住宿最高CP值（5晚）</div><div class="v">${money(hBest.price5N / 2)}<small style="font-size:12px">/人</small></div><div class="d">${hBest.name.split('(')[0]}<br>每晚 ${money(hBest.priceNight)}（雙人5晚 ${money(hBest.price5N)}）</div></div>`;
+    if (all[0]) {
+      const pkgMin = all[0].f.price + Math.round(hBest.price5N / 2);
+      const pkgRec = all[0].f.price + Math.round(hTop.price5N / 2);
+      h += `<div class="kpi htl"><div class="t">🧳 5晚機＋酒每人總價區間</div><div class="v">${money(pkgMin)} 起</div><div class="d">小資配：${money(pkgMin)}/人<br>首選飯店配：${money(pkgRec)}/人</div></div>`;
+    }
+  }
+  if (DATA.lcc) h += `<div class="kpi lcc"><div class="t">參考：廉價航空最低（已排除）</div><div class="v">${money(DATA.lcc[0])}</div><div class="d">${DATA.lcc[1]}<br>${DATA.lcc[2]}</div></div>`;
+  $("#kpis").innerHTML = h || "<p>無符合條件的航班</p>";
+}
+function color(p, lo, hi){ if(hi===lo) return "#c9f0dd"; const t=(p-lo)/(hi-lo); const g=[201,240,221], r=[253,226,207]; const c=g.map((v,i)=>Math.round(v+(r[i]-v)*t)); return `rgb(${c})`; }
+function renderMatrix(){
+  const deps = [...new Set(DATA.combos.map(c=>c.dep))].sort(), rets = [...new Set(DATA.combos.map(c=>c.ret))].sort();
+  const lab = {}; DATA.combos.forEach(c=>{lab[c.dep]=c.depL; lab["r"+c.ret]=c.retL;});
+  const prices = DATA.combos.map(best).filter(Boolean).map(f=>f.price); const lo=Math.min(...prices), hi=Math.max(...prices);
+  let h = `<tr><th>去程 \\ 回程</th>${rets.map(r=>`<th>${lab["r"+r]}</th>`).join("")}</tr>`;
+  deps.forEach(d => {
+    h += `<tr><th>${lab[d]}</th>`;
+    rets.forEach(r => {
+      const c = DATA.combos.find(x=>x.dep===d && x.ret===r);
+      if(!c){ h += `<td class="na">—</td>`; return; }
+      const b = best(c);
+      h += b ? `<td class="cell" style="background:${color(b.price,lo,hi)}" onclick="go('${id(c)}')">${b.price.toLocaleString()}<small>${b.op}·${c.days}晚</small></td>` : `<td class="na">${c.ok?"無航班":"抓取失敗"}</td>`;
+    });
+    h += "</tr>";
+  });
+  $("#matrix").innerHTML = h;
+}
+function renderAir(){
+  const cols = opList.filter(o=>sel.has(o));
+  let h = `<tr><th class="l">去程 → 回程</th><th>住幾晚</th>${cols.map(o=>`<th>${o}${isPrefName(o)?'<span class="pref">偏好</span>':''}</th>`).join("")}</tr>`;
+  DATA.combos.forEach(c => {
+    const m = {}; fl(c).forEach(f => { if(m[f.op]==null || f.price<m[f.op]) m[f.op]=f.price; });
+    const lo = Math.min(...Object.values(m));
+    h += `<tr><td class="l"><a href="#${id(c)}" onclick="go('${id(c)}');return false;">${c.depL} → ${c.retL}</a></td><td>${c.days}</td>${cols.map(o=>`<td class="${m[o]===lo?'low':''}">${m[o]!=null?m[o].toLocaleString():'—'}</td>`).join("")}</tr>`;
+  });
+  $("#airTable").innerHTML = h;
+}
+
+function renderAreaGuide(){
+  if(!DATA.hotels) return;
+  $("#areaGuide").innerHTML = DATA.hotels.areaGuide.map(a => `
+    <div class="area-box">
+      <h3><span>📍 ${a.name}</span><span class="badge">${a.badge}</span></h3>
+      <ul>
+        <li><strong>✈️ 來回機場：</strong>${a.airport}</li>
+        <li><strong>🛍️ 逛街美食：</strong>${a.shopping}</li>
+        <li><strong>👍 推薦理由：</strong>${a.pros}</li>
+      </ul>
+    </div>
+  `).join("");
+}
+
+function setHotelSort(mode){
+  hotelSort = mode;
+  ["Rec","Price","Score"].forEach(k => $("#sort"+k).classList.toggle("active", mode===k.toLowerCase()));
+  renderHotels();
+}
+
+function htlUrl(h, ci, co){
+  return `https://hotel.eztravel.com.tw/detail?CheckInDate=${ci}&CheckOutDate=${co}&Person=2&Room=1&Ages=&CityID=${h.cityId}&HotelID=${h.id}`;
+}
+
+function renderHotels(){
+  if(!DATA.hotels) return;
+  const nights = parseInt($("#stayNights").value, 10) || 5;
+  const list = [...DATA.hotels.hotels];
+  if(hotelSort === 'price') list.sort((a,b) => a.priceNight - b.priceNight);
+  else if(hotelSort === 'score') list.sort((a,b) => (b.score - a.score) || (b.reviews - a.reviews));
+  const minNight = Math.min(...list.map(x=>x.priceNight));
+  const coDate = `2027-03-0${nights}`;
+  let h = `<tr>
+    <th class="l">飯店名稱 / 特色標籤</th>
+    <th>商圈位置</th>
+    <th>評分 (評鑑數)</th>
+    <th class="l">🚇 車站距離 & ✈️ 機場交通</th>
+    <th class="l">🛍️ 周邊逛街 & 推薦亮點</th>
+    <th>每晚含稅均價<br><small>(雙人房)</small></th>
+    <th>住 ${nights} 晚含稅總價<br><small>(雙人房1間)</small></th>
+    <th>每人分攤 (${nights}晚)<br><small>(2人1室÷2)</small></th>
+    <th>訂房連結</th>
+  </tr>`;
+  list.forEach(x => {
+    const tot = x.priceNight * nights;
+    const perPerson = Math.round(tot / 2);
+    const isLow = x.priceNight === minNight;
+    const stars = "★".repeat(Math.floor(x.star)) + (x.star%1 ? "☆" : "");
+    const tags = (x.tags||[]).map(t => `<span class="tag ${t.includes('早餐')||t.includes('取消')?'green':''}">${t}</span>`).join("");
+    h += `<tr>
+      <td class="l wrap"><strong>${x.name}</strong> <span class="pref">${stars}</span><br>${tags}</td>
+      <td><strong>${x.area}</strong></td>
+      <td><strong style="color:var(--pri);font-size:15px">${x.score.toFixed(1)}</strong> / 5<br><span class="note">(${x.reviews.toLocaleString()}則)</span></td>
+      <td class="l wrap"><div>🚇 ${x.distStation}</div><div class="note" style="margin-top:3px">✈️ ${x.airportAccess}</div></td>
+      <td class="l wrap"><div>🛍️ ${x.shopping}</div><div class="note" style="margin-top:3px">✨ ${x.highlight}</div></td>
+      <td class="${isLow?'low':''}">${money(x.priceNight)}</td>
+      <td class="${isLow?'low':''}"><strong>${money(tot)}</strong></td>
+      <td style="color:var(--htl);font-weight:700">${money(perPerson)}/人</td>
+      <td><a href="${htlUrl(x, '2027-02-28', coDate)}" target="_blank" rel="noopener">查看房型 ➡️</a></td>
+    </tr>`;
+  });
+  $("#hotelTable").innerHTML = h;
+}
+
+function initPkgCombo(){
+  const selEl = $("#pkgCombo");
+  selEl.innerHTML = DATA.combos.map((c, idx) => `<option value="${idx}" ${c.dep==='0228'&&c.ret==='0305'?'selected':''}>${c.depL} → ${c.retL}（住 ${c.days} 晚）</option>`).join("");
+}
+
+function renderPkg(){
+  if(!DATA.hotels || !DATA.combos.length) return;
+  const idx = parseInt($("#pkgCombo").value, 10) || 0;
+  const c = DATA.combos[idx] || DATA.combos[0];
+  const mode = $("#pkgFlightMode").value;
+  const candidates = (mode === 'pref') ? fl(c).filter(f => f.pref) : fl(c);
+  const fBest = candidates.reduce((m,f) => (!m || f.price < m.price) ? f : m, null);
+  const ci = `2027-${c.dep.slice(0,2)}-${c.dep.slice(2,4)}`;
+  const co = `2027-${c.ret.slice(0,2)}-${c.ret.slice(2,4)}`;
+
+  if(!fBest){
+    $("#pkgTable").innerHTML = `<tr><td>此日期組合在目前篩選條件下無符合的航班，請勾選更多航空公司。</td></tr>`;
+    return;
+  }
+  const list = [...DATA.hotels.hotels];
+  const minTot = Math.min(...list.map(x => fBest.price + Math.round(x.priceNight * c.days / 2)));
+  let h = `<tr>
+    <th class="l">搭配飯店（${c.depL}→${c.retL}，共 ${c.days} 晚）</th>
+    <th>商圈</th>
+    <th>評分</th>
+    <th>✈️ 搭配機票（每人來回含稅）</th>
+    <th>🏨 住宿總價（${c.days}晚雙人房）</th>
+    <th>🏨 每人住宿分攤（÷2人）</th>
+    <th>💰 機＋酒 每人含稅總計</th>
+    <th>快速預訂</th>
+  </tr>`;
+  list.forEach(x => {
+    const hTot = x.priceNight * c.days;
+    const hPer = Math.round(hTot / 2);
+    const pkgPer = fBest.price + hPer;
+    const isLow = pkgPer === minTot;
+    h += `<tr>
+      <td class="l"><strong>${x.name.split('(')[0]}</strong></td>
+      <td>${x.area}</td>
+      <td>${x.score.toFixed(1)}</td>
+      <td>${fBest.op} ${fBest.no}（${fBest.dt}出發）<br><strong>${money(fBest.price)}</strong></td>
+      <td>${money(hTot)}<br><span class="note">(${money(x.priceNight)}/晚)</span></td>
+      <td>${money(hPer)}</td>
+      <td class="${isLow?'low':''}" style="font-size:16px"><strong>${money(pkgPer)} / 人</strong></td>
+      <td><a href="${c.url}" target="_blank" rel="noopener">訂機票</a> · <a href="${htlUrl(x, ci, co)}" target="_blank" rel="noopener">訂飯店</a></td>
+    </tr>`;
+  });
+  $("#pkgTable").innerHTML = h;
+}
+
+function sameGroup(a, b){ const k = ["中華","長榮","星宇","大韓","韓亞","日本航空","全日","華信","國泰","日本越洋"]; return k.some(x => (a||"").includes(x) && (b||"").includes(x)); }
+function renderDetails(){
+  $("#details").innerHTML = DATA.combos.map(c => {
+    const list = fl(c), b = best(c);
+    const opsHere = [...new Set(list.map(f=>f.op))];
+    const rets = (DATA.returns[c.ret]||[]).filter(r => opsHere.some(o => sameGroup(o, r.op) || o===r.op));
+    return `<details id="${id(c)}"><summary>${c.depL} → ${c.retL} <span class="note">住 ${c.days} 晚 · ${list.length} 班可選</span><span class="p">${b?money(b.price)+" 起 · "+b.op:"無符合航班"}</span></summary><div class="in">
+      <h4>🛫 去程 ${c.depL} 台北 → 沖繩（價格＝來回含稅價起）</h4>
+      ${list.length?`<div class="scroll"><table><tr><th class="l">航空公司 / 班號</th><th>起飛</th><th>抵達</th><th>飛行時間</th><th>來回含稅價</th></tr>${list.map(f=>`<tr><td class="l">${f.airline} ${f.no}${f.cs?`<span class="cs">聯營・實際 ${f.op}</span>`:''}${f.pref?'<span class="pref">偏好</span>':''}</td><td>${f.dt} <span class="note">${f.da}</span></td><td>${f.at} <span class="note">${f.aa}</span></td><td>${f.dur}</td><td class="${f===b?'low':''}">${money(f.price)}</td></tr>`).join("")}</table></div>`:'<p class="note">無符合篩選的航班</p>'}
+      <h4>🛬 回程 ${c.retL} 沖繩 → 台北 可搭配班次（同航空集團）</h4>
+      ${rets.length?`<div class="scroll"><table><tr><th class="l">航空公司 / 班號</th><th>起飛</th><th>抵達</th><th>飛行時間</th></tr>${rets.map(r=>`<tr><td class="l">${r.airline} ${r.no}${r.cs?`<span class="cs">聯營・實際 ${r.op}</span>`:''}</td><td>${r.dt} <span class="note">${r.da}</span></td><td>${r.at} <span class="note">${r.aa}</span></td><td>${r.dur}</td></tr>`).join("")}</table></div>`:'<p class="note">（未取得回程時刻資料）</p>'}
+      <p><a href="${c.url}" target="_blank" rel="noopener">➡️ 前往 ezTravel 查看此日期組合</a></p>
+    </div></details>`;
+  }).join("");
+}
+function go(i){ const e=document.getElementById(i); if(e){ e.open=true; e.scrollIntoView({behavior:"smooth",block:"start"}); } }
+function renderAll(){ renderKPIs(); renderMatrix(); renderAir(); renderAreaGuide(); renderHotels(); renderPkg(); renderDetails(); }
+renderFilters(); initPkgCombo(); renderAll();
+</script>
+</body>
+</html>
