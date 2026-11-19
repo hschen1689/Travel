@@ -163,9 +163,52 @@ iframe{width:100%;height:780px;border:0;display:block}
           <li><strong>航班選擇：</strong>華航、長榮、大韓、韓亞航班極密集（此時段無星宇直飛）</li>
         </ul>
       </div>
-      <div class="dest-foot">
+      <div class="dest-foot" style="flex-wrap:wrap">
         <a class="btn-go sel" href="./易遊網-機票住宿_台北-首爾_2027-02-27至03-07.html">進入首爾完整比價 ➡️</a>
         <a class="btn-sub" href="#viewer" onclick="switchTab('sel')">頁內預覽</a>
+        <a class="btn-go" style="flex-basis:100%;background:#0f766e" href="./首爾住宿規劃.html">🏨 首爾住宿＆機場交通規劃（2人/3人投票） ➡️</a>
+      </div>
+    </article>
+
+    <!-- 首爾住宿＆交通規劃提案 -->
+    <article class="dest-card">
+      <div class="dest-head" style="background:linear-gradient(135deg,#115e59,#0d9488)">
+        <h2>🏨 首爾・住宿＆交通提案</h2>
+        <span class="code">弘大優先 vs. 明洞</span>
+      </div>
+      <div class="dest-body">
+        <div class="price-grid">
+          <div class="pbox">
+            <div class="lbl">🚇 仁川機場 ➔ 弘大</div>
+            <div class="val good">52 分鐘直達</div>
+            <div class="meta">AREX 普通列車 (約 NT$110)</div>
+          </div>
+          <div class="pbox">
+            <div class="lbl">🚌 仁川機場 ➔ 明洞</div>
+            <div class="val">75 分鐘直達</div>
+            <div class="meta">6015 機場巴士 / 3人可包車</div>
+          </div>
+          <div class="pbox">
+            <div class="lbl">🅰️ Plan A：2人同行</div>
+            <div class="val">弘大3間＋明洞2間</div>
+            <div class="meta">美居大使 / 智選假日 / L7 等</div>
+          </div>
+          <div class="pbox">
+            <div class="lbl">🅱️ Plan B：3人同行</div>
+            <div class="val good">原生正規三人房</div>
+            <div class="meta">L7家庭房 / 美居3人 / 九樹3單床</div>
+          </div>
+        </div>
+        <ul class="info-list">
+          <li><strong>核心訴求：</strong>下樓就能逛街、美食與夜生活豐富（以<strong>弘大商圈</strong>為第一優先）</li>
+          <li><strong>地鐵動線：</strong>首爾地鐵「黃金 2 號線」一線直達弘大、明洞乙支路、聖水洞、江南</li>
+          <li><strong>方案比較：</strong>提供 <strong>2人房 (Plan A)</strong> 與 <strong>正規3人房 (Plan B)</strong> 每晚總價與每人均攤比較</li>
+          <li><strong>團員投票器：</strong>網頁底部內建勾選投票＆<strong>一鍵複製回報文字貼回 LINE 群組</strong></li>
+        </ul>
+      </div>
+      <div class="dest-foot">
+        <a class="btn-go" style="background:#0d9488" href="./首爾住宿規劃.html">進入首爾住宿規劃＆投票 ➡️</a>
+        <a class="btn-sub" href="#viewer" onclick="switchTab('sel_plan')">頁內預覽</a>
       </div>
     </article>
 
@@ -289,6 +332,7 @@ iframe{width:100%;height:780px;border:0;display:block}
       <div class="viewer-tabs">
         <button id="tab-pus" class="active" onclick="switchTab('pus')">🇰🇷 釜山（台北⇄釜山＋西面住宿）</button>
         <button id="tab-sel" onclick="switchTab('sel')">🇰🇷 首爾（台北⇄首爾＋弘大住宿）</button>
+        <button id="tab-sel_plan" onclick="switchTab('sel_plan')">🏨 首爾住宿規劃（交通＋2人/3人投票）</button>
         <button id="tab-oka" onclick="switchTab('oka')">🇯🇵 沖繩（台北⇄沖繩＋國際通住宿）</button>
         <a id="extLink" class="open-ext" href="./易遊網-機票住宿_台北-釜山_2027-02-27至03-07.html" target="_blank">在新分頁單獨開啟 ↗</a>
       </div>
@@ -301,6 +345,7 @@ iframe{width:100%;height:780px;border:0;display:block}
 const FILES = {
   pus: "./易遊網-機票住宿_台北-釜山_2027-02-27至03-07.html",
   sel: "./易遊網-機票住宿_台北-首爾_2027-02-27至03-07.html",
+  sel_plan: "./首爾住宿規劃.html",
   oka: "./易遊網-機票住宿_台北-沖繩_2027-02-27至03-07.html"
 };
 
@@ -402,7 +447,7 @@ function renderCompare(){
 }
 
 function switchTab(k){
-  ["pus","sel","oka"].forEach(x => document.getElementById("tab-"+x).classList.toggle("active", x===k));
+  ["pus","sel","sel_plan","oka"].forEach(x => document.getElementById("tab-"+x).classList.toggle("active", x===k));
   document.getElementById("frame").src = FILES[k];
   document.getElementById("extLink").href = FILES[k];
 }

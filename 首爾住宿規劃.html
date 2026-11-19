@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>首爾自由行｜機場交通＆住宿決策提案（弘大 vs. 明洞）</title>
+  <style>
+    :root {
+      --bg: #f4f6fb;
+      --card: #ffffff;
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --primary-light: #eff6ff;
+      --hongdae: #059669;
+      --hongdae-bg: #ecfdf5;
+      --myeongdong: #7c3aed;
+      --myeongdong-bg: #f5f3ff;
+      --accent: #f59e0b;
+      --text: #1e293b;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.07), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+      --radius: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      padding-bottom: 60px;
+    }
+
+    /* Hero Header */
+    .hero {
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 55%, #047857 100%);
+      color: #ffffff;
+      padding: 48px 24px 56px;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.16);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      margin-bottom: 14px;
+    }
+
+    .hero h1 {
+      font-size: clamp(1.65rem, 4vw, 2.4rem);
+      font-weight: 800;
+      margin-bottom: 12px;
+      letter-spacing: -0.02em;
+    }
+
+    .hero p {
+      font-size: 1.05rem;
+      color: rgba(255, 255, 255, 0.88);
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .container {
+      max-width: 1120px;
+      margin: -32px auto 0;
+      padding: 0 20px;
+      position: relative;
+      z-index: 10;
+    }
+
+    /* Quick Action Bar */
+    .toolbar {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 16px 24px;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 28px;
+      border: 1px solid var(--border);
+    }
+
+    .toolbar-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 600;
+      color: var(--text);
+      font-size: 0.95rem;
+    }
+
+    .toolbar-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      border: none;
+      cursor: pointer;
+      padding: 9px 18px;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+    }
+    .btn-primary:hover {
+      background: var(--primary-dark);
+    }
+
+    .btn-outline {
+      background: #f8fafc;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+    .btn-outline:hover {
+      background: #e2e8f0;
+    }
+
+    /* Section Styling */
+    .section {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow);
+      margin-bottom: 28px;
+      border: 1px solid var(--border);
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 20px;
+      padding-bottom: 14px;
+      border-bottom: 2px solid #f1f5f9;
+    }
+
+    .section-title {
+      font-size: 1.35rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 700;
+    }
+
+    .tag-hongdae {
+      background: var(--hongdae-bg);
+      color: var(--hongdae);
+      border: 1px solid #a7f3d0;
+    }
+
+    .tag-myeongdong {
+      background: var(--myeongdong-bg);
+      color: var(--myeongdong);
+      border: 1px solid #ddd6fe;
+    }
+
+    .tag-gold {
+      background: #fef3c7;
+      color: #b45309;
+      border: 1px solid #fde68a;
+    }
+
+    /* Grid & Cards */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+    }
+
+    .transport-card {
+      border-radius: 14px;
+      padding: 22px;
+      border: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .transport-card.hongdae {
+      background: linear-gradient(180deg, #ecfdf5 0%, #ffffff 45%);
+      border-color: #a7f3d0;
+    }
+
+    .transport-card.myeongdong {
+      background: linear-gradient(180deg, #f5f3ff 0%, #ffffff 45%);
+      border-color: #ddd6fe;
+    }
+
+    .transport-card h3 {
+      font-size: 1.18rem;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .route-box {
+      background: rgba(255, 255, 255, 0.85);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px;
+      margin-bottom: 12px;
+    }
+
+    .route-title {
+      font-weight: 700;
+      font-size: 0.96rem;
+      margin-bottom: 6px;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .route-meta {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .route-meta span {
+      background: #f1f5f9;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-weight: 600;
+      color: #334155;
+    }
+
+    /* Subway Diagram */
+    .subway-flow {
+      background: #0f172a;
+      color: #f8fafc;
+      border-radius: 14px;
+      padding: 22px;
+      margin-top: 18px;
+    }
+
+    .subway-line-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #16a34a;
+      color: #fff;
+      font-weight: 700;
+      padding: 5px 14px;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      margin-bottom: 14px;
+    }
+
+    .stations-wrap {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 12px 0;
+    }
+
+    .station-node {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      padding: 8px 14px;
+      border-radius: 10px;
+      font-size: 0.88rem;
+      font-weight: 600;
+    }
+
+    .station-node.highlight-green {
+      background: #059669;
+      border-color: #34d399;
+      color: #fff;
+      box-shadow: 0 0 12px rgba(16, 185, 129, 0.45);
+    }
+
+    .station-node.highlight-purple {
+      background: #6d28d9;
+      border-color: #a78bfa;
+      color: #fff;
+    }
+
+    .arrow {
+      color: #94a3b8;
+      font-weight: bold;
+    }
+
+    /* Comparison Table */
+    .table-responsive {
+      overflow-x: auto;
+      margin-top: 10px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.94rem;
+    }
+
+    th, td {
+      padding: 14px 16px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+
+    th {
+      background: #f8fafc;
+      font-weight: 700;
+      color: #334155;
+    }
+
+    /* Plan Tabs */
+    .plan-tabs {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+
+    .plan-tab {
+      flex: 1;
+      min-width: 220px;
+      padding: 16px 20px;
+      border-radius: 14px;
+      border: 2px solid var(--border);
+      background: #f8fafc;
+      cursor: pointer;
+      text-align: left;
+      transition: all 0.2s ease;
+    }
+
+    .plan-tab.active {
+      border-color: var(--primary);
+      background: var(--primary-light);
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.14);
+    }
+
+    .plan-tab-title {
+      font-size: 1.12rem;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .plan-tab-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .plan-panel {
+      display: block;
+    }
+
+    .plan-panel.hidden {
+      display: none;
+    }
+
+    /* Hotel Cards */
+    .hotel-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+      gap: 20px;
+      margin-top: 16px;
+      margin-bottom: 26px;
+    }
+
+    .hotel-card {
+      border: 2px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.2s ease;
+      position: relative;
+    }
+
+    .hotel-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 24px -6px rgba(15, 23, 42, 0.12);
+    }
+
+    .hotel-card.selected {
+      border-color: var(--primary);
+      background: #f8fbff;
+    }
+
+    .hotel-card.priority-hongdae {
+      border-top: 5px solid var(--hongdae);
+    }
+
+    .hotel-card.priority-myeongdong {
+      border-top: 5px solid var(--myeongdong);
+    }
+
+    .hotel-rank {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .hotel-name {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 2px;
+    }
+
+    .hotel-en {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    .hotel-specs {
+      list-style: none;
+      margin-bottom: 16px;
+      font-size: 0.9rem;
+    }
+
+    .hotel-specs li {
+      margin-bottom: 8px;
+      padding-left: 22px;
+      position: relative;
+    }
+
+    .hotel-specs li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      color: var(--hongdae);
+      font-weight: bold;
+    }
+
+    .hotel-footer {
+      border-top: 1px dashed var(--border);
+      padding-top: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .price-box {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .price-val {
+      font-size: 1.08rem;
+      font-weight: 800;
+      color: #dc2626;
+      display: block;
+    }
+
+    .vote-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      background: #f1f5f9;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 0.86rem;
+      font-weight: 700;
+      user-select: none;
+      transition: all 0.15s;
+    }
+
+    .vote-label:hover {
+      background: #e2e8f0;
+    }
+
+    .vote-checkbox:checked + span {
+      color: var(--primary);
+    }
+
+    .tip-banner {
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      border-left: 5px solid #f59e0b;
+      padding: 16px 20px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      font-size: 0.93rem;
+      color: #78350f;
+    }
+
+    /* Voting Summary Box */
+    .vote-box {
+      background: linear-gradient(135deg, #eff6ff 0%, #f0fdf4 100%);
+      border: 2px solid #bfdbfe;
+      border-radius: var(--radius);
+      padding: 24px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-top: 14px;
+      margin-bottom: 16px;
+    }
+
+    .input-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: #334155;
+    }
+
+    .input-group input, .input-group select, .input-group textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: 1px solid #cbd5e1;
+      font-size: 0.92rem;
+      font-family: inherit;
+    }
+
+    .copy-output {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 16px;
+      border-radius: 10px;
+      font-family: monospace;
+      font-size: 0.88rem;
+      white-space: pre-wrap;
+      margin-top: 12px;
+      display: none;
+    }
+
+    @media print {
+      .toolbar, .vote-box {
+        display: none;
+      }
+      .plan-panel.hidden {
+        display: block !important;
+      }
+      body {
+        background: #fff;
+      }
+      .section {
+        box-shadow: none;
+        border: 1px solid #ccc;
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Banner -->
+  <header class="hero">
+    <div class="hero-badge">🇰🇷 首爾自由行・團員決策提案表</div>
+    <h1>仁川機場交通 ＆ 最佳住宿點比較</h1>
+    <p>主打訴求：下樓就能逛街、美食與夜生活豐富｜以【弘大商圈】為第一優先，【明洞商圈】為備選對照</p>
+  </header>
+
+  <main class="container">
+
+    <!-- Quick Toolbar -->
+    <div class="toolbar">
+      <div class="toolbar-info">
+        <span>👋 團員請看：可切換「2人方案」與「3人方案」，勾選喜歡的飯店後可在最下方一鍵複製投票結果貼回群組！</span>
+      </div>
+      <div class="toolbar-actions">
+        <button class="btn btn-outline" onclick="showAllPlans()">📖 同時展開 2人＋3人方案</button>
+        <button class="btn btn-primary" onclick="window.print()">🖨️ 列印 / 存成 PDF</button>
+      </div>
+    </div>
+
+    <!-- Section 1: 機場交通與首爾地鐵 -->
+    <section class="section">
+      <div class="section-header">
+        <div class="section-title">✈️ 一、仁川機場 (ICN) 進市區交通 ＆ 首爾地鐵關鍵</div>
+        <span class="tag tag-hongdae">弘大交通大勝：便宜、免換車、不塞車</span>
+      </div>
+
+      <div class="grid-2">
+        <!-- 弘大交通 -->
+        <div class="transport-card hongdae">
+          <h3>
+            <span>🟢 往【弘大入口站】</span>
+            <span class="tag tag-hongdae">推薦首選</span>
+          </h3>
+          <div class="route-box">
+            <div class="route-title">
+              <span>🥇 首選：AREX 機場快線（普通列車 All-Stop）</span>
+              <span style="color:#059669;">★ 最推薦</span>
+            </div>
+            <div class="route-meta">
+              <span>⏱️ 約 50～55 分鐘</span>
+              <span>💰 約 4,550 韓元 (約 NT$110)</span>
+              <span>🔄 免換車直達</span>
+            </div>
+            <p style="font-size:0.88rem; color:#475569;">
+              仁川機場 T1 / T2 直接刷 T-money 卡進站，一班車直達「弘大入口站」。每 6～12 分鐘一班，站內全程有電梯／手扶梯，拖大行李超輕鬆！
+            </p>
+          </div>
+          <div class="route-box" style="margin-bottom:0;">
+            <div class="route-title">
+              <span>🥈 次選：6002 號機場巴士</span>
+            </div>
+            <div class="route-meta">
+              <span>⏱️ 約 65～75 分鐘</span>
+              <span>💰 17,000 韓元 (約 NT$400)</span>
+            </div>
+            <p style="font-size:0.88rem; color:#475569;">
+              適合行李極多或飯店離地鐵出口較遠時搭乘。
+            </p>
+          </div>
+        </div>
+
+        <!-- 明洞交通 -->
+        <div class="transport-card myeongdong">
+          <h3>
+            <span>🟣 往【明洞站 / 乙支路入口】</span>
+            <span class="tag tag-myeongdong">備選方案</span>
+          </h3>
+          <div class="route-box">
+            <div class="route-title">
+              <span>🥇 首選：6015 / 6001 號機場巴士</span>
+              <span style="color:#7c3aed;">★ 免扛行李</span>
+            </div>
+            <div class="route-meta">
+              <span>⏱️ 約 70～90 分鐘</span>
+              <span>💰 17,000 韓元 (約 NT$400)</span>
+              <span>🚌 直達飯店路口</span>
+            </div>
+            <p style="font-size:0.88rem; color:#475569;">
+              明洞地鐵站樓梯多，搭機場巴士由司機幫忙放行李，直達明洞各大飯店門口最省力（但上下班尖峰可能塞車）。<br>
+              <strong style="color:#b45309;">💡 3人同行秘訣：</strong>3人搭巴士要 51,000 韓元，直接叫機場計程車／包車（約 65,000～75,000 韓元）每人只多百元台幣就能專車直達！
+            </p>
+          </div>
+          <div class="route-box" style="margin-bottom:0;">
+            <div class="route-title">
+              <span>🥈 次選：AREX 機場快線 ＋ 首爾站轉地鐵 4 號線</span>
+            </div>
+            <div class="route-meta">
+              <span>⏱️ 約 65～75 分鐘</span>
+              <span>💰 約 4,650 韓元 (約 NT$115)</span>
+            </div>
+            <p style="font-size:0.88rem; color:#475569;">
+              需在「首爾站」走長通道轉乘 4 號線至明洞站（建議走 3 號或 7 號出口才有手扶梯／電梯）。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 首爾地鐵黃金 2 號線圖解 -->
+      <div class="subway-flow">
+        <div class="subway-line-badge">🚇 首爾地鐵「黃金 2 號線（綠色環狀線）」一線玩透透</div>
+        <p style="font-size:0.9rem; color:#cbd5e1; margin-bottom:10px;">
+          首爾最精華的逛街與美食站點幾乎都在 <strong>地鐵 2 號線</strong> 上！住在<strong>弘大</strong>或<strong>明洞北側（乙支路入口站）</strong>，去哪裡都不用一直換車：
+        </p>
+        <div class="stations-wrap">
+          <div class="station-node">✈️ 仁川機場</div>
+          <span class="arrow">➔ AREX 52分直達 ➔</span>
+          <div class="station-node highlight-green">🟢 弘大入口站 (2號線/AREX)</div>
+          <span class="arrow">➔</span>
+          <div class="station-node">新村 / 梨大</div>
+          <span class="arrow">➔ 15分鐘 ➔</span>
+          <div class="station-node highlight-purple">🟣 乙支路入口站 (明洞商圈)</div>
+          <span class="arrow">➔</span>
+          <div class="station-node">東大門歷史文化公園</div>
+          <span class="arrow">➔</span>
+          <div class="station-node">☕ 聖水洞</div>
+          <span class="arrow">➔</span>
+          <div class="station-node">蠶室 / 江南</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: 弘大 vs 明洞 商圈比較 -->
+    <section class="section">
+      <div class="section-header">
+        <div class="section-title">🛍️ 二、為什麼我們優先選【弘大】？（弘大 vs. 明洞商圈對比）</div>
+        <span class="tag tag-gold">核心訴求：下樓就能逛、美食＆夜生活豐富</span>
+      </div>
+
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:18%;">比較項目</th>
+              <th style="width:41%; background:#ecfdf5; color:#065f46;">🏆 第一優先：弘大商圈（8、9號出口／延南洞）</th>
+              <th style="width:41%; background:#f5f3ff; color:#5b21b6;">🛍️ 第二備選：明洞商圈（乙支路入口～明洞站）</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>🌙 夜生活＆營業時間</strong></td>
+              <td><strong>越夜越嗨（開到凌晨 02:00～05:00）</strong><br>服飾店開到 23:00+，韓式烤肉、炸雞、布帳馬車、酒吧、街頭表演熱鬧到半夜，下樓隨時有宵夜。</td>
+              <td><strong>打烊較早（約 22:00～23:00 收攤）</strong><br>百貨免稅店 20:00～21:00 關門，路邊攤約 22:00 收攤；深夜僅剩乙支路三街一帶有居酒屋與炸雞。</td>
+            </tr>
+            <tr>
+              <td><strong>👗 逛街購物風格</strong></td>
+              <td>韓國年輕潮流服飾、小眾設計師品牌、延南洞文創選物店、Olive Young 大型店、潮鞋與拍貼機。</td>
+              <td>國際精品、樂天／新世界百貨免稅店、各大美妝旗艦店、伴手禮超市掃貨、換錢所匯率最佳。</td>
+            </tr>
+            <tr>
+              <td><strong>✈️ 機場往返體驗</strong></td>
+              <td>⭐⭐⭐⭐⭐（AREX 直達 52 分鐘、NT$110 超省錢）</td>
+              <td>⭐⭐⭐⭐（搭 6015 機場巴士直達，約 75 分鐘、NT$400）</td>
+            </tr>
+            <tr>
+              <td><strong>📍 最佳住宿落點</strong></td>
+              <td><strong>弘大入口站 8、9 號出口</strong>（下樓即逛街主街）或 <strong>5 號出口 AREX 共構大樓</strong>（免淋雨出站即到）。</td>
+              <td><strong>2 號線乙支路入口站 ～ 4 號線明洞站之間</strong>（平坦不爬坡、雙地鐵交會、去弘大/聖水洞免換車）。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Section 3: Plan A (2人) & Plan B (3人) 住宿提案 -->
+    <section class="section">
+      <div class="section-header">
+        <div class="section-title">🏨 三、住宿方案挑選（Plan A 雙人方案 vs. Plan B 三人方案）</div>
+        <span style="font-size:0.88rem; color:var(--text-muted);">💡 點擊下方頁籤可切換人數方案，勾選卡片右下角「投我一票」可加入底部統計</span>
+      </div>
+
+      <!-- Tabs -->
+      <div class="plan-tabs">
+        <button class="plan-tab active" id="tab-btn-2p" onclick="switchPlan('2p')">
+          <div class="plan-tab-title">
+            <span>🅰️ Plan A：【2人同行】雙人精華方案</span>
+            <span class="tag tag-hongdae">2人房 (Double / Twin)</span>
+          </div>
+          <div class="plan-tab-desc">交通搭 AREX 最划算！精選下樓即商圈、高質感新穎雙人房（弘大 3 間 ＋ 明洞 2 間）</div>
+        </button>
+        <button class="plan-tab" id="tab-btn-3p" onclick="switchPlan('3p')">
+          <div class="plan-tab-title">
+            <span>🅱️ Plan B：【3人同行】三人舒適方案</span>
+            <span class="tag tag-myeongdong">原生 3人房 (Triple / Family)</span>
+          </div>
+          <div class="plan-tab-desc">拒絕硬塞行軍床！精選 3 個大行李箱能攤開、衛浴不打架的正規三人房（弘大 3 間 ＋ 明洞 2 間）</div>
+        </button>
+      </div>
+
+      <!-- ==================== PLAN A: 2人方案 ==================== -->
+      <div id="panel-2p" class="plan-panel">
+        <div class="tip-banner">
+          <strong>🅰️ 【Plan A：2人同行】重點提示：</strong>
+          2人出遊機動性最高！住弘大搭 AREX 來回機場每人只要約 NT$220；喜歡半夜逛街吃烤肉首選<strong>「弘大美居大使」</strong>，不想拉行李走馬路首選<strong>「弘大智選假日（出站直通）」</strong>。
+        </div>
+
+        <h3 style="font-size:1.15rem; color:var(--hongdae); margin-bottom:4px;">🟢 弘大優先推薦（2人房・3 選 1）</h3>
+        <div class="hotel-grid">
+          <!-- A-H1 -->
+          <div class="hotel-card priority-hongdae" id="card-A1">
+            <div>
+              <div class="hotel-rank">
+                <span class="tag tag-hongdae">🥇 弘大首選・下樓即主街</span>
+                <span class="tag tag-gold">2人最推</span>
+              </div>
+              <div class="hotel-name">弘大美居大使飯店</div>
+              <div class="hotel-en">Mercure Ambassador Seoul Hongdae</div>
+              <ul class="hotel-specs">
+                <li><strong>無敵位置：</strong>弘大站 9 號出口步行 2 分鐘，下樓 10 秒就是最熱鬧的逛街主街、Olive Young 與烤肉街。</li>
+                <li><strong>戰利品救星：</strong>買完東西隨時走回飯店放，半夜吃宵夜喝酒走路 2 分鐘回房。</li>
+                <li><strong>房間質感：</strong>約 7 坪 (23㎡)，2020 開業極新，高樓層隔音好、乾濕分離。</li>
+              </ul>
+            </div>
+            <div class="hotel-footer">
+              <div class="price-box">
+                雙人房每晚參考價
+                <span class="price-val">NT$ 4,500 ~ 6,200</span>
+                <span>(每人約 NT$ 2,250~3,100)</span>
+              </div>
+              <label class="vote-label">
+                <input type="checkbox" class="vote-checkbox" value="[2人方案-弘大] 弘大美居大使飯店 (Mercure Hongdae)" onchange="toggleCardSelect(this, 'card-A1')" />
+                <span>👍 投這間</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- A-H2 -->
+          <div class="hotel-card priority-hongdae" id="card-A2">
+            <div>
+              <div class="hotel-rank">
+                <span class="tag tag-hongdae">🥈 交通無敵・機場線共構</span>
+                <span class="tag" style="background:#e0f2fe; color:#0369a1;">含免費早餐</span>
+              </div>
+              <div class="hotel-name">弘大智選假日飯店</div>
+              <div class="hotel-en">Holiday Inn Express Seoul Hongdae</div>
+              <ul class="hotel-specs">
+                <li><strong>機場直通：</strong>位於弘大站 5 號出口（AREX 共構大樓），下飛機搭 AREX 出站<strong>完全不用走到室外</strong>，直接搭電梯上樓！</li>
+                <li><strong>生活機能：</strong>樓下就是 AK Plaza 百貨（超多潮牌與美食），過馬路即延南洞與 9 號出口主街。</li>
+                <li><strong>高 CP 值：</strong>約 6.7 坪 (22㎡)，房價直接包含豐盛中西式自助早餐。</li>
+              </ul>
+            </div>
+            <div class="hotel-footer">
+              <div class="price-box">
+                雙人房每晚參考價
+                <span class="price-val">NT$ 4,200 ~ 5,800</span>
+                <span>(每人約 NT$ 2,100~2,900)</span>
+              </div>
+              <label class="vote-label">
+                <input type="checkbox" class="vote-checkbox" value="[2人方案-弘大] 弘大智選假日飯店 (Holiday Inn Express)" onchange="toggleCardSelect(this, 'card-A2')" />
+                <span>👍 投這間</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- A-H3 -->
+          <div class="hotel-card priority-hongdae" id="card-A3">
+            <div>
+              <div class="hotel-rank">
+                <span class="tag tag-hongdae">🥉 潮流夜生活・高空酒吧</span>
+              </div>
+              <div class="hotel-name">L7 弘大樂天飯店</div>
+              <div class="hotel-en">L7 Hongdae by LOTTE</div>
+              <ul class="hotel-specs">
+                <li><strong>核心地段：</strong>弘大站 1 號出口步行 1 分鐘，過斑馬線就進 9 號出口商圈。</li>
+                <li><strong>潮流氛圍：</strong>樂天集團旗下年輕潮牌飯店，21 樓高空大廳視野極佳，頂樓有酒吧與泳池。</li>
+                <li><strong>舒適好眠：</strong>約 6.7 坪 (22㎡)，床鋪好睡、設計年輕時尚。</li>
+              </ul>
+            </div>
+            <div class="hotel-footer">
+              <div class="price-box">
+                雙人房每晚參考價
+                <span class="price-val">NT$ 4,200 ~ 5,600</span>
+                <span>(每人約 NT$ 2,100~2,800)</span>
+              </div>
+              <label class="vote-label">
+                <input type="checkbox" class="vote-checkbox" value="[2人方案-弘大] L7 弘大樂天飯店 (L7 Hongdae)" onchange="toggleCardSelect(this, 'card-A3')" />
+                <span>👍 投這間</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <h3 style="font-size:1.15rem; color:var(--myeongdong); margin-bottom:4px;">🟣 明洞備選推薦（2人房・2 選 1）</h3>
+        <div class="hotel-grid">
+          <!-- A-M1 -->
+          <div class="hotel-card priority-myeongdong" id="card-A4">
+            <div>
+              <div class="hotel-rank">
+                <span class="tag tag-myeongdong">🥇 明洞首選・2號線直達弘大</span>
+              </div>
+              <div class="hotel-name">明洞斯坦福飯店</div>
+              <div class="hotel-en">Stanford Hotel Myeongdong</div>
+              <ul class="hotel-specs">
+                <li><strong>黃金位置：</strong>2 號線「乙支路入口站」步行 2 分鐘，門口就是機場巴士站，樓下是 Apple Store 與明洞主街北口。</li>
+                <li><strong>地鐵優勢：</strong>不用走去 4 號線轉車，下樓搭 <strong>2 號線 15 分鐘直達弘大、聖水洞</strong>！</li>
+                <li><strong>新穎乾淨：</strong>2021 年底新開幕，在老飯店居多的明洞非常難得。</li>
+              </ul>
+            </div>
+            <div class="hotel-footer">
+              <div class="price-box">
+                雙人房每晚參考價
+                <span class="price-val">NT$ 4,500 ~ 6,000</span>
+                <span>(每人約 NT$ 2,250~3,000)</span>
+              </div>
+              <label class="vote-label">
+                <input type="checkbox" class="vote-checkbox" value="[2人方案-明洞] 明洞斯坦福飯店 (Stanford Myeongdong)" onchange="toggleCardSelect(this, 'card-A4')" />
+                <span>👍 投這間</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- A-M2 -->
+          <div class="hotel-card priority-myeongdong" id="card-A5">
+            <div>
+              <div class="hotel-rank">
+                <span class="tag tag-myeongdong">🥈 夜市正中央・日系泡澡</span>
+              </div>
+              <div class="hotel-name">索拉利西鐵飯店首爾明洞</div>
+              <div class="hotel-en">Solaria Nishitetsu Hotel Seoul Myeongdong</div>
+              <ul class="hotel-specs">
+                <li><strong>下樓即夜市：</strong>位於明洞步行街正中央（明洞站 8 號出口 3 分鐘），被路邊攤、美妝旗艦店包圍。</li>
+                <li><strong>獨立浴缸：</strong>約 7.5 坪 (25㎡)，純日系乾濕三分離衛浴＋大浴缸，每天逛街鐵腿回房泡澡超享受。</li>
+              </ul>
+            </div>
+            <div class="hotel-footer">
+              <div class="price-box">
+                雙人房每晚參考價
+                <span class="price-val">NT$ 4,800 ~ 6,500</span>
+                <span>(每人約 NT$ 2,400~3,250)</span>
+              </div>
+              <label class="vote-label">
+                <input type="checkbox" class="vote-checkbox" value="[2人方案-明洞] 索拉利西鐵飯店首爾明洞 (Solaria Myeongdong)" onchange="toggleCardSelect(this, 'card-A5')" />
+                <span>👍 投這間</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== PLAN B: 3人方案 ==================== -->
+      <div id="panel-3p" class="plan-panel hidden">
+        <div class="tip-banner">
+          <strong>🅱️ 【Plan B：3人同行】重點提示：</strong>
+          3 個大行李箱非常佔空間！以下全部排除「雙人房硬塞行軍床」的地雷，精選<strong>「原生三人房（1大1小床 或 3張獨立單床）」</strong>，而且 3 人平攤下來每人每晚只要 NT$1,500～2,600，比住雙人房還划算！
+        </div>
+
+        <h3 style="font-size:1.15rem; color:var(--hongdae); margin-bottom:4px;">🟢 弘大優先推薦（正規 3人房・3 選 1）</h3>
+        <div class="hotel-grid">
+          <!-- B-H1 -->
+          <div class="hotel-card priority-hongdae" id="card-B1">
+            <div>
+              <div class="hotel-rank">
+                <span class="tag tag-hongdae">🥇 弘大3人首選・大坪數</span>
+                <span class="tag tag-gold">空間最舒適</span>
+              </div>
+              <div class="hotel-name">L7 弘大樂天飯店（家庭三人房）</div>
+              <div class="hotel-en">L7 Hongdae - Family Twin / Triple Room</div>
+              <ul class="hotel-specs">
+                <li><strong>正規三床／家庭房：</strong>配置「1雙人床＋1單人床」或「3張單人床」，坪數約 <strong>8～13 坪 (26～43㎡)</strong>，3 個 28 吋行李箱可同時攤平！</li>
+                <li><strong>下樓即商圈：</strong>弘大站 1 號出口 1 分鐘，過馬路就是 9 號出口烤肉街與服飾主街。</li>
+                <li><strong>星級配套：</strong>有頂樓酒吧、自助洗衣房，年輕人住起來最自在。</li>
+              </ul>
+            </div>
+            <div class="hotel-footer">
+              <div class="price-box">
+                三人房每晚參考價
+                <span class="price-val">NT$ 5,800 ~ 7,800</span>
+                <span>(3人攤：每人約 NT$ 1,930~2,600)</span>
+              </div>
+              <label class="vote-label">
+                <input type="checkbox" class="vote-checkbox" value="[3人方案-弘大] L7 弘大樂天飯店-家庭三人房 (L7 Hongdae)" onchange="toggleCardSelect(this, 'card-B1')" />
+                <span>👍 投這間</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- B-H2 -->
+          <div class="hotel-card priority-hongdae" id="card-B2">
+            <div>
+              <div class="hotel-rank">
+                <span class="tag tag-hongdae">🥈 逛街戰鬥組・位置第一</span>
+              </div>
+              <div class="hotel-name">弘大美居大使飯店（尊貴三人房）</div>
+              <div class="hotel-en">Mercure Ambassador Hongdae - Superior Triple</div>
+              <ul class="hotel-specs">
+                <li><strong>位置無敵：</strong>弘大 9 號出口步行 2 分鐘，正處於弘大最精華地段，半夜逛完街或喝完酒 2 分鐘回房。</li>
+                <li><strong>房型配置：</strong>1 大床＋1 單人床（約 8 坪 / 26㎡），房況極新、插座超多。</li>
+                <li><strong>衛浴分流：</strong>廁所、淋浴間、洗手台分區設計，3 個人早上輪流化妝洗漱不打架。</li>
+              </ul>
+            </div>
+            <div class="hotel-footer">
+              <div class="price-box">
+                三人房每晚參考價
+                <span class="price-val">NT$ 6,000 ~ 8,000</span>
+                <span>(3人攤：每人約 NT$ 2,000~2,650)</span>
+              </div>
+              <label class="vote-label">
+                <input type="checkbox" class="vote-checkbox" value="[3人方案-弘大] 弘大美居大使飯店-尊貴三人房 (Mercure Hongdae)" onchange="toggleCardSelect(this, 'card-B2')" />
+                <span>👍 投這間</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- B-H3 -->
+          <div class="hotel-card priority-hongdae" id="card-B3">
+            <div>
+              <div class="hotel-rank">
+                <span class="tag tag-hongdae">🥉 高 CP 值大空間・小資首選</span>
+              </div>
+              <div class="hotel-name">弘大九磚飯店（三人房）</div>
+              <div class="hotel-en">9 Brick Hotel Hongdae - Triple Room</div>
+              <ul class="hotel-specs">
+                <li><strong>超大空間：</strong>三人房高達 <strong>9.5 坪 (32㎡)</strong>，比一般連鎖飯店寬敞許多，還有獨立浴缸！</li>
+                <li><strong>熱鬧核心：</strong>位於弘大 9 號出口商圈內（近弘益大學正門與夜店酒吧街），下樓全是美食與服飾店。</li>
+                <li><strong>價格親民：</strong>3 人平攤下來每人每晚不到兩千元台幣。</li>
+              </ul>
+            </div>
+            <div class="hotel-footer">
+              <div class="price-box">
+                三人房每晚參考價
+                <span class="price-val">NT$ 4,500 ~ 6,200</span>
+                <span>(3人攤：每人約 NT$ 1,500~2,050)</span>
+              </div>
+              <label class="vote-label">
+                <input type="checkbox" class="vote-checkbox" value="[3人方案-弘大] 弘大九磚飯店-三人房 (9 Brick Hotel)" onchange="toggleCardSelect(this, 'card-B3')" />
+                <span>👍 投這間</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <h3 style="font-size:1.15rem; color:var(--myeongdong); margin-bottom:4px;">🟣 明洞備選推薦（純正 3 張單人床・2 選 1）</h3>
+        <div class="hotel-grid">
+          <!-- B-M1 -->
+          <div class="hotel-card priority-myeongdong" id="card-B4">
+            <div>
+              <div class="hotel-rank">
+                <span class="tag tag-myeongdong">🥇 純正 3 張單人床・10坪大空間</span>
+              </div>
+              <div class="hotel-name">明洞九樹精品飯店 II（家庭三人房）</div>
+              <div class="hotel-en">Nine Tree Premier Hotel Myeongdong II</div>
+              <ul class="hotel-specs">
+                <li><strong>一人一張床：</strong>提供<strong>純正 3 張獨立單人床 (Triple)</strong>，誰都不用搶被子！坪數高達 <strong>10～11 坪 (33～37㎡)</strong>。</li>
+                <li><strong>夜生活美食區：</strong>靠近乙支路三街（首爾超紅的布帳馬車與烤腸街）及明洞商圈，樓下就有超商。</li>
+              </ul>
+            </div>
+            <div class="hotel-footer">
+              <div class="price-box">
+                三人房每晚參考價
+                <span class="price-val">NT$ 5,500 ~ 7,500</span>
+                <span>(3人攤：每人約 NT$ 1,850~2,500)</span>
+              </div>
+              <label class="vote-label">
+                <input type="checkbox" class="vote-checkbox" value="[3人方案-明洞] 明洞九樹精品飯店 II-三人房 (Nine Tree II)" onchange="toggleCardSelect(this, 'card-B4')" />
+                <span>👍 投這間</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- B-M2 -->
+          <div class="hotel-card priority-myeongdong" id="card-B5">
+            <div>
+              <div class="hotel-rank">
+                <span class="tag tag-myeongdong">🥈 明洞正中心・日系三分離衛浴</span>
+              </div>
+              <div class="hotel-name">索拉利西鐵飯店首爾明洞（三人房）</div>
+              <div class="hotel-en">Solaria Nishitetsu Hotel Myeongdong - Triple</div>
+              <ul class="hotel-specs">
+                <li><strong>純正 3 張單人床：</strong>約 8.5～9 坪 (28～30㎡)，擺放 3 張正規單人床仍保有走道空間。</li>
+                <li><strong>3 人洗漱神設計：</strong>日系三點式乾濕分離（馬桶間、淋浴泡澡間、雙洗手台各自獨立），3 人同住完全不塞車！</li>
+                <li><strong>下樓即明洞：</strong>出電梯就是明洞步行街正中央。</li>
+              </ul>
+            </div>
+            <div class="hotel-footer">
+              <div class="price-box">
+                三人房每晚參考價
+                <span class="price-val">NT$ 5,800 ~ 7,800</span>
+                <span>(3人攤：每人約 NT$ 1,930~2,600)</span>
+              </div>
+              <label class="vote-label">
+                <input type="checkbox" class="vote-checkbox" value="[3人方案-明洞] 索拉利西鐵飯店首爾明洞-三人房 (Solaria Triple)" onchange="toggleCardSelect(this, 'card-B5')" />
+                <span>👍 投這間</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: 團員確認與一鍵複製投票器 -->
+    <section class="section vote-box">
+      <div class="section-header" style="border-bottom-color:#bfdbfe;">
+        <div class="section-title">🗳️ 四、團員投票＆確認回報區（一鍵複製貼回 LINE 群組）</div>
+      </div>
+      <p style="font-size:0.92rem; color:#334155;">
+        請在上方卡片勾選你喜歡的飯店（可複選），並在下方填寫你的偏好，按下<strong>「產生並複製回覆文字」</strong>即可直接貼回群組！
+      </p>
+
+      <div class="form-grid">
+        <div class="input-group">
+          <label for="member-name">1. 你的名字 / 暱稱</label>
+          <input type="text" id="member-name" placeholder="例如：Sabina" />
+        </div>
+        <div class="input-group">
+          <label for="member-plan">2. 確認同行人數方案</label>
+          <select id="member-plan">
+            <option value="Plan A（2人同行）">🅰️ Plan A（2人同行）</option>
+            <option value="Plan B（3人同行）">🅱️ Plan B（3人同行）</option>
+            <option value="2人或3人皆可">👌 2人或3人皆可</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <label for="member-area">3. 最想住哪一區？</label>
+          <select id="member-area">
+            <option value="🟢 弘大優先（機場直達＋夜生活豐富）">🟢 弘大優先（機場直達＋夜生活豐富）</option>
+            <option value="🟣 明洞優先（百貨免稅店＋夜市路邊攤）">🟣 明洞優先（百貨免稅店＋夜市路邊攤）</option>
+            <option value="都可以，配合大家">🙌 都可以，配合大家</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <label for="member-note">4. 其他補充（預算／床型偏好）</label>
+          <input type="text" id="member-note" placeholder="例如：希望一人一張床 / 預算每晚2500內" />
+        </div>
+      </div>
+
+      <button class="btn btn-primary" onclick="generateVoteSummary()" style="padding:12px 22px; font-size:0.98rem;">
+        📋 產生並複製回覆文字（貼到 LINE / 群組）
+      </button>
+      <span id="copy-toast" style="margin-left:12px; font-weight:700; color:#059669; display:none;">✅ 已複製到剪貼簿！直接去群組貼上即可</span>
+
+      <pre id="copy-output" class="copy-output"></pre>
+    </section>
+
+  </main>
+
+  <script>
+    function switchPlan(plan) {
+      const panel2p = document.getElementById('panel-2p');
+      const panel3p = document.getElementById('panel-3p');
+      const btn2p = document.getElementById('tab-btn-2p');
+      const btn3p = document.getElementById('tab-btn-3p');
+
+      if (plan === '2p') {
+        panel2p.classList.remove('hidden');
+        panel3p.classList.add('hidden');
+        btn2p.classList.add('active');
+        btn3p.classList.remove('active');
+        document.getElementById('member-plan').value = 'Plan A（2人同行）';
+      } else {
+        panel2p.classList.add('hidden');
+        panel3p.classList.remove('hidden');
+        btn2p.classList.remove('active');
+        btn3p.classList.add('active');
+        document.getElementById('member-plan').value = 'Plan B（3人同行）';
+      }
+    }
+
+    function showAllPlans() {
+      document.getElementById('panel-2p').classList.remove('hidden');
+      document.getElementById('panel-3p').classList.remove('hidden');
+      document.getElementById('tab-btn-2p').classList.add('active');
+      document.getElementById('tab-btn-3p').classList.add('active');
+    }
+
+    function toggleCardSelect(checkbox, cardId) {
+      const card = document.getElementById(cardId);
+      if (checkbox.checked) {
+        card.classList.add('selected');
+      } else {
+        card.classList.remove('selected');
+      }
+    }
+
+    function generateVoteSummary() {
+      const name = document.getElementById('member-name').value.trim() || '團員';
+      const plan = document.getElementById('member-plan').value;
+      const area = document.getElementById('member-area').value;
+      const note = document.getElementById('member-note').value.trim() || '無特別備註';
+
+      const checkedBoxes = Array.from(document.querySelectorAll('.vote-checkbox:checked'));
+      const hotels = checkedBoxes.length > 0
+        ? checkedBoxes.map((cb, i) => `   ${i + 1}. ${cb.value}`).join('\n')
+        : '   （尚未勾選特定飯店）';
+
+      const summaryText =
+`🇰🇷【首爾住宿＆交通確認回報】
+👤 團員：${name}
+👥 方案：${plan}
+📍 偏好區域：${area}
+🏨 我投給這幾間飯店：
+${hotels}
+💬 補充建議：${note}`;
+
+      const outputEl = document.getElementById('copy-output');
+      outputEl.style.display = 'block';
+      outputEl.textContent = summaryText;
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(summaryText).then(() => {
+          const toast = document.getElementById('copy-toast');
+          toast.style.display = 'inline';
+          setTimeout(() => { toast.style.display = 'none'; }, 3500);
+        });
+      }
+    }
+  </script>
+</body>
+</html>
