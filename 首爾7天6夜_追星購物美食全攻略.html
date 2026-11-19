@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🇰🇷 2027首爾 7天6夜 追星・穿搭・醫美保養・美食全攻略</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #4f46e5;
+      --primary-light: #eef2ff;
+      --accent: #ec4899;
+      --accent-light: #fdf2f8;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --tip-bg: #ecfdf5;
+      --tip-border: #10b981;
+      --tip-text: #065f46;
+      --imp-bg: #fef2f2;
+      --imp-border: #ef4444;
+      --imp-text: #991b1b;
+      --note-bg: #eff6ff;
+      --note-border: #3b82f6;
+      --note-text: #1e40af;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.7;
+      padding-bottom: 4rem;
+    }
+
+    /* Hero Header */
+    .hero {
+      background: linear-gradient(135deg, #312e81 0%, #4f46e5 50%, #db2777 100%);
+      color: #ffffff;
+      padding: 3.5rem 1.5rem 3rem;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(79, 70, 229, 0.2);
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(8px);
+      padding: 0.35rem 1rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      letter-spacing: 0.05em;
+    }
+
+    .hero h1 {
+      font-size: clamp(1.6rem, 4vw, 2.5rem);
+      font-weight: 900;
+      margin-bottom: 1rem;
+      line-height: 1.3;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 0 auto;
+      font-size: 1.05rem;
+      color: rgba(255, 255, 255, 0.92);
+    }
+
+    /* Sticky Quick Nav */
+    .quick-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 0.75rem 1rem;
+      overflow-x: auto;
+      white-space: nowrap;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+
+    .quick-nav a {
+      display: inline-block;
+      text-decoration: none;
+      color: var(--text-main);
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 0.4rem 0.9rem;
+      margin: 0 0.2rem;
+      border-radius: 999px;
+      transition: all 0.2s;
+    }
+
+    .quick-nav a:hover {
+      background: var(--primary-light);
+      color: var(--primary);
+    }
+
+    /* Main Container */
+    .container {
+      max-width: 1040px;
+      margin: 2rem auto 0;
+      padding: 0 1.25rem;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin: 2.5rem 0 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #0f172a;
+      border-left: 5px solid var(--primary);
+      padding-left: 0.75rem;
+    }
+
+    /* Route Overview Cards */
+    .route-flow {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+    }
+
+    .route-step {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-top: 4px solid var(--primary);
+      border-radius: 12px;
+      padding: 1rem 0.85rem;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+      transition: transform 0.2s;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .route-step:hover {
+      transform: translateY(-3px);
+      border-top-color: var(--accent);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.07);
+    }
+
+    .route-step .day-num {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--primary);
+      background: var(--primary-light);
+      padding: 0.15rem 0.6rem;
+      border-radius: 999px;
+      margin-bottom: 0.4rem;
+    }
+
+    .route-step .area {
+      font-weight: 700;
+      font-size: 0.95rem;
+      margin-bottom: 0.25rem;
+      color: #0f172a;
+    }
+
+    .route-step .focus {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* Day Cards */
+    .day-card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      padding: 1.75rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+      scroll-margin-top: 4.5rem;
+    }
+
+    .day-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.15rem;
+      padding-bottom: 0.85rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .day-badge {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: white;
+      font-weight: 800;
+      font-size: 0.95rem;
+      padding: 0.35rem 0.9rem;
+      border-radius: 8px;
+      letter-spacing: 0.03em;
+    }
+
+    .day-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #0f172a;
+    }
+
+    /* Alert Callouts */
+    .callout {
+      padding: 0.9rem 1.15rem;
+      border-radius: 10px;
+      margin-bottom: 1.2rem;
+      font-size: 0.95rem;
+      border-left: 4px solid;
+    }
+
+    .callout-tip {
+      background-color: var(--tip-bg);
+      border-left-color: var(--tip-border);
+      color: var(--tip-text);
+    }
+
+    .callout-important {
+      background-color: var(--imp-bg);
+      border-left-color: var(--imp-border);
+      color: var(--imp-text);
+    }
+
+    .callout-note {
+      background-color: var(--note-bg);
+      border-left-color: var(--note-border);
+      color: var(--note-text);
+    }
+
+    .callout-title {
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    /* Lists inside Cards */
+    .timeline-list {
+      list-style: none;
+    }
+
+    .timeline-list > li {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 1.1rem;
+    }
+
+    .timeline-list > li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.55rem;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--primary);
+      box-shadow: 0 0 0 3px var(--primary-light);
+    }
+
+    .time-slot {
+      font-weight: 800;
+      color: var(--primary);
+      font-size: 1.02rem;
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+
+    .sub-list {
+      list-style: disc;
+      padding-left: 1.25rem;
+      color: #334155;
+      font-size: 0.96rem;
+    }
+
+    .sub-list li {
+      margin-bottom: 0.4rem;
+    }
+
+    strong {
+      color: #0f172a;
+      font-weight: 700;
+    }
+
+    .highlight-tag {
+      display: inline-block;
+      background: var(--accent-light);
+      color: #be185d;
+      padding: 0.1rem 0.5rem;
+      border-radius: 5px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-right: 0.25rem;
+    }
+
+    /* Guide Grid & Tables */
+    .guide-card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      padding: 1.75rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+      scroll-margin-top: 4.5rem;
+    }
+
+    .guide-card h3 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .guide-card h4 {
+      font-size: 1.08rem;
+      font-weight: 700;
+      margin: 1.25rem 0 0.6rem;
+      color: var(--primary);
+    }
+
+    .table-wrapper {
+      overflow-x: auto;
+      margin-top: 1rem;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.95rem;
+    }
+
+    th {
+      background: #f1f5f9;
+      color: #0f172a;
+      font-weight: 700;
+      padding: 0.85rem 1rem;
+      border-bottom: 2px solid var(--border);
+      white-space: nowrap;
+    }
+
+    td {
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f8fafc;
+    }
+
+    .two-col-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.25rem;
+      margin-top: 0.75rem;
+    }
+
+    .box-panel {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem;
+    }
+
+    .box-panel h4 {
+      margin-top: 0;
+    }
+
+    .num-list {
+      padding-left: 1.25rem;
+      font-size: 0.95rem;
+    }
+
+    .num-list li {
+      margin-bottom: 0.55rem;
+    }
+
+    /* Print & Footer */
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 640px) {
+      .day-card, .guide-card {
+        padding: 1.25rem;
+      }
+      .hero {
+        padding: 2.5rem 1rem 2rem;
+      }
+    }
+
+    @media print {
+      .quick-nav {
+        display: none;
+      }
+      .day-card, .guide-card {
+        break-inside: avoid;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-badge">❄️ 2027年2月 家庭旅行專屬企劃</div>
+    <h1>🇰🇷 首爾 7天6夜 追星・穿搭・醫美保養・美食全攻略</h1>
+    <p>以 <strong>弘大商圈（Hongdae）</strong> 為住宿中心（機場快線 AREX 直達、地鐵 2 號線貫穿各大商圈），將 K-Pop 追星與周邊、學生＆上班族服飾採買、醫美藥局保養品、超市掃貨與在地美食完美串聯！</p>
+  </header>
+
+  <!-- Quick Sticky Navigation -->
+  <nav class="quick-nav">
+    <a href="#overview">🗺️ 總覽</a>
+    <a href="#day1">Day 1 弘大</a>
+    <a href="#day2">Day 2 明洞/超市</a>
+    <a href="#day3">Day 3 聖水/建大</a>
+    <a href="#day4">Day 4 江南/高巴</a>
+    <a href="#day5">Day 5 漢南/汝矣島</a>
+    <a href="#day6">Day 6 廣藏/演唱會</a>
+    <a href="#day7">Day 7 返程</a>
+    <a href="#kpop-guide">🎤 追星指南</a>
+    <a href="#fashion-guide">👗 穿搭分流</a>
+    <a href="#beauty-guide">🧴 醫美藥局</a>
+    <a href="#mart-guide">🛒 超市必買</a>
+    <a href="#winter-tips">❄️ 2月冬季貼士</a>
+  </nav>
+
+  <main class="container">
+
+    <!-- 7天6夜 每日行程總覽 -->
+    <h2 id="overview" class="section-title">🗺️ 7天6夜 每日行程動線總覽</h2>
+    <div class="route-flow">
+      <a href="#day1" class="route-step">
+        <span class="day-num">DAY 1</span>
+        <div class="area">弘大・合井</div>
+        <div class="focus">周邊與學生服飾</div>
+      </a>
+      <a href="#day2" class="route-step">
+        <span class="day-num">DAY 2</span>
+        <div class="area">明洞・首爾站</div>
+        <div class="focus">換錢/專輯/樂天超市</div>
+      </a>
+      <a href="#day3" class="route-step">
+        <span class="day-num">DAY 3</span>
+        <div class="area">聖水・建大</div>
+        <div class="focus">快閃店/KWANGYA/OL</div>
+      </a>
+      <a href="#day4" class="route-step">
+        <span class="day-num">DAY 4</span>
+        <div class="area">江南・高巴站</div>
+        <div class="focus">醫美藥局/地下街批發</div>
+      </a>
+      <a href="#day5" class="route-step">
+        <span class="day-num">DAY 5</span>
+        <div class="area">漢南・汝矣島</div>
+        <div class="focus">設計師潮牌/現代百貨</div>
+      </a>
+      <a href="#day6" class="route-step">
+        <span class="day-num">DAY 6</span>
+        <div class="area">廣藏・東大門</div>
+        <div class="focus">傳統美食/演唱會彈性日</div>
+      </a>
+      <a href="#day7" class="route-step">
+        <span class="day-num">DAY 7</span>
+        <div class="area">弘大・機場</div>
+        <div class="focus">最後補貨/退稅返程</div>
+      </a>
+    </div>
+
+    <!-- 每日詳細行程規劃 -->
+    <h2 class="section-title">📅 每日詳細行程規劃</h2>
+
+    <!-- Day 1 -->
+    <section id="day1" class="day-card">
+      <div class="day-header">
+        <span class="day-badge">DAY 1</span>
+        <h3 class="day-title">抵達首爾 ➔ 弘大／延南洞／合井（K-Pop 周邊與學生平價穿搭）</h3>
+      </div>
+      <div class="callout callout-tip">
+        <div class="callout-title">💡 交通動線小撇步</div>
+        搭乘 <strong>AREX 機場快線</strong> 直達「弘大入口站」，放好行李後直接開逛，第一天先熟悉周邊環境並補齊基本美妝與平價服飾。
+      </div>
+      <ul class="timeline-list">
+        <li>
+          <span class="time-slot">下午｜弘大 K-Pop 周邊＆應援咖啡廳巡禮</span>
+          <ul class="sub-list">
+            <li><strong>AK Plaza 弘大店（2F~5F）</strong>：就在弘大站 4 號出口上方，有 <strong>WithMUU</strong>（買官方手燈、特典卡、官方周邊必去），以及各式動漫與愛豆卡套/卡冊周邊店。</li>
+            <li><strong>K-Pop Merch 專門店</strong>：弘大商圈內的 <strong>K-Mecca</strong>、<strong>合井教保文庫（Kyobo Book Centre）地下 K-Pop 區</strong>。</li>
+            <li><strong>延南洞／弘大生咖（應援咖啡廳）</strong>：弘大 3 號出口（延南洞）與 7~9 號出口巷弄是粉絲舉辦偶像生日應援咖啡廳（생일카페）的一級戰區，以及拍貼機（人生四格 Photoism 等偶像聯名框）。</li>
+          </ul>
+        </li>
+        <li>
+          <span class="time-slot">傍晚｜弘大主街服飾採買（適合學生＆休閒穿搭）</span>
+          <ul class="sub-list">
+            <li><strong>M Playground（엠플레이그라운드）</strong>、<strong>AA Place</strong>、<strong>Market A</strong>：超大型平價服飾店，衛衣、牛仔褲、針織衫、百褶裙款式極多，價格親民。</li>
+            <li><strong>秀唱歌房／弘大街頭公演（Busking）</strong>：感受韓國年輕街頭的 K-Pop 翻跳熱潮。</li>
+          </ul>
+        </li>
+        <li>
+          <span class="time-slot">晚餐｜弘大烤肉或辣炒章魚</span>
+          <ul class="sub-list">
+            <li>推薦：<strong>小豬存錢筒（石頭烤肉）</strong>、<strong>荒謬的生肉（吃到飽）</strong>、<strong>朝鮮火爐烤肉（BTS 曾造訪）</strong> 或 <strong>홍대쭈꾸미（弘大辣炒小章魚）</strong>。</li>
+          </ul>
+        </li>
+        <li>
+          <span class="time-slot">宵夜｜橋村炸雞（Kyochon）或 BHC 炸雞 ＋ 弘大 Olive Young 旗艦店初探</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Day 2 -->
+    <section id="day2" class="day-card">
+      <div class="day-header">
+        <span class="day-badge">DAY 2</span>
+        <h3 class="day-title">明洞 ➔ 南大門 ➔ 首爾站（換錢、地下街專輯、藥局醫美、樂天超市大掃貨）</h3>
+      </div>
+      <div class="callout callout-important">
+        <div class="callout-title">💱 換錢重要提醒</div>
+        明洞「大使館換錢所」或「一品香換錢所」匯率通常最優，記得帶台幣或美金現鈔來此換韓元。
+      </div>
+      <ul class="timeline-list">
+        <li>
+          <span class="time-slot">上午｜明洞換錢 ➔ 明洞地下街（K-Pop 專輯與周邊尋寶）</span>
+          <ul class="sub-list">
+            <li><strong>明洞地下購物中心</strong>：有 <strong>Music Korea（明洞主街 Nature Republic 樓上）</strong>、<strong>CT Record</strong> 等老牌唱片行，地下街還有非常多歷代專、絕版周邊、手燈與非官方應援物，可計入 Hanteo 榜單。</li>
+          </ul>
+        </li>
+        <li>
+          <span class="time-slot">午餐｜明洞美食</span>
+          <ul class="sub-list">
+            <li>推薦：<strong>明洞餃子（米其林必比登刀削麵）</strong>、<strong>神仙雪濃湯</strong> 或 <strong>王妃家烤韓牛/豬排</strong>。</li>
+          </ul>
+        </li>
+        <li>
+          <span class="time-slot">下午｜明洞美妝＆藥局醫美保養品 ＋ 時尚品牌</span>
+          <ul class="sub-list">
+            <li><strong>Olive Young 明洞旗艦店（Myeongdong Town）</strong>：全韓最大規模之一，兩層樓分類超齊全，2 樓有專門的 K-Pop 專輯與周邊專區。</li>
+            <li><strong>明洞大型藥局（如明洞龍山藥局、明洞中央藥局等）</strong>：購買韓國藥局限定醫美級軟膏（詳見下方「醫美保養品必買清單」）。</li>
+            <li><strong>上班族與休閒品牌</strong>：<strong>8seconds</strong>、<strong>SPAO</strong>、<strong>ALAND</strong>、<strong>Marithe Francois Girbaud</strong>、<strong>Matin Kim（明洞聖堂附近或樂天百貨）</strong>。</li>
+          </ul>
+        </li>
+        <li>
+          <span class="time-slot">傍晚～晚上｜首爾站 樂天超市（Lotte Mart ZETTAPLEX 首爾站店）</span>
+          <ul class="sub-list">
+            <li>晚餐可在首爾站吃 <strong>新村雪濃湯 / 韓式拌飯 / 炸豬排</strong>。</li>
+            <li><strong>樂天超市掃貨</strong>：草莓、零食、海苔、泡麵、沖泡飲品、紫蘇油、韓國大創（Daiso）都在同棟。買完可直接現場辦理退稅，搭 AREX 或計程車回弘大放戰利品超輕鬆！</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Day 3 -->
+    <section id="day3" class="day-card">
+      <div class="day-header">
+        <span class="day-badge">DAY 3</span>
+        <h3 class="day-title">聖水洞 ➔ 建大（娛樂公司周邊、美妝快閃店、質感上班族穿搭）</h3>
+      </div>
+      <div class="callout callout-note">
+        <div class="callout-title">✨ 商圈亮點</div>
+        聖水洞被譽為「首爾布魯克林」，是現在韓國最火紅的美妝快閃店（Pop-up Store）、小眾設計師服飾與愛豆同款聚集地！
+      </div>
+      <ul class="timeline-list">
+        <li>
+          <span class="time-slot">上午～下午｜聖水洞（Seongsu）＆ 首爾林（Seoul Forest）</span>
+          <ul class="sub-list">
+            <li><strong>追星必朝聖</strong>：<strong>SM 娛樂總部大樓 ＆ KWANGYA SEOUL（曠野旗艦店）</strong>（位於首爾林站 D-Tower 地下 1 樓，SM 家族飯必逛）、<strong>CUBE 娛樂</strong> 也在聖水一帶。</li>
+            <li><strong>美妝保養旗艦店＆快閃店</strong>：<strong>Olive Young N 聖水（5層樓超大型概念店，有專屬美妝診斷與 K-Pop 專區）</strong>、<strong>fwee Agit 聖水店</strong>（買布丁膏送鑰匙圈）、<strong>탬버린즈（Tamburins）</strong>、<strong>Torriden 旗艦店</strong>、<strong>Amore Seongsu（愛茉莉聖水，可體驗客製化粉底與保養品試用）</strong>。</li>
+            <li><strong>服飾與選品店（學生＋質感上班族）</strong>：<strong>EQL Grove（超大型設計師品牌選品店）</strong>、<strong>MUSINSA Standard 聖水店（被稱為韓國版 Uniqlo，但西裝外套、落地西裝褲剪裁極好，超級適合上班族與大學生！）</strong>、<strong>Stand Oil（百搭通勤包款）</strong>。</li>
+          </ul>
+        </li>
+        <li>
+          <span class="time-slot">午餐＆下午茶｜聖水洞美食與咖啡廳</span>
+          <ul class="sub-list">
+            <li>推薦正餐：<strong>祖傳三代馬鈴薯排骨湯（소문난성수감자탕）</strong>、<strong>陵洞水芹菜生牛肉拌飯（능동미나리）</strong>。</li>
+            <li>必買麵包/甜點：<strong>自然島鹽可頌（자연도소금빵）</strong>、<strong>Onion 廢墟風咖啡廳</strong>、<strong>Nudake（Jennie 同款藝術甜點）</strong>。</li>
+          </ul>
+        </li>
+        <li>
+          <span class="time-slot">晚上｜建大入口（Konkuk Univ.）Common Ground ＆ 建大商圈</span>
+          <ul class="sub-list">
+            <li>藍色貨櫃屋商場、建大美食街（如高品格羊肉串、黃牛肥腸）、大學周邊平價服飾與居酒屋。</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Day 4 -->
+    <section id="day4" class="day-card">
+      <div class="day-header">
+        <span class="day-badge">DAY 4</span>
+        <h3 class="day-title">江南 ➔ 新沙林蔭道 ➔ 高速巴士客運站（地下街 OL/學生服飾批發價、江南醫美＆藥局）</h3>
+      </div>
+      <div class="callout callout-tip">
+        <div class="callout-title">🛍️ 冬季室內逛街首選</div>
+        這一天專門攻克「江南區醫美/藥局」與「全首爾CP值最高的室內暖氣服飾地下街」！
+      </div>
+      <ul class="timeline-list">
+        <li>
+          <span class="time-slot">上午｜高速巴士客運站地下街（Goto Mall）</span>
+          <ul class="sub-list">
+            <li><strong>服飾天堂</strong>：全長 880 公尺、超過 600 間店鋪！從 <strong>萬元韓幣（約台幣 230 元）的學生針織衫、T恤</strong>，到 <strong>韓國 OL 上班族最愛的雪紡襯衫、西裝套裝、羊毛大衣、跟鞋與通勤包</strong> 應有盡有，建議預留 2.5～3 小時。</li>
+          </ul>
+        </li>
+        <li>
+          <span class="time-slot">午餐｜高速巴士站 / 新世界百貨江南店美食街</span>
+          <ul class="sub-list">
+            <li>新世界百貨地下美食街（Sweet Park）匯集全韓國最紅的甜點與熟食，室內溫暖舒適，非常適合家庭用餐。</li>
+          </ul>
+        </li>
+        <li>
+          <span class="time-slot">下午｜江南站商圈 ＆ 新沙洞林蔭道（Sinsa Garosu-gil）</span>
+          <ul class="sub-list">
+            <li><strong>江南藥局醫美保養品採購</strong>：江南站與新論峴站之間是韓國醫美診所最密集的區域，這裡的 <strong>大型藥局（如江南廣場藥局等）</strong> 備貨最齊全，專門販售院線級再生霜、PDRN 精華與退紅藥膏。</li>
+            <li><em>（若想順便體驗基礎醫美如水飛梭、麗珠蘭、皮秒雷射，可安排在今天下午於江南或回弘大的連鎖診所如 Muse、PPEUM、Abijou 等進行，記得提前 1~2 週用 LINE/微信預約）</em>。</li>
+            <li><strong>江南地下街 ＆ 江南主街</strong>：<strong>MIXXO</strong>、<strong>Roem</strong>（這兩家是韓國年輕上班族 OL 最愛的甜美/俐落通勤正裝品牌，西裝裙、襯衫質感極佳！）。</li>
+            <li><strong>新沙洞林蔭道 / 狎鷗亭羅德奧</strong>：各大品牌旗艦店、<strong>K-Star Road（韓流明星熊公仔大道）</strong>，以及娛樂公司巡禮或明星常去的清潭洞餐廳。</li>
+          </ul>
+        </li>
+        <li>
+          <span class="time-slot">晚餐｜江南／新沙美食</span>
+          <ul class="sub-list">
+            <li>推薦：<strong>新沙洞醬蟹胡同（Pro 醬蟹 / 新沙醬蟹）</strong>、<strong>金北順大鍋家（김북순큰남비집，超多明星簽名的泡菜鍋與韓式蒸蛋）</strong>。</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Day 5 -->
+    <section id="day5" class="day-card">
+      <div class="day-header">
+        <span class="day-badge">DAY 5</span>
+        <h3 class="day-title">漢南洞 ➔ 龍山（HYBE） ➔ 汝矣島現代百貨（愛豆私服潮牌與快閃店聖地）</h3>
+      </div>
+      <ul class="timeline-list">
+        <li>
+          <span class="time-slot">上午｜龍山 ＆ 漢南洞（Hannam-dong）</span>
+          <ul class="sub-list">
+            <li><strong>龍山 HYBE 總部大樓巡禮</strong>：若喜歡 BTS、SEVENTEEN、TXT、ENHYPEN、LE SSERAFIM、NewJeans 等 HYBE 旗下藝人，可到新龍山站附近的 HYBE 大樓外打卡，周邊公車站牌與咖啡廳常有滿滿的粉絲應援廣告。</li>
+            <li><strong>漢南洞設計師品牌街（愛豆私服同款集中地）</strong>：<strong>Mardi Mercredi</strong>（小雛菊衛衣/針織衫）、<strong>Marithe Francois Girbaud</strong>、<strong>EMIS</strong>（愛豆人手一頂的棒球帽與包款）、<strong>Rockfish Weatherwear</strong>（芭蕾舞鞋/瑪莉珍鞋/冬季毛毛鞋）、<strong>EPT</strong>（超好穿小白鞋）、<strong>COS</strong>（極簡高級感上班族穿搭）。</li>
+          </ul>
+        </li>
+        <li>
+          <span class="time-slot">午餐｜漢南洞美食</span>
+          <ul class="sub-list">
+            <li>推薦：<strong>漢南洞 24 小時馬鈴薯排骨湯</strong>、<strong>Solsot（솔솥，超人氣釜飯，必吃牛排釜飯與起司豬排）</strong>。</li>
+          </ul>
+        </li>
+        <li>
+          <span class="time-slot">下午～晚上｜汝矣島現代百貨（The Hyundai Seoul）</span>
+          <ul class="sub-list">
+            <li><strong>B2 Creative Ground</strong>：集結所有韓國當紅設計師品牌（Matin Kim、Thisisneverthat、Depound、CARLYN 雲朵包），且 <strong>每週都有不同的 K-Pop 偶像回歸快閃店（Pop-up Store）</strong>！</li>
+            <li><strong>5F Sounds Forest 室內空中花園 ＆ 6F 餐廳/B1 美食街</strong>：B1 有 <strong>London Bagel Museum（倫敦貝果博物館，建議一到百貨先抽號碼牌或用 CatchTable 遠端候位）</strong>、<strong>Teddy Beurre House</strong>。全室內暖氣空間，全家大小逛起來最舒服！</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Day 6 -->
+    <section id="day6" class="day-card">
+      <div class="day-header">
+        <span class="day-badge">DAY 6</span>
+        <h3 class="day-title">傳統市場美食 ＋ 追星演唱會／打歌舞台彈性日（或 東大門夜貓子購物）</h3>
+      </div>
+      <div class="callout callout-note">
+        <div class="callout-title">🎤 週末追星彈性調整機制</div>
+        <strong>週六或週日通常是首爾演唱會（Concert）、粉絲見面會（Fan Meeting）或音樂節目打歌的日子！</strong><br>
+        • <strong>若有演唱會</strong>：上午輕鬆吃美食，下午直奔演唱會場館（常見場館：<strong>KSPO DOME 奧林匹克體操競技場</strong>、<strong>蠶室室內體育館</strong>、<strong>高尺天空巨蛋</strong>、<strong>Inspire Arena</strong>），先去領票、排周邊（MD）、領粉絲免費應援物（Freebies）！<br>
+        • <strong>若無演唱會</strong>：按以下經典家庭美食與室內購物路線走：
+      </div>
+      <ul class="timeline-list">
+        <li>
+          <span class="time-slot">上午｜廣藏市場（Gwangjang Market）當地小吃巡禮</span>
+          <ul class="sub-list">
+            <li>必吃：<strong>生章魚＋生拌牛肉（富村生牛肉）</strong>、<strong>綠豆煎餅（順熙家）</strong>、<strong>麻藥飯捲</strong>、<strong>現炸糯米麻花捲（광장시장 찹쌀꽈배기）</strong>，也可在此買 2月當季新鮮大草莓、草莓乾、人蔘與韓國冬被。</li>
+          </ul>
+        </li>
+        <li>
+          <span class="time-slot">中午～下午｜益善洞韓屋村 ➔ 永登浦地下街＆時代廣場</span>
+          <ul class="sub-list">
+            <li><strong>益善洞</strong>：在改建自傳統韓屋的絕美咖啡廳喝下午茶（如 <strong>清水堂</strong>、<strong>小夏鹽田</strong>），逛文創小物。</li>
+            <li><strong>永登浦地下街 ＋ 時代廣場（Times Square）</strong>：全室內連通暖氣商場！這裡的衣服比高速巴士站更偏向實穿的日常 OL 與大學生風格，且旁邊就有大型 <strong>E-Mart 易買得超市</strong> 可以逛另一家超市體系！</li>
+          </ul>
+        </li>
+        <li>
+          <span class="time-slot">晚上｜東大門設計廣場（DDP）＆ 批發零售商場</span>
+          <ul class="sub-list">
+            <li>晚餐：<strong>陳玉華一隻雞（진옥화할매원조닭한마리，2月冬天喝蒜頭雞湯超暖胃！）</strong> 或 <strong>橋村炸雞東大門 1 號店</strong>。</li>
+            <li>購物：<strong>dundun（原現代百貨 Outlet 東大門店，有超大型大創、Uniqlo、Olive Young）</strong>、<strong>Migliore（美利來）</strong>、<strong>nyu.nyu（東大門超狂飾品批發店，耳環、項鍊、髮夾、冬帽圍巾、包包一面牆上萬款，1件就能買！）</strong>、<strong>MIMILINE</strong>。</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Day 7 -->
+    <section id="day7" class="day-card">
+      <div class="day-header">
+        <span class="day-badge">DAY 7</span>
+        <h3 class="day-title">弘大最後補貨 ➔ 仁川／金浦機場退稅返程</h3>
+      </div>
+      <ul class="timeline-list">
+        <li>
+          <span class="time-slot">上午｜弘大商圈最後衝刺</span>
+          <ul class="sub-list">
+            <li>早餐：<strong>Isaac 吐司</strong> 或 <strong>Egg Drop</strong>，搭配韓國超商 <strong>香蕉牛奶（바나나맛우유）</strong> 或 <strong>延世大學生乳包</strong>。</li>
+            <li><strong>最後補貨</strong>：在弘大 <strong>Olive Young</strong>、<strong>Daiso 大創（弘大 2 號店有整整 7 層樓！）</strong> 把漏買的美妝、零食與伴手禮買齊。</li>
+          </ul>
+        </li>
+        <li>
+          <span class="time-slot">下午｜前往機場 ＆ 退稅手續</span>
+          <ul class="sub-list">
+            <li>搭乘 AREX 機場快線或預約機場接送包車前往仁川機場（建議起飛前 3 小時抵達機場，預留退稅與逛免稅店時間）。</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 五大主題必買＆實用指南 -->
+    <h2 class="section-title">🌟 五大主題必買＆實用指南</h2>
+
+    <!-- 1. 追星＆演唱會攻略 -->
+    <section id="kpop-guide" class="guide-card">
+      <h3>1️⃣ 🎤 追星＆演唱會攻略（如何查 2027年2月 演唱會＆周邊店整理）</h3>
+      <div class="two-col-grid">
+        <div class="box-panel">
+          <h4>🎫 出發前如何查詢首爾演唱會/見面會？</h4>
+          <p style="font-size:0.9rem; color:var(--text-muted); margin-bottom:0.5rem;">（2月常有偶像年初 Fan Meeting、安可場演唱會及 Hanteo Music Awards 等頒獎典禮，各大售票網均有英文國際版可刷海外卡）</p>
+          <ol class="num-list">
+            <li><strong>Interpark Global</strong> (globalinterpark.com)：最多大型 K-Pop 演唱會與音樂劇。</li>
+            <li><strong>YES24 Ticket Global</strong> (ticket.yes24.com)：SM、JYP 等經紀公司常用。</li>
+            <li><strong>Melon Ticket Global</strong> (tkglobal.melon.com)：Kakao 體系、音源頒獎典禮、IU 等常用。</li>
+            <li><strong>Ticketlink Global</strong>：部分拼盤演唱會與見面會。</li>
+            <li><strong>電視台打歌舞台</strong>：可透過 <strong>Klook / KKday / Trazy</strong> 預訂週二《THE SHOW》或週三《Show Champion》外國人觀光客錄影名額！</li>
+          </ol>
+        </div>
+        <div class="box-panel">
+          <h4>💿 五大必逛 K-Pop 周邊店總整理</h4>
+          <ol class="num-list">
+            <li><strong>WithMUU（弘大 AK Plaza 2F / 明洞店）</strong>：官方手燈（應援棒）最齊全，買專輯常有獨家特典小卡。</li>
+            <li><strong>KWANGYA SEOUL（首爾林站 D-Tower B1）</strong>：SM 娛樂官方旗艦店。</li>
+            <li><strong>Ktown4u（COEX Artium 2~4F，三成站）</strong>：除了買專輯周邊，還有拍貼機與期間限定愛豆聯名 Café。</li>
+            <li><strong>明洞地下街唱片行（CT Record / Music Korea）</strong>：適合一次買齊不同公司的舊專、海報與周邊。</li>
+            <li><strong>POCA SPOT（明洞 / 弘大）</strong>：專門買賣與交換偶像官方小卡（Photocard）的實體店，可直接用平板挑選本命小卡！</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. 買衣服指南 -->
+    <section id="fashion-guide" class="guide-card">
+      <h3>2️⃣ 👗 買衣服指南：學生風 vs. 上班族（OL）分流推薦</h3>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>風格定位</th>
+              <th>推薦品牌 / 商場</th>
+              <th>特色與必買單品</th>
+              <th>所在商圈</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="highlight-tag">學生＆日常休閒</span></td>
+              <td><strong>M Playground、AA Place、Market A</strong></td>
+              <td>幾百塊台幣就能買到韓系大學T、工裝褲、針織外套、刷毛帽T，男裝女裝都有</td>
+              <td>弘大主街</td>
+            </tr>
+            <tr>
+              <td><span class="highlight-tag">學生＆街頭潮牌</span></td>
+              <td><strong>SPAO、Wonderplace、ALAND</strong></td>
+              <td>常常與 K-Pop 偶像或動漫聯名，睡衣、發熱衣與休閒外套版型年輕活潑</td>
+              <td>明洞、弘大</td>
+            </tr>
+            <tr>
+              <td><span class="highlight-tag">學生＆上班族通吃</span></td>
+              <td><strong>MUSINSA Standard</strong></td>
+              <td><strong>激推必逛！</strong>韓國國民品牌，西裝外套、Slacks 西裝落地褲、2月折扣季羊毛大衣與羽絨衣版型極神，千元台幣上下就能入手</td>
+              <td>弘大、聖水、江南、明洞</td>
+            </tr>
+            <tr>
+              <td><span class="highlight-tag">上班族 OL 通勤正裝</span></td>
+              <td><strong>MIXXO、Roem、8seconds</strong></td>
+              <td>韓劇女主角上班穿搭模板！雪紡衫、針織套裝、修身西裝裙、優雅羊毛大衣</td>
+              <td>江南主街、明洞、時代廣場</td>
+            </tr>
+            <tr>
+              <td><span class="highlight-tag">超高 CP 值混搭</span></td>
+              <td><strong>高速巴士站地下街 (Goto Mall)、永登浦地下街</strong></td>
+              <td>韓國歐膩日常採買地，從萬元平價針織衫到正韓製（Made in Korea）上班襯衫、真皮樂福鞋都有</td>
+              <td>高速巴士站、永登浦站</td>
+            </tr>
+            <tr>
+              <td><span class="highlight-tag">輕奢設計師＆愛豆同款</span></td>
+              <td><strong>Matin Kim、Mardi Mercredi、Marithe、COS</strong></td>
+              <td>適合上班族週末穿搭或質感單品（LOGO 針織衫、小雛菊毛衣、通勤托特包）</td>
+              <td>漢南洞、聖水洞、汝矣島現代百貨</td>
+            </tr>
+            <tr>
+              <td><span class="highlight-tag">飾品與配件批發</span></td>
+              <td><strong>nyu.nyu、MIMILINE</strong></td>
+              <td>上班戴的精緻銀飾/珍珠耳環、學生髮箍、冬季貝雷帽與圍巾，批發價單件可買</td>
+              <td>東大門、明洞分店、聖水分店</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 3. 醫美保養品必買清單 -->
+    <section id="beauty-guide" class="guide-card">
+      <h3>3️⃣ 🧴 醫美保養品必買清單（韓國藥局 ＆ Olive Young 雙通路）</h3>
+      <p style="font-size:0.95rem; color:var(--text-muted); margin-bottom:0.75rem;">韓國現在最流行「<strong>院線醫美成分居家化（PDRN 鮭魚針成分、外泌體、微針、積雪草再生）</strong>」，建議分兩大通路採買：</p>
+      <div class="two-col-grid">
+        <div class="box-panel">
+          <h4>🏥 【韓國藥局（약국）限定】醫美級藥膏＆保養品</h4>
+          <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.6rem;">走進明洞、弘大或江南貼有「Tax Free」的大型藥局，直接拿韓文名稱給藥師看即可！</p>
+          <ol class="num-list">
+            <li><strong>Rejuvenex Cream（리쥬비넥스크림，PDRN 鮭魚再生霜）</strong>：近期全韓斷貨王！含有與醫美「麗珠蘭（Rejuran）」相同的高濃度 PDRN 成分，修復屏障、抗老、淡化細紋極強。</li>
+            <li><strong>Centellian24 東國製藥 Madeca Cream（마데카크림 積雪草老虎霜）</strong>：韓國國民醫美級修護霜，換季泛紅、做完雷射或熬夜暗沉擦它修復超快。</li>
+            <li><strong>Noscarna Gel（노스카나겔 除疤凝膠）</strong>：東亞製藥出品，針對紅痘印、新舊痘疤與疤痕淡化非常有效。</li>
+            <li><strong>Acnon Cream（애크논크림 痘痘膏） / Acrin Gel（애크린겔 粉刺凝膠）</strong>：紅腫大悶痘擦 Acnon（黃管），閉鎖性粉刺與黑頭擦 Acrin（綠管）。</li>
+            <li><strong>D-Panthenol 軟膏（디판테놀연고 B5 泛醇修護霜）</strong>：極致溫和的保濕修復膏，2月冬天乾冷可混在乳液裡當晚安面膜。</li>
+          </ol>
+        </div>
+        <div class="box-panel">
+          <h4>🍏 【Olive Young ＆ 聖水美妝店】熱銷醫美級保養品</h4>
+          <ol class="num-list">
+            <li><strong>Rejuran Healer（麗珠蘭家用版保養系列）</strong>：金色管（回春精華）與銀色管（水分安瓶），主打在家擦的水光針。</li>
+            <li><strong>VT Reedle Shot（微針精華 100 / 300）</strong>：利用天然微針打開肌膚通道，幫助後續保養品吸收、縮毛孔與平滑膚質（初次使用建議從 100 開始）。</li>
+            <li><strong>敏弱肌保濕棉片＆面膜</strong>：<strong>Mediheal（美迪惠爾積雪草/膠原蛋白方型棉片）</strong>、<strong>Abib 魚腥草棉片</strong>、<strong>Biodance 膠原蛋白實感凝膠面膜</strong>（敷 3 小時變透明的爆紅面膜）。</li>
+            <li><strong>皮膚科推薦保濕精華與乳霜</strong>：<strong>Torriden DIVE-IN 低分子玻尿酸精華＆面膜</strong>、<strong>Aestura（愛詩途）365 保濕屏障修護霜</strong>（韓國皮膚科醫院常推薦的醫美級保濕霜，冬季乾冷救星）。</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. 超市與當地食物必買清單 -->
+    <section id="mart-guide" class="guide-card">
+      <h3>4️⃣ 🛒 超市與當地食物必買清單（樂天超市 / E-Mart / 便利商店）</h3>
+      <ul class="timeline-list" style="margin-top:0.75rem;">
+        <li>
+          <span class="time-slot">🍪 零食餅乾與果乾類</span>
+          <ul class="sub-list">
+            <li><strong>HBAF 杏仁果系列</strong>（蜂蜜奶油、烤玉米、芥末、大蒜麵包口味，明洞也有整間旗艦店可試吃）。</li>
+            <li><strong>Orion 預感洋芋片（예감）</strong>、<strong>Binch 巧克力餅乾</strong>、<strong>好麗友烏龜玉米脆片（꼬북칩 巧克力吉拿棒 / 玉米濃湯口味）</strong>、<strong>Teazen 康普茶（BTS 柾國同款）</strong>。</li>
+            <li><strong>2月當季新鮮韓國草莓 ＆ 冷凍草莓乾 / 無花果乾</strong>。</li>
+          </ul>
+        </li>
+        <li>
+          <span class="time-slot">🍲 正餐＆伴手禮食材類</span>
+          <ul class="sub-list">
+            <li><strong>廣川海苔 / 聖山海苔</strong>（推薦買「海苔酥（김자반）」，拌白飯或煮湯麵超香，而且不佔行李體積）。</li>
+            <li><strong>韓國香油 / 紫蘇油（들기름）</strong>、<strong>CJ Bibigo 湯品調理包</strong>（⚠️ 注意：含肉類調理包不能帶回台灣，可在飯店當宵夜吃；帶回台灣請選 <strong>海鮮或純蔬菜/泡菜豆腐湯包</strong>！）。</li>
+            <li><strong>大創（Daiso）隱藏版必買</strong>：大創與 VT 聯名的平價微針精華包（只要 3000~5000 韓元）、大創美妝蛋、K-Pop 小卡收納冊與硬卡套（탑로더）。</li>
+          </ul>
+        </li>
+        <li>
+          <span class="time-slot">🏪 便利商店（CU / GS25 / 7-11）每日必吃當地食物</span>
+          <ul class="sub-list">
+            <li><strong>延世大學生乳包（연세우유 생크림빵）</strong>、<strong>胖胖瓶香蕉牛奶</strong>、<strong>畢約特（비요뜨 Biyott 折疊巧克力脆片優格，韓國女生早餐最愛！）</strong>、<strong>辣炒年糕加起司微波碗</strong>。</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 5. 2/28~3/7 冬季家庭旅行天氣與專屬貼士 -->
+    <section id="winter-tips" class="guide-card">
+      <h3>5️⃣ ❄️ 首爾 2/28 ～ 3/7 天氣注意事項・穿搭與家庭旅行專屬貼士</h3>
+      <div class="callout callout-note">
+        <div class="callout-title">🌡️ 2/28 ～ 3/7 首爾實際氣候特徵（平均氣溫約 -2°C ～ 9°C・早晚體感可達 -5°C）</div>
+        • <strong>倒春寒「花信風（꽃샘추위）」</strong>：2月底至3月初是首爾冬末轉初春的交接期，白天出太陽時約 6°C～9°C 相當舒適，但<strong>清晨與入夜後仍會降至 0°C～-3°C 以下</strong>，且偶有乾冷強風。<br>
+        • <strong>室內外極端溫差（超過 25°C 的溫差）</strong>：首爾地鐵、百貨、地下街與餐廳暖氣皆高達 <strong>24°C～26°C</strong>！切忌穿脫不掉的厚重高領毛衣，請務必採用「<strong>洋蔥式穿法</strong>」（內搭薄長袖或一般發熱衣 ＋ 針織衫/大學T ＋ 防風羽絨外套或長版羊毛大衣），進室內脫掉外套才不會悶熱流汗。
+      </div>
+      <div class="two-col-grid">
+        <div class="box-panel">
+          <h4>🧣 2/28～3/7 天氣應對＆節日四大注意事項</h4>
+          <ol class="num-list">
+            <li><strong>防風配件比穿多更重要</strong>：首爾乾冷不潮濕，只要把脖子、耳朵與手遮住就不冷！必備 <strong>圍巾、毛帽、暖暖包</strong>，鞋子請穿 <strong>好走的防風運動鞋＋厚長襪</strong>（避免薄底帆布鞋以免腳底冰冷）。</li>
+            <li><strong>極度乾燥＆靜電防護</strong>：2～3月濕度僅 40%～50%，容易起靜電與嘴唇乾裂。<strong>Day 1 抵達弘大後</strong>可立刻在 Olive Young 或藥局買 <strong>Aestura 保濕霜、B5 泛醇軟膏、護手霜與護唇膏</strong>，晚上飯店房間建議放一杯水或掛濕毛巾保濕。</li>
+            <li><strong>🇰🇷 3/1「三一節」韓國連假注意</strong>：<strong>2/28(日)～3/1(一) 為韓國三一節國定連假</strong>，商圈與百貨人潮較多；且 <strong>3/1 當天光化門／市廳站一帶常有大型集會遊行，請避開光化門周邊</strong>（本行程安排的弘大、明洞、聖水、江南皆不受影響）。</li>
+            <li><strong>🎒 3/2(二) 起韓國開學日逛街超順暢</strong>：3月2日是韓國各級學校新學期開學日！從 3/2 起平日各大商圈、網美咖啡廳與地下街人潮會明顯減少，逛街與吃美食免大排長龍！</li>
+          </ol>
+        </div>
+        <div class="box-panel">
+          <h4>👨‍👩‍👧‍👦 家庭同行・冬春換季購物與交通必備</h4>
+          <ol class="num-list">
+            <li><strong>買冬衣出清＆春裝新品最划算</strong>：2/28～3/7 剛好同時遇到「<strong>冬季大衣/羽絨衣最後出清折扣</strong>」與「<strong>早春風衣/西裝外套/襯衫上市</strong>」！台灣只需帶 1 件主力厚外套去，其餘去 <strong>MUSINSA Standard</strong>、<strong>高速巴士站地下街</strong> 現買最划算。</li>
+            <li><strong>善用大型室內暖氣動線</strong>：若遇起風或寒流，可將重心放在全室內暖氣商場：<strong>汝矣島現代百貨（Day 5）</strong>、<strong>高速巴士站地下街＋新世界百貨（Day 4）</strong>、<strong>明洞地下街＋樂天超市（Day 2）</strong>、<strong>永登浦地下街＋時代廣場（Day 6）</strong>。</li>
+            <li><strong>地圖與家庭叫車（免吹冷風）</strong>：請下載 <strong>Naver Map</strong> 或 <strong>KakaoMap</strong>。家庭出遊強烈建議用 <strong>Kakao T</strong> 或 <strong>Uber</strong> 叫計程車，3~4人分攤下來車資跟地鐵差不多，不用在寒風中爬地鐵樓梯、提戰利品超輕鬆！</li>
+            <li><strong>付款與即時退稅</strong>：推薦 <strong>海外高回饋信用卡 ＋ WOWPASS 卡 ＋ 明洞換韓元現鈔</strong>；在 Olive Young、樂天超市、MUSINSA 單筆滿 <strong>15,000 韓元</strong> 出示護照即可現場直接扣稅！</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>🇰🇷 2027.02 首爾家庭旅行企劃 ｜ 祝旅途愉快、追星順利、滿載而歸！</p>
+  </footer>
+
+</body>
+</html>

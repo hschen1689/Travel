@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🇰🇷 韓國首爾旅遊：刷卡、行動支付、換匯與訂房全攻略</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --primary-light: #eff6ff;
+            --secondary: #0f172a;
+            --accent: #f59e0b;
+            --danger: #ef4444;
+            --danger-light: #fef2f2;
+            --success: #10b981;
+            --success-light: #ecfdf5;
+            --text: #334155;
+            --text-light: #64748b;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --border: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.65;
+            padding-bottom: 60px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+            color: white;
+            padding: 48px 20px 36px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        header h1 {
+            font-size: 2.1rem;
+            margin-bottom: 12px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        header p {
+            font-size: 1.05rem;
+            opacity: 0.92;
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        .golden-strategy {
+            max-width: 960px;
+            margin: -22px auto 28px;
+            background: #fffbeb;
+            border: 2px solid #f59e0b;
+            border-radius: 12px;
+            padding: 16px 24px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .golden-strategy .icon {
+            font-size: 1.8rem;
+        }
+
+        .golden-strategy .content strong {
+            color: #b45309;
+            display: block;
+            font-size: 1.05rem;
+            margin-bottom: 2px;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+
+        .nav-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 28px;
+            justify-content: center;
+        }
+
+        .nav-pills a {
+            text-decoration: none;
+            background: var(--card-bg);
+            color: var(--primary);
+            border: 1px solid var(--border);
+            padding: 8px 16px;
+            border-radius: 999px;
+            font-size: 0.92rem;
+            font-weight: 600;
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+        }
+
+        .nav-pills a:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        section {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 28px;
+            margin-bottom: 28px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            border: 1px solid var(--border);
+        }
+
+        section h2 {
+            font-size: 1.45rem;
+            color: var(--secondary);
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--primary-light);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        section h3 {
+            font-size: 1.15rem;
+            color: var(--primary-dark);
+            margin: 22px 0 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
+            margin-top: 12px;
+        }
+
+        .card {
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 18px;
+            background: #fafafa;
+            position: relative;
+        }
+
+        .card.highlight {
+            background: var(--primary-light);
+            border-color: #bfdbfe;
+        }
+
+        .card h4 {
+            font-size: 1.08rem;
+            color: var(--secondary);
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 999px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            background: var(--primary);
+            color: white;
+        }
+
+        .badge.green {
+            background: var(--success);
+        }
+
+        .badge.amber {
+            background: var(--accent);
+        }
+
+        .badge.red {
+            background: var(--danger);
+        }
+
+        ul {
+            padding-left: 20px;
+            margin: 8px 0;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .alert {
+            padding: 16px 20px;
+            border-radius: 10px;
+            margin: 16px 0;
+            border-left: 5px solid;
+        }
+
+        .alert-danger {
+            background: var(--danger-light);
+            border-left-color: var(--danger);
+            color: #991b1b;
+        }
+
+        .alert-success {
+            background: var(--success-light);
+            border-left-color: var(--success);
+            color: #065f46;
+        }
+
+        .alert-info {
+            background: var(--primary-light);
+            border-left-color: var(--primary);
+            color: #1e40af;
+        }
+
+        .alert strong {
+            display: block;
+            margin-bottom: 4px;
+            font-size: 1.02rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            font-size: 0.95rem;
+        }
+
+        th, td {
+            border: 1px solid var(--border);
+            padding: 12px 14px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background: #f1f5f9;
+            color: var(--secondary);
+            font-weight: 700;
+        }
+
+        tr:nth-child(even) {
+            background: #f8fafc;
+        }
+
+        .checklist {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .checklist li {
+            position: relative;
+            padding-left: 28px;
+            margin-bottom: 10px;
+        }
+
+        .checklist li::before {
+            content: "✅";
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        footer {
+            text-align: center;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 640px) {
+            header h1 {
+                font-size: 1.6rem;
+            }
+            .golden-strategy {
+                margin: -16px 16px 24px;
+                flex-direction: column;
+                text-align: center;
+            }
+            section {
+                padding: 20px 16px;
+            }
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+            thead tr {
+                display: none;
+            }
+            tr {
+                margin-bottom: 12px;
+                border: 1px solid var(--border);
+                border-radius: 8px;
+                overflow: hidden;
+            }
+            td {
+                border: none;
+                border-bottom: 1px solid var(--border);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>🇰🇷 韓國首爾旅遊：支付、換匯與訂房全攻略</h1>
+    <p>信用卡推薦・玉山卡攻略・TWQR 行動支付・明洞換錢所・交通卡・Agoda 訂房避坑指南</p>
+</header>
+
+<div class="golden-strategy">
+    <div class="icon">💡</div>
+    <div class="content">
+        <strong>旅韓最划算黃金公式</strong>
+        主力刷「高回饋信用卡 (3%~6%)」＋ 超商/小店用「行動支付 (LINE Pay / TWQR)」＋ 帶「台幣現鈔」到首爾明洞換少量韓元！
+    </div>
+</div>
+
+<div class="container">
+
+    <nav class="nav-pills">
+        <a href="#credit-cards">💳 信用卡與玉山卡推薦</a>
+        <a href="#mobile-pay">📱 TWQR 與行動支付</a>
+        <a href="#exchange">💵 換匯攻略與明洞換錢所</a>
+        <a href="#transport">🚇 地鐵與交通卡選擇</a>
+        <a href="#agoda">🏨 Agoda 訂房省錢避坑</a>
+    </nav>
+
+    <!-- 一、信用卡推薦 -->
+    <section id="credit-cards">
+        <h2>💳 一、韓國旅遊高回饋信用卡推薦（含玉山銀行專區）</h2>
+        <p>韓國刷卡普及率超過 90%，連路邊攤、計程車都能刷。由於海外刷卡有 <strong>1.5% 海外交易手續費</strong>，建議挑選回饋 <strong>3% 以上</strong>的信用卡。</p>
+
+        <h3>🔥 熱門主力信用卡</h3>
+        <div class="grid-2">
+            <div class="card highlight">
+                <h4>台新 Richart 卡 <span class="badge">免登錄無上限</span></h4>
+                <ul>
+                    <li><strong>回饋：</strong>切換至「玩旅刷」方案，海外消費享最高 <strong>3.3% 回饋無上限</strong>。</li>
+                    <li><strong>優勢：</strong>不用搶登錄名額，出發前在 App 切好方案即可無腦刷。</li>
+                </ul>
+            </div>
+            <div class="card highlight">
+                <h4>富邦 J 卡 (J Cash / J Points) <span class="badge">日韓人氣王</span></h4>
+                <ul>
+                    <li><strong>回饋：</strong>日韓一般消費 <strong>3% 無上限</strong>；實體店滿額登錄加碼最高可達 <strong>6%</strong>。</li>
+                    <li><strong>優勢：</strong>若是 JCB 晶緻卡以上等級，還可免費進仁川機場指定貴賓室。</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h4>星展 eco 永續卡 <span class="badge green">實體店推薦</span></h4>
+                <ul>
+                    <li><strong>回饋：</strong>韓國實體商店消費享最高 <strong>5% 回饋</strong>（含加碼）。</li>
+                    <li><strong>優勢：</strong>適合喜歡在韓國到處吃美食、探店購物的旅客。</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h4>永豐 幣倍卡 / DAWAY 卡 <span class="badge amber">行動支付加碼</span></h4>
+                <ul>
+                    <li><strong>回饋：</strong>幣倍卡海外最高 <strong>6%</strong>；DAWAY 卡綁 LINE Pay 在韓國指定通路常有高額點數加碼。</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3>⛰️ 玉山銀行信用卡專區（玉山卡友必看！）</h3>
+        <div class="grid-2">
+            <div class="card highlight">
+                <h4>玉山 Unicard <span class="badge">玉山旅韓首選</span></h4>
+                <ul>
+                    <li><strong>回饋：</strong>韓國與 Agoda 皆屬「百大指定特店」！基本享 <strong>3%～3.5%</strong>，在玉山 Wallet App 切換「UP 選」方案最高享 <strong>4.5%～5% 回饋</strong>。</li>
+                    <li><strong>優勢：</strong>回饋上限高，在韓國實體店與線上訂房都非常好用。</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h4>玉山 熊本熊卡 (JCB) <span class="badge green">隱藏貴賓室福利</span></h4>
+                <ul>
+                    <li><strong>隱藏好康：</strong>雖然主打日本，但因屬 <strong>JCB 晶緻卡等級</strong>，出示當日登機證與此卡，一年可免費使用 <strong>韓國仁川機場指定貴賓室 2 次</strong>（不限搭乘航空、免刷機票）！</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="alert alert-danger">
+            <strong>⚠️ 刷卡必知鐵則：結帳幣別一定要選「韓元 (KRW)」！</strong>
+            在韓國刷卡或線上訂房時，若機台詢問要用「韓元 (KRW)」還是「台幣 (TWD)」結帳，<strong>請務必選擇「韓元 (KRW)」</strong>！若選台幣會觸發 DCC（動態貨幣轉換），會被多收 3%～5% 的隱藏手續費與極差匯率。
+        </div>
+    </section>
+
+    <!-- 二、TWQR 與行動支付 -->
+    <section id="mobile-pay">
+        <h2>📱 二、TWQR 行動支付、LINE Pay 與 WOWPASS</h2>
+
+        <div class="alert alert-info">
+            <strong>❓ 常見疑問：在韓國刷 TWQR 是扣「銀行帳戶」還是「信用卡」？</strong>
+            答案是：<strong>只能扣「銀行帳戶（或電支錢包餘額）」，不能刷信用卡！</strong><br>
+            為了提供<strong>「免 1.5% 海外交易手續費」</strong>優惠，無論是使用台灣Pay、全支付、悠遊付或 icash Pay，在韓國掃 TWQR 條碼時皆規定直接從綁定的台灣銀行帳戶即時扣台幣，無法使用信用卡扣款。
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>支付工具</th>
+                    <th>扣款來源</th>
+                    <th>適用通路與優勢</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>TWQR 跨境支付</strong><br>(台灣Pay / 全支付 / 悠遊付)</td>
+                    <td><strong>台灣銀行帳戶</strong><br>或電支餘額</td>
+                    <td>
+                        <ul>
+                            <li><strong>通路：</strong>韓國四大超商 (CU、GS25、7-11、emart24)、大創 (Daiso)、連鎖咖啡廳等貼有 TWQR / ZeroPay / Paybooc 標誌店家。</li>
+                            <li><strong>優勢：</strong>免 1.5% 海外手續費，且各家常推 10%~20% 跨國回饋（出國前需確認 App 已綁定銀行帳戶並開啟跨國交易）。</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>LINE Pay</strong><br>(切換至韓國地區)</td>
+                    <td><strong>可綁台灣信用卡</strong></td>
+                    <td>
+                        <ul>
+                            <li><strong>通路：</strong>Olive Young、CU 超商、樂天超市、大型免稅店等。</li>
+                            <li><strong>優勢：</strong>可綁定高回饋信用卡（如永豐、富邦、中信），疊加 LINE Pay 季節活動常有 10%~25% 點數回饋。</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>WOWPASS</strong><br>(外國旅客專用預付卡)</td>
+                    <td><strong>台幣現鈔儲值</strong><br>或 App 線上儲值</td>
+                    <td>
+                        <ul>
+                            <li><strong>功能：</strong>結合「換匯＋簽帳卡＋T-money 交通卡」三合一。</li>
+                            <li><strong>優勢：</strong>地鐵站機台可直接塞台幣現鈔儲值成韓元消費，支援全韓國所有能插卡的刷卡機與自助點餐機。</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- 三、換匯攻略與首爾換錢所 -->
+    <section id="exchange">
+        <h2>💵 三、換匯攻略：台灣換還是韓國換？首爾哪裡換？</h2>
+
+        <div class="alert alert-success">
+            <strong>🏆 最佳換匯結論：帶「台幣 1,000 元平整大鈔」到「首爾明洞民間換錢所」換最划算！</strong>
+            台灣的銀行換韓元匯差極大、最不划算。現在首爾民間換錢所收台幣的匯率極佳，不需特地先在台灣換美金，直接帶台幣千元鈔去換即可！（若擔心剛下飛機沒錢搭車，可在台灣或韓國機場先換 1,000 台幣應急，進市區再換主力現金）。
+        </div>
+
+        <h3>📍 首爾最推薦換錢地點</h3>
+        <div class="grid-2">
+            <div class="card highlight">
+                <h4>1. 明洞：大使館 ＆ 一品香換錢所 <span class="badge">全首爾匯率最優</span></h4>
+                <ul>
+                    <li><strong>交通：</strong>地鐵 4 號線<strong>「明洞站」5 號出口</strong>直走約 3~5 分鐘，於中國大使館周邊巷子。</li>
+                    <li><strong>大使館換錢所：</strong>位於中國大使館旁轉角，老字號匯率指標。</li>
+                    <li><strong>一品香換錢所：</strong>已從原本地下室搬至距離 10 公尺處的<strong>「1 樓亮黃色店面」</strong>，匯率與大使館並列第一。</li>
+                    <li><strong>小撇步：</strong>兩家與對面的大信換錢所距離不到 1 分鐘，看門口電子看板哪間匯率好、人少就換哪間！</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h4>2. 連鎖：Money Box 換錢所 <span class="badge green">24小時無人機</span></h4>
+                <ul>
+                    <li><strong>分店多：</strong>明洞、<strong>弘大、東大門、江南</strong>皆有分店（住弘大不必特地跑明洞）。</li>
+                    <li><strong>優勢：</strong>匯率緊追大使館（可先在 Creatrip 或 Klook 免費領匯率優惠券），且店外設有 <strong>24 小時無人自助換匯機</strong>，深夜或清晨都能拿台幣換韓元。</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3>📝 換匯 3 大注意事項</h3>
+        <ul class="checklist">
+            <li><strong>必帶護照正本：</strong>韓國規定於換錢所（含無人換匯機）換錢皆須出示護照掃描登記。</li>
+            <li><strong>當場點清現鈔：</strong>拿到韓元後務必在櫃檯前當面數清楚金額再離開。</li>
+            <li><strong>現金不用換太多：</strong>現金主要用於<strong>儲值 T-money 交通卡、傳統市場（如廣藏市場）、路邊小吃攤、地下街買衣服</strong>，其餘 90% 場所皆可刷卡。</li>
+        </ul>
+    </section>
+
+    <!-- 四、地鐵交通卡 -->
+    <section id="transport">
+        <h2>🚇 四、地鐵需要買交通卡嗎？哪種最划算？</h2>
+        <p><strong>強烈建議一人買一張交通卡！</strong>因為韓國地鐵目前<strong>不能直接刷台灣信用卡進站</strong>，而買單程票每趟貴 100 韓元、每次還要付 500 韓元押金並排隊退卡；且首爾公車幾乎全面「無現金化」，加上刷交通卡才有<strong>「30 分鐘內公車與地鐵轉乘免費/折扣優惠」</strong>。</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>交通卡種類</th>
+                    <th>適合對象</th>
+                    <th>購買與儲值方式</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>1. T-money 卡</strong><br>(最普遍，似台灣悠遊卡)</td>
+                    <td>一般旅客、搭車次數適中者</td>
+                    <td>各大超商皆有售（空卡約 3,000~5,000 韓元），<strong>僅能用韓元現鈔</strong>於地鐵機台或超商儲值。</td>
+                </tr>
+                <tr>
+                    <td><strong>2. 氣候同行卡</strong><br>(Climate Card 吃到飽神卡)</td>
+                    <td>每天在<strong>首爾市區內</strong>搭地鐵+公車超過 3~4 次以上者</td>
+                    <td>可選 1/2/3/5/7 日券（如 3 日券僅 10,000 韓元），買空卡後於地鐵機台<strong>可直接刷信用卡儲值天數</strong>，無限次搭首爾市區地鐵與公車！（註：仁川機場搭 AREX 進市區不可用）。</td>
+                </tr>
+                <tr>
+                    <td><strong>3. WOWPASS</strong><br>(消費卡 + T-money 二合一)</td>
+                    <td>想一卡搞定換匯消費與搭車者</td>
+                    <td>注意卡內分為「消費餘額」與「T-money 交通餘額」，搭車前需確保 T-money 區塊有儲值韓元。</td>
+                </tr>
+                <tr>
+                    <td><strong>📱 iPhone 虛擬 T-money</strong><br>(免買實體空卡省錢法)</td>
+                    <td>iPhone 用戶</td>
+                    <td>下載「T-money」或「NAMANE」App，可直接在 Apple Wallet 免費新增虛擬 T-money 卡，直接拿手機感應進站！</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- 五、Agoda 訂房攻略 -->
+    <section id="agoda">
+        <h2>🏨 五、Agoda 訂韓國飯店：刷哪張卡最划算？三大避坑秘訣</h2>
+
+        <div class="alert alert-danger">
+            <strong>❌ 千萬不要計畫「到韓國飯店現場刷 TWQR」！</strong>
+            韓國絕大多數飯店櫃檯<strong>不支援 TWQR</strong>（TWQR 主要在超商與小店）。且選擇到店付款會無法使用 Agoda 信用卡專屬網頁的 <strong>88 折～94 折現折優惠</strong>！建議直接在線上刷高回饋信用卡最划算。
+        </div>
+
+        <h3>💳 Agoda 訂房推薦信用卡</h3>
+        <div class="grid-2">
+            <div class="card highlight">
+                <h4>1. 玉山 Unicard <span class="badge">百大特店最高 5%</span></h4>
+                <p>Agoda 為指定百大特店，切換「UP 選」最高享 <strong>4.5%～5% 回饋</strong>；從「Agoda 玉山專屬網頁」訂房還可享現折 6%～10%。</p>
+            </div>
+            <div class="card highlight">
+                <h4>2. 台新 Richart 卡 <span class="badge">3.3% 無上限</span></h4>
+                <p>大筆住宿費最怕爆回饋上限！切換「玩旅刷」方案享 <strong>3.3% 回饋無上限</strong>，房價再高都能拿滿回饋。</p>
+            </div>
+            <div class="card">
+                <h4>3. 國泰世華 CUBE 卡 <span class="badge green">趣旅行 3% 無上限</span></h4>
+                <p>切換「趣旅行」權益享 <strong>3% 小樹點無上限</strong>，搭配國泰 App 領券或專屬網頁享額外折扣。</p>
+            </div>
+            <div class="card">
+                <h4>4. 永豐 幣倍卡 / 大戶卡 <span class="badge amber">旅遊通路高回饋</span></h4>
+                <p>符合指定任務並登錄，旅遊訂房通路常享 <strong>5%～7%</strong> 高回饋。</p>
+            </div>
+        </div>
+
+        <h3>⚠️ Agoda 訂房「三大避坑秘訣」（必看！省下上千元）</h3>
+        <ul class="checklist">
+            <li>
+                <strong>秘訣 1：絕對不要選「延後扣款（台幣計價）」，請選「立即付款（以韓元 KRW 計價）」！</strong><br>
+                若選延後扣款並用台幣計價，Agoda 會用內部極差的匯率（比銀行貴 5%～7%）換算台幣。<strong>正確做法：將 Agoda 幣別改為「韓元 (KRW)」並選擇「立即付款」刷韓元</strong>，才會走 Visa/Mastercard 最划算的國際匯率！
+            </li>
+            <li>
+                <strong>秘訣 2：從「銀行專屬訂房網頁」或「Google Maps 比價連結」進入</strong><br>
+                直接開 Agoda App 通常較貴！請先 Google 搜尋「Agoda 玉山 / 台新 / Visa / Mastercard 專屬優惠」從專屬連結進入，或從 Google Maps 搜尋飯店點擊比價連結跳轉，房價常直接打 88 折～94 折。
+            </li>
+            <li>
+                <strong>秘訣 3：記得使用海外回饋 3% 以上的信用卡</strong><br>
+                Agoda 主機在海外，<strong>即使刷台幣也會被收 1.5% 海外交易手續費</strong>！因此務必搭配上述 3%～5% 回饋的信用卡，才能抵銷手續費並倒賺回饋。
+            </li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>祝您有一趟愉快又省錢的韓國首爾之旅！ ✈️🇰🇷</p>
+    </footer>
+
+</div>
+
+</body>
+</html>
